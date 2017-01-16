@@ -30,8 +30,14 @@
             array('colour',_("colour"),9,'EDC240'),
             array('units',_("units"),5,''),
             array('dp',_("dp"),7,'2'),
-            array('scale',_("scale"),6,'1'))
+            array('scale',_("scale"),6,'1'),
+			array('ymin',_("ymin"),6,''),
+			array('ymax',_("ymax"),6,''),
+			array('xtitle',_("xtitle"),5,''),
+			array('ytitle',_("ytitle"),5,'')
+			)
         ),
+		
         
         'bargraph'=> array('label'=>_("BarGraph"), 'options'=>array(
             array('feedid',_("feed"),0),

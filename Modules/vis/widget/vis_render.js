@@ -28,10 +28,10 @@ function vis_widgetlist(){
     {
       "offsetx":0,"offsety":0,"width":400,"height":300,
       "menu":"Visualisations",  
-      "options":["feedid","colour","units","dp","scale","fill","initzoom"],
-      "optionstype":["feedid","colour_picker","value","value","value","value","dropbox"],
-      "optionsname":[_Tr("Feed"),_Tr("Colour"),_Tr("units"),_Tr("dp"),_Tr("scale"),_Tr("Fill"),_Tr("Zoom")],
-      "optionshint":[_Tr("Feed source"),_Tr("Line colour in hex. Blank is use default."),_Tr("units"),_Tr("Decimal points"),_Tr("Scale by"),_Tr("Fill value"),_Tr("Default visible window interval")],
+      "options":["feedid","colour","units","dp","scale","fill","initzoom","ymin","ymax","xtitle","ytitle"],
+      "optionstype":["feedid","colour_picker","value","value","value","value","dropbox","value","value","value","value"],
+      "optionsname":[_Tr("Feed"),_Tr("Colour"),_Tr("units"),_Tr("dp"),_Tr("scale"),_Tr("Fill"),_Tr("Zoom"),_Tr("ymin"),_Tr("ymax"),_Tr("xtitle"),_Tr("ytitle")],
+      "optionshint":[_Tr("Feed source"),_Tr("Line colour in hex. Blank is use default."),_Tr("units"),_Tr("Decimal points"),_Tr("Scale by"),_Tr("Fill value"),_Tr("Default visible window interval"),_Tr("y axis minimum"),_Tr("y axis maximum"),_Tr("x axis title"),_Tr("y axis title")],
       "optionsdata": [ , , , , , , [["1", _Tr("Day")],["7", _Tr("Week")],["30", _Tr("Month")],["365", _Tr("Year")]] ],
       "html":""
     },

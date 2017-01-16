@@ -87,6 +87,12 @@ var fill = +urlParams.fill;
     if (fill>0) fill = true;
 var initzoom = urlParams.initzoom;
     if (initzoom==undefined || initzoom=='' || initzoom < 1) initzoom = '7'; // Initial zoom default to 7 days (1 week)
+
+var ymin = urlParams.ymin;
+var ymax = urlParams.ymax;
+var xtitle = urlParams.xtitle;
+var ytitle = urlParams.ytitle;
+		
 // Some browsers want the colour codes to be prepended with a "#". Therefore, we
 // add one if it's not already there
 if (plotColour.indexOf("#") == -1) {
@@ -192,12 +198,18 @@ $(function() {
             canvas: true,
             lines: { fill: fill },
             xaxis: { mode: "time", timezone: "browser", min: view.start, max: view.end, minTickSize: [interval, "second"] },
-            //yaxis: { min: 0 },
+            yaxis: { },
             grid: {hoverable: true, clickable: true},
             selection: { mode: "x" },
             touch: { pan: "x", scale: "x" }
         }
+		
+		if (!(ymin==undefined || ymin=='')) options.yaxis.min=ymin;
+		if (!(ymax==undefined || ymax=='')) options.yaxis.max=ymax;
 
+		if (!(xtitle==undefined || xtitle=='')) options.xaxis.title=xtitle;
+		if (!(ytitle==undefined || ytitle=='')) options.yaxis.title=ytitle;
+		
         $.plot(placeholder, [{data:data,color: plotColour}], options);
     }
 
