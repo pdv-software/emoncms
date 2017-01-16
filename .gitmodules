@@ -1,0 +1,3 @@
+[submodule "Modules/dashboard"]
+	path = Modules/dashboard
+	url = https://github.com/pdv-software/dashboard.git
