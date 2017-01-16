@@ -28,7 +28,7 @@
     </head>
     <body>
         <div id="wrap">
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar navbar-inverse">
             <div class="navbar-inner">
                 <div class="container">
 <?php  if ($menucollapses) { ?>
