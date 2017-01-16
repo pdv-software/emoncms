@@ -1,3 +1,6 @@
 [submodule "Modules/dashboard"]
 	path = Modules/dashboard
 	url = https://github.com/pdv-software/dashboard.git
+[submodule "Modules/device"]
+	path = Modules/device
+	url = https://github.com/pdv-software/device.git
