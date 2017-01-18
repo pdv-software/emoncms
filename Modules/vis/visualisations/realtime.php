@@ -27,7 +27,7 @@
 
     <div id="graph_bound" style="height:400px; width:100%; position:relative; ">
      <div id="graph"></div>
-     <div style="position:absolute; top:20px; right:20px;  opacity:0.5;">
+     <div id="button-graph" style="position:absolute; top:20px; right:20px;  opacity:0.5; display: none;">
        <button class="viewWindow" time="3600">1 <?php echo _('hour') ?></button>
        <button class="viewWindow" time="1800">30 <?php echo _('min') ?></button>
        <button class="viewWindow" time="900">15 <?php echo _('min') ?></button>
@@ -141,4 +141,13 @@
       interval = parseInt(((end*0.001+10) - (start*0.001-10)) / 800);
       data = get_feed_data(feedid,(start-10000),(end+10000),interval,1,1);
     });
+	
+	$("#graph").mouseenter(function(){
+		$('#button-graph').stop().fadeIn();
+	});
+	
+	$("#graph_bound").mouseleave(function(){
+		$('#button-graph').stop().fadeOut();
+	});
+	
     </script>
