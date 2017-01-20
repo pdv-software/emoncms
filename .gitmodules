@@ -7,3 +7,6 @@
 [submodule "Modules/app"]
 	path = Modules/app
 	url = https://github.com/pdv-software/app.git
+[submodule "Modules/collector"]
+	path = Modules/collector
+	url = https://github.com/pdv-software/collector.git
