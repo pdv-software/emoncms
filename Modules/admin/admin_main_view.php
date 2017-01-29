@@ -159,7 +159,7 @@ table tr td.buttons { text-align: right;}
 table tr td.subinfo { border-color:transparent;}
 </style>
 
-<h2>Administration</h2>
+<h2><?php echo _('Administration'); ?></h2>
 <table class="table table-hover">
     <tr>
         <td>
@@ -251,35 +251,35 @@ if ($allow_emonpi_admin) {
 <?php
 if ($feed_settings['redisbuffer']['enabled']) {
 ?>
-              <tr><td class="subinfo"></td><td>Buffer</td><td><span id="bufferused">loading...</span></td></tr>
+              <tr><td class="subinfo"></td><td>Buffer</td><td><span id="bufferused"><?php echo _('loading...'); ?></span></td></tr>
               <tr><td class="subinfo"></td><td>Writer</td><td><?php echo ($system['feedwriter'] ? "Daemon is running with sleep ".$feed_settings['redisbuffer']['sleep'] . "s" : "<font color='red'>Daemon is not running, start it at ~/scripts/feedwriter</font>"); ?></td></tr>
 <?php
 }
 ?>
-              <tr><td><b>Server</b></td><td>OS</td><td><?php echo $system['system'] . ' ' . $system['kernel']; ?></td></tr>
-              <tr><td class="subinfo"></td><td>Host</td><td><?php echo $system['host'] . ' ' . $system['hostbyaddress'] . ' (' . $system['ip'] . ')'; ?></td></tr>
-              <tr><td class="subinfo"></td><td>Date</td><td><?php echo $system['date']; ?></td></tr>
-              <tr><td class="subinfo"></td><td>Uptime</td><td><?php echo $system['uptime']; ?></td></tr>
+              <tr><td><b><?php echo _('Server'); ?></b></td><td>OS</td><td><?php echo $system['system'] . ' ' . $system['kernel']; ?></td></tr>
+              <tr><td class="subinfo"></td><td><?php echo _('Host'); ?></td><td><?php echo $system['host'] . ' ' . $system['hostbyaddress'] . ' (' . $system['ip'] . ')'; ?></td></tr>
+              <tr><td class="subinfo"></td><td><?php echo _('Date'); ?></td><td><?php echo $system['date']; ?></td></tr>
+              <tr><td class="subinfo"></td><td><?php echo _('Uptime'); ?></td><td><?php echo $system['uptime']; ?></td></tr>
 
-              <tr><td><b>HTTP</b></td><td>Server</td><td colspan="2"><?php echo $system['http_server'] . " " . $system['http_proto'] . " " . $system['http_mode'] . " " . $system['http_port']; ?></td></tr>
+              <tr><td><b>HTTP</b></td><td><?php echo _('Server'); ?></td><td colspan="2"><?php echo $system['http_server'] . " " . $system['http_proto'] . " " . $system['http_mode'] . " " . $system['http_port']; ?></td></tr>
 
-              <tr><td><b>Database</b></td><td>Version</td><td><?php echo $system['db_version']; ?></td></tr>
-              <tr><td class="subinfo"></td><td>Host</td><td><?php echo $system['db_server'] . ' (' . $system['db_ip'] . ')'; ?></td></tr>
-              <tr><td class="subinfo"></td><td>Date</td><td><?php echo $system['db_date']; ?></td></tr>
-              <tr><td class="subinfo"></td><td>Stats</td><td><?php echo $system['db_stat']; ?></td></tr>
+              <tr><td><b><?php echo _('Database'); ?></b></td><td><?php echo _('Version'); ?></td><td><?php echo $system['db_version']; ?></td></tr>
+              <tr><td class="subinfo"></td><td><?php echo _('Host'); ?></td><td><?php echo $system['db_server'] . ' (' . $system['db_ip'] . ')'; ?></td></tr>
+              <tr><td class="subinfo"></td><td><?php echo _('Date'); ?></td><td><?php echo $system['db_date']; ?></td></tr>
+              <tr><td class="subinfo"></td><td><?php echo _('Stats'); ?></td><td><?php echo $system['db_stat']; ?></td></tr>
 <?php
 if ($redis_enabled) {
 ?>
-              <tr><td><b>Redis</b></td><td>Version</td><td><?php echo $redis->info()['redis_version']; ?></td></tr>
-              <tr><td class="subinfo"></td><td>Host</td><td><?php echo $system['redis_server'] . ' (' . $system['redis_ip'] . ')'; ?></td></tr>
-              <tr><td class="subinfo"></td><td>Size</td><td><span id="redisused"><?php echo $redis->dbSize() . " keys  (" . $redis->info()['used_memory_human'].")";?></span><button id="redisflush" class="btn btn-info btn-small pull-right"><?php echo _('Flush'); ?></button></td></tr>
-              <tr><td class="subinfo"></td><td>Uptime</td><td><?php echo $redis->info()['uptime_in_days'] . " days"; ?></td></tr>
+              <tr><td><b>Redis</b></td><td><?php echo _('Version'); ?></td><td><?php echo $redis->info()['redis_version']; ?></td></tr>
+              <tr><td class="subinfo"></td><td><?php echo _('Host'); ?></td><td><?php echo $system['redis_server'] . ' (' . $system['redis_ip'] . ')'; ?></td></tr>
+              <tr><td class="subinfo"></td><td><?php echo _('Size'); ?></td><td><span id="redisused"><?php echo $redis->dbSize() . " keys  (" . $redis->info()['used_memory_human'].")";?></span><button id="redisflush" class="btn btn-info btn-small pull-right"><?php echo _('Flush'); ?></button></td></tr>
+              <tr><td class="subinfo"></td><td><?php echo _('Uptime'); ?></td><td><?php echo $redis->info()['uptime_in_days'] . " days"; ?></td></tr>
 <?php
 }
 if ($mqtt_enabled) {
 ?>
-              <tr><td><b>MQTT</b></td><td>Version</td><td><?php if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') { echo "n/a"; } else { if (file_exists('/usr/sbin/mosquitto')) { echo exec('/usr/sbin/mosquitto -h | grep -oP \'(?<=mosquitto\sversion\s)[0-9.]+(?=\s*\(build)\''); } } ?></td></tr>
-              <tr><td class="subinfo"></td><td>Host</td><td><?php echo $system['mqtt_server']. ":" . $system['mqtt_port'] . ' (' . $system['mqtt_ip'] . ')'; ?></td></tr>
+              <tr><td><b>MQTT</b></td><td><?php echo _('Version'); ?></td><td><?php if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') { echo "n/a"; } else { if (file_exists('/usr/sbin/mosquitto')) { echo exec('/usr/sbin/mosquitto -h | grep -oP \'(?<=mosquitto\sversion\s)[0-9.]+(?=\s*\(build)\''); } } ?></td></tr>
+              <tr><td class="subinfo"></td><td><?php echo _('Host'); ?></td><td><?php echo $system['mqtt_server']. ":" . $system['mqtt_port'] . ' (' . $system['mqtt_ip'] . ')'; ?></td></tr>
 <?php
 }
 
@@ -302,13 +302,13 @@ if ($system['mem_info']) {
               if ($system['mem_info']['SwapTotal'] > 0) {
                 $sysSwapUsed = $system['mem_info']['SwapTotal'] - $system['mem_info']['SwapFree'];
                 $sysSwapPercent = sprintf('%.2f',($sysSwapUsed / $system['mem_info']['SwapTotal']) * 100);
-                echo "<tr><td class='subinfo'></td><td>Swap</td><td><div class='progress progress-info' style='margin-bottom: 0;'><div class='bar' style='width: ".$sysSwapPercent."%;'>Used&nbsp;".$sysSwapPercent."%</div></div>";
-                echo "<b>Total:</b> ".formatSize($system['mem_info']['SwapTotal'])."<b> Used:</b> ".formatSize($sysSwapUsed)."<b> Free:</b> ".formatSize($system['mem_info']['SwapFree'])."</td></tr>\n";
+                echo "<tr><td class='subinfo'></td><td>Swap</td><td><div class='progress progress-info' style='margin-bottom: 0;'><div class='bar' style='width: ".$sysSwapPercent."%;'>._('Used').&nbsp;".$sysSwapPercent."%</div></div>";
+                echo "<b>"._('Total').":</b> ".formatSize($system['mem_info']['SwapTotal'])."<b> "._('Used').":</b> ".formatSize($sysSwapUsed)."<b> "._('Free').":</b> ".formatSize($system['mem_info']['SwapFree'])."</td></tr>\n";
               }
 }
 // Filesystem Information
                 if (count($system['partitions']) > 0) {
-                    echo "<tr><td><b>Disk</b></td><td><b>Mount</b></td><td><b>Stats</b></td></tr>\n";
+                    echo "<tr><td><b>"._('Disk')."</b></td><td><b>"._('Mount')."</b></td><td><b>"._('Stats')."</b></td></tr>\n";
                     foreach($system['partitions'] as $fs) {
                       if (!$fs['Temporary']['bool'] && $fs['FileSystem']['text']!= "none" && $fs['FileSystem']['text']!= "udev") {
                         $diskFree = $fs['Free']['value'];
@@ -317,15 +317,15 @@ if ($system['mem_info']) {
                         $diskPercent = sprintf('%.2f',($diskUsed / $diskTotal) * 100);
                         
                         echo "<tr><td class='subinfo'></td><td>".$fs['Partition']['text']."</td><td><div class='progress progress-info' style='margin-bottom: 0;'><div class='bar' style='width: ".$diskPercent."%;'>Used&nbsp;".$diskPercent."%</div></div>";
-                        echo "<b>Total:</b> ".formatSize($diskTotal)."<b> Used:</b> ".formatSize($diskUsed)."<b> Free:</b> ".formatSize($diskFree)."</td></tr>\n";
+                        echo "<b>"._('Total').":</b> ".formatSize($diskTotal)."<b> "._('Used').":</b> ".formatSize($diskUsed)."<b> "._('Free').":</b> ".formatSize($diskFree)."</td></tr>\n";
                         
                       }
                     }
                 }
 
 ?>
-              <tr><td><b>PHP</b></td><td>Version</td><td colspan="2"><?php echo $system['php'] . ' (' . "Zend Version" . ' ' . $system['zend'] . ')'; ?></td></tr>
-              <tr><td class="subinfo"></td><td>Modules</td><td colspan="2"><?php while (list($key, $val) = each($system['php_modules'])) { echo "$val &nbsp; "; } ?></td></tr>
+              <tr><td><b>PHP</b></td><td><?php echo _('Version'); ?></td><td colspan="2"><?php echo $system['php'] . ' (' . "Zend Version" . ' ' . $system['zend'] . ')'; ?></td></tr>
+              <tr><td class="subinfo"></td><td><?php echo _('Modules'); ?></td><td colspan="2"><?php while (list($key, $val) = each($system['php_modules'])) { echo "$val &nbsp; "; } ?></td></tr>
             </table>
             
         </td>

@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emoncms3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-02 22:36+0100\n"
-"PO-Revision-Date: 2015-02-03 14:24+0100\n"
-"Last-Translator: @sumpfing <anne@sumpfing.de>\n"
+"POT-Creation-Date: 2017-01-29 17:17+0100\n"
+"PO-Revision-Date: 2017-01-29 17:22+0100\n"
+"Last-Translator: Frank Dille\n"
 "Language-Team: @sumpfing <anne@sumpfing.de>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
@@ -12,49 +12,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
 "X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.11\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ../../..\n"
 
-#: ../../../userlist_view.php:32
-msgid "Id"
-msgstr "Id"
-
-#: ../../../userlist_view.php:33
-msgid "Username"
-msgstr "Benutzername"
-
-#: ../../../userlist_view.php:34
-msgid "Email"
-msgstr "Email"
-
-#: ../../../admin_menu.php:7
-msgid "Admin"
-msgstr "Admin"
-
-#: ../../../admin_main_view.php:10 ../../../admin_main_view.php:14
-msgid "Users"
-msgstr "Benutzer"
-
-#: ../../../admin_main_view.php:11
-msgid "Administer user accounts"
-msgstr "Benutzerkonten verwalten"
-
-#: ../../../admin_main_view.php:19 ../../../update_view.php:29
-msgid "Update database"
-msgstr "Datenbankupdate"
-
-#: ../../../admin_main_view.php:20
-msgid ""
-"Run this after updating emoncms, after installing a new module or to check "
-"emoncms database status."
-msgstr ""
-"Bitte starten nach einem emoncms Update, nach Installation eines Moduls oder "
-"um den Datenbankstatus zu prüfen."
-
-#: ../../../admin_main_view.php:23
-msgid "Update & check"
-msgstr "Update & prüfen"
+#: ../../../admin_controller.php:18
+msgid "Admin re-authentication required"
+msgstr "Administrator Authorisierung notwendig"
 
 #: ../../../admin_db_view.php:1
 msgid "Database setup, update and status check"
@@ -88,21 +52,174 @@ msgstr "Name"
 msgid "Status"
 msgstr "Status"
 
-#: ../../../update_view.php:37
+#: ../../../admin_main_view.php:86
+msgid "Shutdown"
+msgstr "Herunterfahren"
+
+#: ../../../admin_main_view.php:86
+msgid "Reboot"
+msgstr "Neustart"
+
+#: ../../../admin_main_view.php:89
+msgid "Shutdown Unsupported"
+msgstr "Herunterfahren nicht unterstützt"
+
+#: ../../../admin_main_view.php:162 ../../../admin_menu.php:7
+msgid "Administration"
+msgstr "Administration"
+
+#: ../../../admin_main_view.php:166 ../../../admin_main_view.php:170
+msgid "Users"
+msgstr "Benutzer"
+
+#: ../../../admin_main_view.php:167
+msgid "Administer user accounts"
+msgstr "Benutzerverwaltung"
+
+#: ../../../admin_main_view.php:175 ../../../update_view.php:21
+msgid "Update database"
+msgstr "Update der Datenbank "
+
+#: ../../../admin_main_view.php:176
+msgid ""
+"Run this after updating emoncms, after installing a new module or to check "
+"emoncms database status."
+msgstr ""
+"Bitte nach einem emoncms Update starten, z. B. nach Installation eines "
+"Moduls oder um den Status der Datenbank zu prüfen."
+
+#: ../../../admin_main_view.php:179
+msgid "Update & check"
+msgstr "Update & Überprüfung"
+
+#: ../../../admin_main_view.php:190
+msgid "Logger"
+msgstr "Logger"
+
+#: ../../../admin_main_view.php:205
+msgid "Auto refresh"
+msgstr "Autom. Aktualisierung"
+
+#: ../../../admin_main_view.php:206 ../../../admin_main_view.php:232
+msgid "Download log"
+msgstr "Download Protokoll"
+
+#: ../../../admin_main_view.php:226
+msgid "Update emonPi"
+msgstr "emonPi Aktualisieren"
+
+#: ../../../admin_main_view.php:231
+msgid "Update Now"
+msgstr "Jetzt Aktualisieren"
+
+#: ../../../admin_main_view.php:247
+msgid "Server Information"
+msgstr "Server Informationen"
+
+#: ../../../admin_main_view.php:249 ../../../admin_main_view.php:266
+#: ../../../admin_main_view.php:273 ../../../admin_main_view.php:281
+#: ../../../admin_main_view.php:327
+msgid "Version"
+msgstr "Version"
+
+#: ../../../admin_main_view.php:254
+msgid "loading..."
+msgstr "wird geladen ..."
+
+#: ../../../admin_main_view.php:259 ../../../admin_main_view.php:264
+msgid "Server"
+msgstr "Server"
+
+#: ../../../admin_main_view.php:260 ../../../admin_main_view.php:267
+#: ../../../admin_main_view.php:274 ../../../admin_main_view.php:282
+msgid "Host"
+msgstr "Rechner"
+
+#: ../../../admin_main_view.php:261 ../../../admin_main_view.php:268
+msgid "Date"
+msgstr "Datum"
+
+#: ../../../admin_main_view.php:262 ../../../admin_main_view.php:276
+msgid "Uptime"
+msgstr "Laufzeit"
+
+#: ../../../admin_main_view.php:266
+msgid "Database"
+msgstr "Datenbank "
+
+#: ../../../admin_main_view.php:269 ../../../admin_main_view.php:311
+msgid "Stats"
+msgstr "Status"
+
+#: ../../../admin_main_view.php:275
+msgid "Size"
+msgstr "Größe"
+
+# Unklar: Bereinigen oder Schreiben?
+#: ../../../admin_main_view.php:275
+msgid "Flush"
+msgstr "Bereinigen"
+
+#: ../../../admin_main_view.php:306 ../../../admin_main_view.php:320
+msgid "Total"
+msgstr "Gesamt"
+
+#: ../../../admin_main_view.php:306 ../../../admin_main_view.php:320
+msgid "Used"
+msgstr "Belegt"
+
+#: ../../../admin_main_view.php:306 ../../../admin_main_view.php:320
+msgid "Free"
+msgstr "Frei"
+
+#: ../../../admin_main_view.php:311
+msgid "Disk"
+msgstr "Disk"
+
+#: ../../../admin_main_view.php:311
+msgid "Mount"
+msgstr "Eingebunden"
+
+#: ../../../admin_main_view.php:328
+msgid "Modules"
+msgstr "Module"
+
+#: ../../../update_view.php:26
 msgid "Apply changes"
 msgstr "Änderungen zuweisen"
 
-#: ../../../update_view.php:44
+#: ../../../update_view.php:31
 msgid "Check for further updates"
-msgstr "Auf weitere Updates prüfen"
+msgstr "auf Updates prüfen"
 
-#: ../../../update_view.php:51
+#: ../../../update_view.php:36
 msgid "Database is up to date "
 msgstr "Datenbank ist aktuell"
 
-#: ../../../update_view.php:51
+#: ../../../update_view.php:36
 msgid "Nothing to do"
 msgstr "Nichts zu tun"
+
+#: ../../../userlist_view.php:29
+msgid "Id"
+msgstr "Id"
+
+#: ../../../userlist_view.php:30
+msgid "Username"
+msgstr "Benutzername"
+
+#: ../../../userlist_view.php:31
+msgid "Email"
+msgstr "E-Mail"
+
+#~ msgid "Memory"
+#~ msgstr "Speicher"
+
+#~ msgid "RAM"
+#~ msgstr "RAM"
+
+#~ msgid "Admin"
+#~ msgstr "Admin"
 
 #~ msgid "en_EN"
 #~ msgstr "English"

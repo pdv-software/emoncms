@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emoncms3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-02 22:44+0100\n"
-"PO-Revision-Date: 2015-02-03 14:27+0100\n"
-"Last-Translator: @sumpfing <anne@sumpfing.de>\n"
+"POT-Creation-Date: 2017-01-29 00:16+0100\n"
+"PO-Revision-Date: 2017-01-29 00:19+0100\n"
+"Last-Translator: Frank Dille\n"
 "Language-Team: @sumpfing <anne@sumpfing.de>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
@@ -12,76 +12,202 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
 "X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.11\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ../../..\n"
 
-#: ../../../user_model.php:153
-msgid "Missing username, password or email parameter"
-msgstr "Fehlender Benutzername, Passwort oder Emailparameter"
+#: ../../../login_block.php:34 ../../../profile/profile.php:65
+msgid "Email"
+msgstr "E-Mail"
 
-#: ../../../user_model.php:155 ../../../user_model.php:381
+#: ../../../login_block.php:40 ../../../profile/profile.php:56
+msgid "Username"
+msgstr "Benutzername"
+
+#: ../../../login_block.php:47
+msgid "Password"
+msgstr "Passwort"
+
+#: ../../../login_block.php:53
+msgid "Confirm password"
+msgstr "Passwort bestätigen"
+
+#: ../../../login_block.php:64
+msgid "Remember me"
+msgstr "Erinnere dich an mich"
+
+#: ../../../login_block.php:68
+msgid "Login"
+msgstr "Login"
+
+#: ../../../login_block.php:69 ../../../login_block.php:76
+#: ../../../login_block.php:94
+msgid "or"
+msgstr "oder"
+
+#: ../../../login_block.php:70
+msgid "register"
+msgstr "registrieren"
+
+#: ../../../login_block.php:75
+msgid "Register"
+msgstr "Registrieren"
+
+#: ../../../login_block.php:77 ../../../login_block.php:95
+msgid "login"
+msgstr "Anmelden"
+
+#: ../../../profile/profile.php:52
+msgid "My account"
+msgstr "Mein Konto"
+
+#: ../../../profile/profile.php:57 ../../../profile/profile.php:66
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: ../../../profile/profile.php:60 ../../../profile/profile.php:69
+#: ../../../profile/profile.php:94
+msgid "Save"
+msgstr "Speichern"
+
+#: ../../../profile/profile.php:75
+msgid "Change Password"
+msgstr "Passwort ändern"
+
+#: ../../../profile/profile.php:82
+msgid "Current password"
+msgstr "Aktuelles Passwort"
+
+#: ../../../profile/profile.php:86
+msgid "New password"
+msgstr "Neues Passwort"
+
+#: ../../../profile/profile.php:90
+msgid "Repeat new password"
+msgstr "Neues Passwort wiederholen"
+
+#: ../../../profile/profile.php:95
+msgid "Cancel"
+msgstr "Abbruch"
+
+#: ../../../profile/profile.php:101
+msgid "Write API Key"
+msgstr "Write API Key"
+
+#: ../../../profile/profile.php:105
+msgid "Read API Key"
+msgstr "Read Api Key"
+
+#: ../../../profile/profile.php:110
+msgid "Mobile App Integration QR Code"
+msgstr "QR Code zur Einbindung der Mobilen App"
+
+#: ../../../profile/profile.php:122
+msgid "My Profile"
+msgstr "Mein Profil"
+
+#: ../../../profile/profile.php:164
+msgid "Gravatar"
+msgstr "Gravatar"
+
+#: ../../../profile/profile.php:165
+msgid "Name"
+msgstr "Name"
+
+#: ../../../profile/profile.php:166
+msgid "Location"
+msgstr "Ort"
+
+#: ../../../profile/profile.php:167
+msgid "Timezone"
+msgstr "Zeitzone"
+
+#: ../../../profile/profile.php:168
+msgid "Language"
+msgstr "Sprache"
+
+#: ../../../profile/profile.php:169
+msgid "Bio"
+msgstr "Bio"
+
+#: ../../../profile/profile.php:295
+msgid "Passwords do not match"
+msgstr "Passwort falsch"
+
+#: ../../../user_menu.php:8
+msgid "My Account"
+msgstr "Mein Konto"
+
+#: ../../../user_menu.php:9
+msgid "Logout"
+msgstr "Abmelden"
+
+#: ../../../user_model.php:159
+msgid "Missing username, password or email parameter"
+msgstr "Fehlender Benutzername, Passwort oder E-Mail Parameter"
+
+#: ../../../user_model.php:161 ../../../user_model.php:367
 msgid "Username must only contain a-z and 0-9 characters"
 msgstr "Benutzername darf nur Zeichen a-z und 0-9 enthalten"
 
-#: ../../../user_model.php:159 ../../../user_model.php:392
+#: ../../../user_model.php:165 ../../../user_model.php:378
 msgid "Username already exists"
 msgstr "Benutzer existiert bereits"
 
-#: ../../../user_model.php:161 ../../../user_model.php:310
-#: ../../../user_model.php:401
+#: ../../../user_model.php:167 ../../../user_model.php:310
+#: ../../../user_model.php:387
 msgid "Email address format error"
-msgstr "Format der Emailadresse falsch"
+msgstr "Format der E-mail Adresse falsch"
 
-#: ../../../user_model.php:163 ../../../user_model.php:379
+#: ../../../user_model.php:169 ../../../user_model.php:365
 msgid "Username length error"
 msgstr "Länge des Benutzernamen ungültig"
 
-#: ../../../user_model.php:164 ../../../user_model.php:283
-#: ../../../user_model.php:284
+#: ../../../user_model.php:170 ../../../user_model.php:284
+#: ../../../user_model.php:285
 msgid "Password length error"
 msgstr "Länge des Passworts ungültig"
 
-#: ../../../user_model.php:177
+#: ../../../user_model.php:184
 msgid "Error creating user"
 msgstr "Fehler beim Anlegen des Benutzer"
 
-#: ../../../user_model.php:191 ../../../user_model.php:241
+#: ../../../user_model.php:198 ../../../user_model.php:247
 msgid "Username or password empty"
 msgstr "Benutzer und Passwort leer"
 
-#: ../../../user_model.php:197
+#: ../../../user_model.php:204
 msgid ""
 "Username must only contain a-z 0-9 dash and underscore, if you created an "
 "account before this rule was in place enter your username without the non a-"
 "z 0-9 dash underscore characters to login and feel free to change your "
 "username on the profile page."
 msgstr ""
-"Benutzername darf nur a-z, 0-9, - oder _ enthalten. Wenn du einen Account "
-"vor dieser Regel erstellt hast bitte den Benutzernamen ohne das ungültige "
-"Zeichen eingeben. Du kannst dann deinen Benutzernamen in den "
-"Accounteinstellungen ändern."
+"Benutzername darf nur a-z, 0-9, - oder _ enthalten. Wenn Sie ein "
+"Benutzekonto vor dieser Regel erstellt haben bitte den Benutzernamen ohne "
+"das ungültige Zeichen eingeben. Der Benutzername kann in den Konto-"
+"Einstellungen geändert werden."
 
-#: ../../../user_model.php:204
+#: ../../../user_model.php:211
 msgid "Username does not exist"
 msgstr "Benutzer existiert nicht"
 
-#: ../../../user_model.php:211
+#: ../../../user_model.php:218
 msgid ""
 "Incorrect password, if your sure its correct try clearing your browser cache"
 msgstr ""
-"Falsches Passwort, wenn du sicher bist dass es richtig ist bitte den "
+"Falsches Passwort, wenn Sie sicher sind dass es richtig ist bitte den "
 "Browsercache löschen"
 
-#: ../../../user_model.php:232
+#: ../../../user_model.php:238
 msgid "Login successful"
 msgstr "Login erfolgreich"
 
-#: ../../../user_model.php:244
+#: ../../../user_model.php:250
 msgid "Username must only contain a-z 0-9 dash and underscore"
 msgstr "Benutzername darf nur a-z, 0-9, - oder _ enthalten"
 
-#: ../../../user_model.php:251 ../../../user_model.php:258
+#: ../../../user_model.php:257 ../../../user_model.php:264
 msgid "Incorrect authentication"
 msgstr "Ungültige Authentifizierung"
 
@@ -89,166 +215,50 @@ msgstr "Ungültige Authentifizierung"
 msgid "Old password incorect"
 msgstr "Altes Passwort falsch"
 
-#: ../../../user_model.php:376
+#: ../../../user_model.php:362
 msgid ""
-"As your using a cookie based remember me login, please logout and log back "
-"in to change username"
+"As you are using a cookie based remember me login, please logout and log "
+"back in to change username"
 msgstr ""
-"Wenn du ein \"erinnere dich an mich\" Cookie verwendest, bitte logge dich "
-"aus und wieder ein um den Benutzernamen zu ändern"
+"Wenn Sie ein \"Remember Me\" Cookie verwenden, loggen Sie sich bitte aus "
+"und wieder ein, um den Benutzernamen zu ändern"
 
-#: ../../../user_model.php:388
+#: ../../../user_model.php:374
 msgid "Username updated"
 msgstr "Benutzername aktualisiert"
 
-#: ../../../user_model.php:398
+#: ../../../user_model.php:384
 msgid ""
-"As your using a cookie based remember me login, please logout and log back "
-"in to change email"
+"As you are using a cookie based remember me login, please logout and log "
+"back in to change email"
 msgstr ""
 "Wenn du ein \"erinnere dich an mich\" Cookie verwendest, bitte logge dich "
-"aus und wieder ein um die Emailadresse zu ändern"
+"aus und wieder ein um die E-Mail Adresse zu ändern"
 
-#: ../../../user_model.php:404
+#: ../../../user_model.php:392
 msgid "Email updated"
-msgstr "Emailadresse aktualisiert"
+msgstr "E-Mail aktualisiert"
 
-#: ../../../user_menu.php:7
-msgid "Account"
-msgstr "Konto"
+#~ msgid "App Integration QR Code"
+#~ msgstr "App Integration QR Code"
 
-#: ../../../user_menu.php:8
-msgid "Logout"
-msgstr "Logout"
+#~ msgid "Account"
+#~ msgstr "Konto"
 
-#: ../../../login_block.php:30
-msgid "Username:"
-msgstr "Benutzername:"
+#~ msgid "Username:"
+#~ msgstr "Benutzername:"
 
-#: ../../../login_block.php:36
-msgid "Email:"
-msgstr "Email:"
+#~ msgid "Email:"
+#~ msgstr "Email:"
 
-#: ../../../login_block.php:42
-msgid "Password:"
-msgstr "Passwort:"
+#~ msgid "cancel"
+#~ msgstr "abbrechen"
 
-#: ../../../login_block.php:48
-msgid "Confirm password:"
-msgstr "Passwort bestätigen:"
+#~ msgid "es_ES"
+#~ msgstr "Spanish"
 
-#: ../../../login_block.php:56
-msgid "Remember me"
-msgstr "Erinnere dich an mich"
-
-#: ../../../login_block.php:57
-msgid "Login"
-msgstr "Login"
-
-#: ../../../login_block.php:58 ../../../login_block.php:62
-msgid "or"
-msgstr "oder"
-
-#: ../../../login_block.php:58
-msgid "register"
-msgstr "registrieren"
-
-#: ../../../login_block.php:62
-msgid "Register"
-msgstr "Registrieren"
-
-#: ../../../login_block.php:63
-msgid "cancel"
-msgstr "abbrechen"
-
-#: ../../../profile/profile.php:22
-msgid "es_ES"
-msgstr "Spanish"
-
-#: ../../../profile/profile.php:23
-msgid "fr_FR"
-msgstr "Französisch"
-
-#: ../../../profile/profile.php:35
-msgid "My account"
-msgstr "Mein Konto"
-
-#: ../../../profile/profile.php:39
-msgid "Username"
-msgstr "Benutzername"
-
-#: ../../../profile/profile.php:40 ../../../profile/profile.php:49
-msgid "Edit"
-msgstr "Bearbeiten"
-
-#: ../../../profile/profile.php:43 ../../../profile/profile.php:52
-#: ../../../profile/profile.php:77
-msgid "Save"
-msgstr "Speichern"
-
-#: ../../../profile/profile.php:48
-msgid "Email"
-msgstr "Email"
-
-#: ../../../profile/profile.php:58
-msgid "Change Password"
-msgstr "Passwort ändern"
-
-#: ../../../profile/profile.php:65
-msgid "Current password"
-msgstr "Aktuelles Passwort"
-
-#: ../../../profile/profile.php:69
-msgid "New password"
-msgstr "Neues Passwort"
-
-#: ../../../profile/profile.php:73
-msgid "Repeat new password"
-msgstr "Neues Passwort wiederholen"
-
-#: ../../../profile/profile.php:78
-msgid "Cancel"
-msgstr "Abbruch"
-
-#: ../../../profile/profile.php:84
-msgid "Write API Key"
-msgstr "Write API Key"
-
-#: ../../../profile/profile.php:89
-msgid "Read API Key"
-msgstr "Read Api Key"
-
-#: ../../../profile/profile.php:98
-msgid "My Profile"
-msgstr "Mein Profil"
-
-#: ../../../profile/profile.php:121
-msgid "Gravatar"
-msgstr "Gravatar"
-
-#: ../../../profile/profile.php:122
-msgid "Name"
-msgstr "Name"
-
-#: ../../../profile/profile.php:123
-msgid "Location"
-msgstr "Ort"
-
-#: ../../../profile/profile.php:124
-msgid "Timezone"
-msgstr "Zeitzone"
-
-#: ../../../profile/profile.php:125
-msgid "Language"
-msgstr "Sprache"
-
-#: ../../../profile/profile.php:126
-msgid "Bio"
-msgstr "Bio"
-
-#: ../../../profile/profile.php:248
-msgid "Passwords do not match"
-msgstr "Passwort falsch"
+#~ msgid "fr_FR"
+#~ msgstr "Französisch"
 
 #~ msgid ""
 #~ "Or if you are new enter a username and password above and click register"

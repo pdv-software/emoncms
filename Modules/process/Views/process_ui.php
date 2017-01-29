@@ -61,15 +61,15 @@
 
                         <span id="type-value" style="display:none">
                             <div class="input-prepend">
-                                <span class="add-on value-select-label">Value</span>
-                                <input type="text" id="value-input" class="input-medium" placeholder="Type value..." />
+                                <span class="add-on value-select-label"><?php echo _('Value'); ?></span>
+                                <input type="text" id="value-input" class="input-medium" placeholder="<?php echo _('Type value...'); ?>" />
                             </div>
                         </span>
                         
                         <span id="type-text" style="display:none">
                             <div class="input-prepend">
-                                <span class="add-on text-select-label">Text</span>
-                                <input type="text" id="text-input" class="input-large" placeholder="Type text..." />
+                                <span class="add-on text-select-label"><?php echo _('Text'); ?></span>
+                                <input type="text" id="text-input" class="input-large" placeholder="<?php echo _('Type text...'); ?>" />
                             </div>
                         </span>
 
@@ -93,13 +93,13 @@
                         
                         <span id="type-feed"> 
                             <div class="input-prepend">
-                                <span class="add-on feed-select-label">Data</span>
+                                <span class="add-on feed-select-label"><?php echo _('Engine'); ?>Data</span>
                                 <div class="btn-group">
                                     <select id="feed-data-type" class="input-medium" style="width: 105px;" readonly>
-                                        <option value=0>Any type</option>
-                                        <option value=1>Realtime</option>
-                                        <option value=2>Daily</option>
-                                        <option value=3>Histogram</option>
+                                        <option value=0><?php echo _('Any type'); ?></option>
+                                        <option value=1><?php echo _('Realtime'); ?></option>
+                                        <option value=2><?php echo _('Daily'); ?></option>
+                                        <option value=3><?php echo _('Histogram'); ?></option>
                                     </select>
                                 </div>
                             </div>
@@ -118,11 +118,12 @@
                                 <div class="btn-group">
                                     <select id="feed-engine" class="input-medium">
 <?php // All supported engines must be here, add to engines_hidden array in settings.php to hide them from user ?>
-                                        <option value=6>PHPFIWA Fixed Interval With Averaging</option>
-                                        <option value=5>PHPFINA Fixed Interval No Averaging</option>
-                                        <option value=2>PHPTIMESERIES Variable Interval No Averaging</option>
-                                        <option value=0>MYSQL TimeSeries</option>
-                                        <option value=8>MYSQL Memory (RAM data lost on power off)</option>
+                                        <option value=6><?php echo _('PHPFIWA Fixed Interval With Averaging'); ?></option>
+                                        <option value=5><?php echo _('PHPFINA Fixed Interval No Averaging'); ?></option>
+                                        <option value=2><?php echo _('PHPTIMESERIES Variable Interval No Averaging'); ?></option>
+                                        <option value=0><?php echo _('MYSQL TimeSeries'); ?></option>
+                                        <option value=8><?php echo _('MYSQL Memory (RAM data lost on power off)'); ?></option>
+<!--                                        <option value=10><?php echo _('RRD TimeSeries'); ?></option> -->
                                     </select>
 
                                     <select id="feed-interval" class="input-mini">

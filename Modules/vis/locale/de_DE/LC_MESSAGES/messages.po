@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emoncms3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-02 22:44+0100\n"
-"PO-Revision-Date: 2015-02-03 14:27+0100\n"
-"Last-Translator: @sumpfing <anne@sumpfing.de>\n"
+"POT-Creation-Date: 2017-01-29 00:23+0100\n"
+"PO-Revision-Date: 2017-01-29 00:25+0100\n"
+"Last-Translator: Frank Dille\n"
 "Language-Team: @sumpfing <anne@sumpfing.de>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
@@ -12,35 +12,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
 "X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.11\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ../../..\n"
 
-#: ../../../vis_menu.php:7
-msgid "Vis"
-msgstr "Vis"
-
-#: ../../../vis_controller.php:14
-msgid "Restricted access"
-msgstr "Beschränkter Zugriff"
-
-#: ../../../vis_main_view.php:26
+#: ../../../Views/vis_main_view.php:33
 msgid "Visualisations"
 msgstr "Visualisierungen"
 
-#: ../../../vis_main_view.php:33
+#: ../../../Views/vis_main_view.php:38
 msgid "Select visualisation:"
 msgstr "Wähle Visualisierung:"
 
-#: ../../../vis_main_view.php:43
+#: ../../../Views/vis_main_view.php:43
 msgid "Set options:"
 msgstr "Setze Optionen:"
 
-#: ../../../vis_main_view.php:45
+#: ../../../Views/vis_main_view.php:45
 msgid "Note:"
 msgstr "Hinweis:"
 
-#: ../../../vis_main_view.php:45
+#: ../../../Views/vis_main_view.php:45
 msgid ""
 "If a feed does not appear in the selection box, check that the type has been "
 "set on the feeds page."
@@ -48,19 +40,19 @@ msgstr ""
 "Wenn ein Feed nicht in der Auswahlbox erscheint bitte den Typ auf der "
 "Feedseite prüfen."
 
-#: ../../../vis_main_view.php:53
+#: ../../../Views/vis_main_view.php:50
 msgid "View"
 msgstr "Anzeigen"
 
-#: ../../../vis_main_view.php:54
+#: ../../../Views/vis_main_view.php:51
 msgid "Full screen"
 msgstr "Vollbild"
 
-#: ../../../vis_main_view.php:62
+#: ../../../Views/vis_main_view.php:56
 msgid "Embed in your website:"
-msgstr "In deine Seite einbetten:"
+msgstr "In Seite einbetten:"
 
-#: ../../../vis_main_view.php:139
+#: ../../../Views/vis_main_view.php:135
 msgid ""
 "Some of the feeds selected are not public, to embed a visualisation publicly "
 "first make the feeds that you want to use public."
@@ -68,45 +60,490 @@ msgstr ""
 "Einige Feeds sind als nicht-öffentlich markiert, um eine Visualisierung "
 "öffentlich einzubetten erst den Feed öffentlich machen."
 
-#: ../../../vis_main_view.php:139
+#: ../../../Views/vis_main_view.php:135
 msgid "To embed privately:"
 msgstr "Zum privaten einbetten:"
 
-#: ../../../visualisations/editrealtime.php:54
-#: ../../../visualisations/editrealtime.php:60
+#: ../../../Views/vis_main_view.php:182
+msgid "Off"
+msgstr "Aus"
+
+#: ../../../Views/vis_main_view.php:182
+msgid "On"
+msgstr "Ein"
+
+#: ../../../vis_controller.php:11
+msgid "Restricted access"
+msgstr "Beschränkter Zugriff"
+
+#: ../../../vis_controller.php:121
+msgid "Not configured"
+msgstr "Nicht konfiguriert"
+
+#: ../../../vis_controller.php:121
+msgid "or"
+msgstr "oder"
+
+#: ../../../vis_controller.php:121
+msgid "Authentication not valid"
+msgstr "Authentifikation ungültig"
+
+#: ../../../vis_menu.php:7
+msgid "Visualization"
+msgstr "Visualisierung"
+
+#: ../../../vis_object.php:20
+msgid "RealTime"
+msgstr "Echtzeit"
+
+#: ../../../vis_object.php:21 ../../../vis_object.php:28
+#: ../../../vis_object.php:43 ../../../vis_object.php:55
+#: ../../../vis_object.php:60 ../../../vis_object.php:65
+#: ../../../vis_object.php:97 ../../../vis_object.php:109
+#: ../../../vis_object.php:114 ../../../vis_object.php:121
+#: ../../../vis_object.php:125 ../../../vis_object.php:138
+#: ../../../vis_object.php:142
+msgid "feed"
+msgstr "Feed"
+
+#: ../../../vis_object.php:22 ../../../vis_object.php:30
+#: ../../../vis_object.php:44
+msgid "colour"
+msgstr "Farbe"
+
+#: ../../../vis_object.php:27
+msgid "RawData"
+msgstr "Rohdaten"
+
+#: ../../../vis_object.php:29 ../../../vis_object.php:143
+msgid "fill"
+msgstr "Füllen"
+
+#: ../../../vis_object.php:31 ../../../vis_object.php:46
+#: ../../../vis_object.php:56
+msgid "units"
+msgstr "Einheit"
+
+#: ../../../vis_object.php:32 ../../../vis_object.php:47
+msgid "dp"
+msgstr "Kommast."
+
+#: ../../../vis_object.php:33 ../../../vis_object.php:48
+msgid "scale"
+msgstr "Skalieren"
+
+#: ../../../vis_object.php:34
+msgid "ymin"
+msgstr ""
+
+#: ../../../vis_object.php:35
+msgid "ymax"
+msgstr ""
+
+#: ../../../vis_object.php:36
+msgid "xtitle"
+msgstr ""
+
+#: ../../../vis_object.php:37
+msgid "ytitle"
+msgstr ""
+
+#: ../../../vis_object.php:42
+msgid "BarGraph"
+msgstr "Balken"
+
+#: ../../../vis_object.php:45
+msgid "interval"
+msgstr "Intervall"
+
+#: ../../../vis_object.php:49 ../../../vis_object.php:78
+#: ../../../vis_object.php:87 ../../../vis_object.php:93
+#: ../../../vis_object.php:105 ../../../vis_object.php:110
+msgid "delta"
+msgstr "Delta"
+
+#: ../../../vis_object.php:50
+msgid "mode"
+msgstr ""
+
+#: ../../../vis_object.php:54
+msgid "Daily from Multiple (BETA)"
+msgstr ""
+
+#: ../../../vis_object.php:59 ../../../visualisations/smoothie.php:15
+msgid "Smoothie"
+msgstr ""
+
+#: ../../../vis_object.php:61
+msgid "ufac"
+msgstr ""
+
+#: ../../../vis_object.php:64
+msgid "Histgraph"
+msgstr "Histogramm"
+
+#: ../../../vis_object.php:66
+msgid "barwidth"
+msgstr "Balkenbreite"
+
+#: ../../../vis_object.php:67
+msgid "start"
+msgstr "Start"
+
+#: ../../../vis_object.php:68
+msgid "end"
+msgstr "Ende"
+
+#: ../../../vis_object.php:72
+msgid "Zoom"
+msgstr "Zoom"
+
+#: ../../../vis_object.php:73 ../../../vis_object.php:103
+#: ../../../vis_object.php:115
+msgid "power"
+msgstr "Leistung"
+
+#: ../../../vis_object.php:74
+msgid "kwhd"
+msgstr "kWh/Tag"
+
+#: ../../../vis_object.php:75
+msgid "currency"
+msgstr "Währung"
+
+#: ../../../vis_object.php:76
+msgid "currency_after_val"
+msgstr ""
+
+#: ../../../vis_object.php:77
+msgid "pricekwh"
+msgstr "kWh Preis"
+
+#: ../../../vis_object.php:82 ../../../visualisations/stacked.php:28
+#: ../../../visualisations/stackedsolar.php:27
+msgid "Stacked"
+msgstr "Gestapelt"
+
+#: ../../../vis_object.php:83
+msgid "bottom"
+msgstr "Unten"
+
+#: ../../../vis_object.php:84
+msgid "top"
+msgstr "Oben"
+
+#: ../../../vis_object.php:85
+msgid "colourt"
+msgstr "Farbe Oben"
+
+#: ../../../vis_object.php:86
+msgid "colourb"
+msgstr "Farbe Unten"
+
+#: ../../../vis_object.php:90
+msgid "StackedSolar"
+msgstr "Solar Gestapelt"
+
+#: ../../../vis_object.php:91
+msgid "solar"
+msgstr "Solar"
+
+#: ../../../vis_object.php:92
+msgid "consumption"
+msgstr "Verbrauch"
+
+#: ../../../vis_object.php:96 ../../../visualisations/threshold.php:29
+msgid "Threshold"
+msgstr "Grenzwert"
+
+#: ../../../vis_object.php:98 ../../../vis_object.php:116
+msgid "thresholdA"
+msgstr "Grenzwert A"
+
+#: ../../../vis_object.php:99 ../../../vis_object.php:117
+msgid "thresholdB"
+msgstr "Grenzwert B"
+
+#: ../../../vis_object.php:102
+msgid "SimpleZoom"
+msgstr ""
+
+#: ../../../vis_object.php:104
+msgid "kwh"
+msgstr "kWh"
+
+#: ../../../vis_object.php:108
+msgid "OrderBars"
+msgstr "Balken Sortiert"
+
+#: ../../../vis_object.php:113
+msgid "OrderThreshold"
+msgstr ""
+
+#: ../../../vis_object.php:120
+msgid "EditRealtime"
+msgstr "Echtzeit mit Bearbeitung"
+
+#: ../../../vis_object.php:124
+msgid "EditDaily"
+msgstr "Tagesdaten mit Bearbeitung"
+
+#: ../../../vis_object.php:128
+msgid "MultiGraph"
+msgstr "Mehrfach-Grafik"
+
+#: ../../../vis_object.php:129
+msgid "mid"
+msgstr "Mittel"
+
+#: ../../../vis_object.php:132
+msgid "Compare"
+msgstr "Vergleichen"
+
+#: ../../../vis_object.php:133
+msgid "Feed A"
+msgstr ""
+
+#: ../../../vis_object.php:134
+msgid "Feed B"
+msgstr ""
+
+#: ../../../vis_object.php:137
+msgid "Graph (BETA)"
+msgstr "Grafik (Beta)"
+
+#: ../../../vis_object.php:141
+msgid "Time Comparison"
+msgstr "Zeit Vergleich"
+
+#: ../../../vis_object.php:144
+msgid "depth"
+msgstr "Tiefe"
+
+#: ../../../vis_object.php:145
+msgid "data points"
+msgstr "Datenpunkte"
+
+#: ../../../visualisations/bargraph.php:133
+msgid "Bar graph:"
+msgstr "Balkendiagramm:"
+
+#: ../../../visualisations/compare.php:31
+msgid "Feed calibration and comparison tool"
+msgstr "Feed Kalibrierungs- und Vergleichs-Tool"
+
+#: ../../../visualisations/compare.php:32
+msgid ""
+"Use this tool to compare two feeds: FeedA and FeedB. Enter feed ids for "
+"comparison below. If there is a difference between feed values adjust the "
+"calibration to see if the difference can be removed."
+msgstr ""
+"Tool zum Vergleichen von zwei Feeds: Feed A und Feed B. Eingabe der Feed "
+"ID's für den Vergleich. Wenn ein Unterschied in den Feed Werten besteht kann "
+"die Kalibrierung zum Angleichen der Daten genutzt werden."
+
+#: ../../../visualisations/compare.php:35
+msgid "Feed A ID"
+msgstr "Feed A Id"
+
+#: ../../../visualisations/compare.php:40
+msgid "Feed B ID"
+msgstr "Feed B Id"
+
+#: ../../../visualisations/compare.php:42
+msgid "Load"
+msgstr "Laden"
+
+#: ../../../visualisations/compare.php:46
+msgid "Feed B Calibration"
+msgstr "Feed B Kalibrierung"
+
+#: ../../../visualisations/compare.php:48
+msgid "Update"
+msgstr "Aktualisieren"
+
+#: ../../../visualisations/compare.php:74
+msgid "Difference between feeds (FeedB calibration applied - FeedA)"
+msgstr "Unterschied zwischen Feeds (Feed B Kalibrierung angwendet - Feed A)"
+
+#: ../../../visualisations/compare.php:77
+msgid "FeedA vs FeedB"
+msgstr "Feed A im Vergleich mit Feed B"
+
+#: ../../../visualisations/compare.php:78
+msgid "Relationship should be linear if measurements are the same"
+msgstr ""
+
+#: ../../../visualisations/editdaily.php:30
+#: ../../../visualisations/editrealtime.php:31
+msgid "Datapoint editor:"
+msgstr "Datenpunkt Editor:"
+
+#: ../../../visualisations/editdaily.php:31
+#: ../../../visualisations/editrealtime.php:32
+msgid ""
+"Click on a datapoint to select, then in the edit box below the graph enter "
+"in the new value. You can also add another datapoint by changing the time to "
+"a point in time that does not yet have a datapoint."
+msgstr ""
+"Datenpunkt zum Auswählen anklicken, dann unten in Eingabefeld einen neuen "
+"Wert eingeben. Es können auch neue Datenpunkte eingegeben werden, indem ein "
+"Zeitpunkt eingegeben wird der bisher keine Daten hat. "
+
+#: ../../../visualisations/editdaily.php:57
+#: ../../../visualisations/editrealtime.php:57
+msgid "Edit feed_"
+msgstr "Bearbeite Feed Id "
+
+#: ../../../visualisations/editdaily.php:57
+#: ../../../visualisations/editrealtime.php:57
+msgid "@ time:"
+msgstr "@ Zeit:"
+
+#: ../../../visualisations/editdaily.php:57
+#: ../../../visualisations/editrealtime.php:57
+msgid "new value:"
+msgstr "Neuer Wert:"
+
+#: ../../../visualisations/editdaily.php:59
+#: ../../../visualisations/editrealtime.php:59
+#: ../../../visualisations/editrealtime.php:65
 msgid "Save"
 msgstr "Speichern"
 
-#: ../../../visualisations/editrealtime.php:55
+#: ../../../visualisations/editdaily.php:60
+msgid "Delete"
+msgstr "Löschen"
+
+#: ../../../visualisations/editrealtime.php:60
 msgid "Delete data in window"
 msgstr "Daten im Fenster löschen"
 
-#: ../../../visualisations/editrealtime.php:66
-msgid "WARNING deleting feed data is permanent"
-msgstr "WARNUNG Feeddaten löschen ist dauerhaft"
+#: ../../../visualisations/editrealtime.php:64
+msgid "Multiply data in window by:"
+msgstr ""
 
-#: ../../../visualisations/editrealtime.php:69
-msgid "Are you sure you want to delete the data in this window?"
-msgstr "Bist du sicher dass du die Daten im Fenster löschen willst?"
+#: ../../../visualisations/editrealtime.php:71
+msgid "Delete feed data"
+msgstr "Feed Daten löschen"
 
-#: ../../../visualisations/editrealtime.php:72
+#: ../../../visualisations/editrealtime.php:74
+msgid "Deleting feed data in this window is permanent."
+msgstr "Warnung: Feed Daten löschen ist dauerhaft."
+
+#: ../../../visualisations/editrealtime.php:76
+msgid "Are you sure you want to delete?"
+msgstr "Daten wirklich löschen?"
+
+#: ../../../visualisations/editrealtime.php:80
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: ../../../visualisations/editrealtime.php:73
+#: ../../../visualisations/editrealtime.php:81
 msgid "Delete permanently"
 msgstr "Dauerhaft löschen"
 
-#: ../../../visualisations/realtime.php:36
-msgid "hour"
-msgstr "Stunde"
+#: ../../../visualisations/histgraph.php:39
+msgid "Histogram:"
+msgstr ""
 
-#: ../../../visualisations/realtime.php:37
-#: ../../../visualisations/realtime.php:38
-#: ../../../visualisations/realtime.php:39
-#: ../../../visualisations/realtime.php:40
+#: ../../../visualisations/multigraph.php:59
+msgid "Multigraph:"
+msgstr ""
+
+#: ../../../visualisations/orderbars.php:25
+msgid "Bar graph (ordered by height):"
+msgstr "Balken (Sortiert)"
+
+#: ../../../visualisations/orderthreshold.php:30
+msgid "Threshold Order"
+msgstr ""
+
+#: ../../../visualisations/orderthreshold.php:37
+msgid "Reload"
+msgstr "Neu Laden"
+
+#: ../../../visualisations/rawdata.php:56
+msgid "Mean:"
+msgstr "Mittelwert:"
+
+#: ../../../visualisations/rawdata.php:57
+msgid "Min:"
+msgstr "Minimum:"
+
+#: ../../../visualisations/rawdata.php:58
+msgid "Max:"
+msgstr "Maximum"
+
+#: ../../../visualisations/rawdata.php:59
+msgid "Standard deviation:"
+msgstr "Standard Abweichung:"
+
+#: ../../../visualisations/rawdata.php:60
+msgid "Datapoints in view:"
+msgstr "Datenpunkte in Ansicht:"
+
+#: ../../../visualisations/rawdata.php:124
+msgid "Raw:"
+msgstr "Rohwert:"
+
+#: ../../../visualisations/realtime.php:25
+msgid "Realtime data:"
+msgstr "Echtzeit Daten:"
+
+#: ../../../visualisations/realtime.php:31
+msgid "hour"
+msgstr "h"
+
+#: ../../../visualisations/realtime.php:32
+#: ../../../visualisations/realtime.php:33
+#: ../../../visualisations/realtime.php:34
+#: ../../../visualisations/realtime.php:35
 msgid "min"
-msgstr "Min"
+msgstr "min"
+
+#: ../../../visualisations/simplezoom.php:29
+msgid "Simpler kWh/d zoomer"
+msgstr ""
+
+#: ../../../visualisations/timecompare.php:55
+msgid "Time Compare: "
+msgstr "Zeit Vergleich:"
+
+#: ../../../visualisations/timestoredaily.php:95
+msgid "Timestore Daily:"
+msgstr ""
+
+#: ../../../visualisations/zoom.php:33
+msgid "kWh/d Zoomer"
+msgstr ""
+
+#: ../../../visualisations/zoom.php:131
+msgid "Total:"
+msgstr "Gesamt:"
+
+#: ../../../visualisations/zoom.php:131 ../../../visualisations/zoom.php:179
+msgid "kWh"
+msgstr "kWh"
+
+#: ../../../visualisations/zoom.php:131 ../../../visualisations/zoom.php:179
+msgid "Average:"
+msgstr "Durchschnitt:"
+
+#: ../../../visualisations/zoom.php:131
+msgid "a week"
+msgstr "Woche"
+
+#: ../../../visualisations/zoom.php:131
+msgid "a year"
+msgstr "Jahr"
+
+#: ../../../visualisations/zoom.php:131
+msgid "Unit price:"
+msgstr "Preis:"
+
+#~ msgid "Vis"
+#~ msgstr "Vis"
 
 #~ msgid "en_EN"
 #~ msgstr "English"

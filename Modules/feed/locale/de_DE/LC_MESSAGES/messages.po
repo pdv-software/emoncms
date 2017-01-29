@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emoncms3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-02 22:40+0100\n"
-"PO-Revision-Date: 2015-02-03 14:25+0100\n"
+"POT-Creation-Date: 2017-01-29 00:22+0100\n"
+"PO-Revision-Date: 2017-01-29 00:25+0100\n"
 "Last-Translator: @sumpfing <anne@sumpfing.de>\n"
 "Language-Team: @sumpfing <anne@sumpfing.de>\n"
 "Language: de_DE\n"
@@ -12,94 +12,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
 "X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.11\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ../../..\n"
-
-#: ../../../feed_menu.php:7 ../../../Views/feedlist_view.php:26
-msgid "Feeds"
-msgstr "Feeds"
-
-#: ../../../Views/feedlist_view.php:23
-msgid "Feed API Help"
-msgstr "Feed API Hilfe"
-
-#: ../../../Views/feedlist_view.php:31
-msgid "No feeds created"
-msgstr "Keine Feeds angelegt"
-
-#: ../../../Views/feedlist_view.php:32
-msgid ""
-"Feeds are where your monitoring data is stored. The recommended route for "
-"creating feeds is to start by creating inputs (see the inputs tab). Once you "
-"have inputs you can either log them straight to feeds or if you want you can "
-"add various levels of input processing to your inputs to create things like "
-"daily average data or to calibrate inputs before storage. You may want to "
-"follow the link as a guide for generating your request."
-msgstr ""
-"In den Feeds werden die Monitoringdaten gespeichert. Der empfohlene Weg um "
-"Feeds anzulegen ist das vorherige Anlegen von Inputs (siehe Inputs Tab). "
-"Wenn du Inputs hast kannst du sie loggen"
-
-#: ../../../Views/feedlist_view.php:32
-msgid "Feed API helper"
-msgstr "Feed API Hilfe"
-
-#: ../../../Views/feedlist_view.php:42
-msgid "WARNING deleting a feed is permanent"
-msgstr "WARNUNG Feed wird dauerhaft gelöscht"
-
-#: ../../../Views/feedlist_view.php:45
-msgid "Are you sure you want to delete this feed?"
-msgstr "Bist du sicher, dass du den Feed löschen willst?"
-
-#: ../../../Views/feedlist_view.php:48
-msgid "Cancel"
-msgstr "Abbrechen"
-
-#: ../../../Views/feedlist_view.php:49
-msgid "Delete permanently"
-msgstr "Dauerhaft gelöscht"
-
-#: ../../../Views/feedlist_view.php:113
-msgid "Close"
-msgstr "Schliessen"
-
-#: ../../../Views/feedlist_view.php:127
-msgid "Id"
-msgstr "Id"
-
-#: ../../../Views/feedlist_view.php:128
-msgid "Name"
-msgstr "Name"
-
-#: ../../../Views/feedlist_view.php:129
-msgid "Tag"
-msgstr "Tag"
-
-#: ../../../Views/feedlist_view.php:130
-msgid "Datatype"
-msgstr "Datentyp"
-
-#: ../../../Views/feedlist_view.php:131
-msgid "Engine"
-msgstr "Engine"
-
-#: ../../../Views/feedlist_view.php:132
-msgid "Public"
-msgstr "Öffentlich"
-
-#: ../../../Views/feedlist_view.php:133
-msgid "Size"
-msgstr "Größe"
-
-#: ../../../Views/feedlist_view.php:135
-msgid "Updated"
-msgstr "Aktualisiert"
-
-#: ../../../Views/feedlist_view.php:136
-msgid "Value"
-msgstr "Wert"
 
 #: ../../../Views/feedapi_view.php:19
 msgid "Feed API"
@@ -111,65 +26,255 @@ msgstr "Apikey Authentifikation"
 
 #: ../../../Views/feedapi_view.php:22
 msgid ""
-"If you want to call any of the following action's when your not logged in, "
-"add an apikey to the URL of your request: &apikey=APIKEY."
+"If you want to call any of the following actions when your not logged in you "
+"have this options to authenticate with the API key:"
 msgstr ""
-"Wenn du die folgenden Funktionen aufrufen willst ohne eingeloggt zu sein "
-"füge den Apikey in deine Request-URL ein: &apikey=APIKEY."
+"Wenn die folgenden Funktionen - ohne eingeloggt zu sein - aufrufen werden "
+"sollen, kann der API Key der URL hinzugefügt werden: &apikey=APIKEY."
 
 #: ../../../Views/feedapi_view.php:23
+msgid "Append on the URL of your request: &apikey=APIKEY"
+msgstr "Der URL bei Request hinzufügen: &apikey=APIKEY"
+
+#: ../../../Views/feedapi_view.php:24
+msgid "Use POST parameter: \"apikey=APIKEY\""
+msgstr "POST Parameter: \"apikey=APIKEY\""
+
+#: ../../../Views/feedapi_view.php:25
+msgid "Add the HTTP header: \"Authorization: Bearer APIKEY\""
+msgstr "Dem HTTP Header hinzufügen:   \"Authorization: Bearer APIKEY\""
+
+#: ../../../Views/feedapi_view.php:26
 msgid "Read only:"
 msgstr "Nur Lesen:"
 
-#: ../../../Views/feedapi_view.php:27
+#: ../../../Views/feedapi_view.php:29
 msgid "Read & Write:"
 msgstr "Lesen & Schreiben:"
 
-#: ../../../Views/feedapi_view.php:31
+#: ../../../Views/feedapi_view.php:33
 msgid "Html"
 msgstr "Html"
 
-#: ../../../Views/feedapi_view.php:32
+#: ../../../Views/feedapi_view.php:34
 msgid "The feed list view"
 msgstr "Listenansicht der Feeds"
 
-#: ../../../Views/feedapi_view.php:33
+#: ../../../Views/feedapi_view.php:35
 msgid "This page"
 msgstr "Diese Seite"
 
-#: ../../../Views/feedapi_view.php:35
+#: ../../../Views/feedapi_view.php:37
 msgid "JSON"
 msgstr "JSON"
 
-#: ../../../Views/feedapi_view.php:36
+#: ../../../Views/feedapi_view.php:38
 msgid "To use the json api the request url needs to include .json"
 msgstr "Um die json Api zu nutzen muss der Request include.json enthalten"
 
-#: ../../../Views/feedapi_view.php:37
-msgid "returns a list of public feeds made public by the given user."
-msgstr "zeigt öffentliche Feeds vom jeweiligen Benutzer."
+#: ../../../Views/feedapi_view.php:43
+msgid "List feeds for autenticated user"
+msgstr "Liste der Feeds für Benutzer"
 
-#: ../../../Views/feedapi_view.php:38 ../../../Views/feedapi_view.php:39
-msgid "returns the present value of a given feed"
-msgstr "zeigt den aktuellen Wert eines Feeds"
+#: ../../../Views/feedapi_view.php:46
+msgid "List public feeds for the given user"
+msgstr "Öffentliche Feeds des Benutzers"
 
-#: ../../../Views/feedapi_view.php:40
-msgid "returns feed data"
-msgstr "zeigt Feeddaten"
+#: ../../../Views/feedapi_view.php:49
+msgid "Get feed field"
+msgstr "Feed Feld abrufen"
 
-#: ../../../Views/feedapi_view.php:41
-msgid "returns histogram data"
-msgstr "zeigt Histogrammdaten"
+#: ../../../Views/feedapi_view.php:52
+msgid "Get all feed fields"
+msgstr "Abruf Feed Felder "
 
-#: ../../../Views/feedapi_view.php:42
-msgid "returns kwh consumed in a given power band using histogram data type"
+#: ../../../Views/feedapi_view.php:59
+msgid "Last updated time and value for feed"
+msgstr "Feed aktualisiert (Wert und Zeitpunkt) "
+
+#: ../../../Views/feedapi_view.php:62
+msgid "Last value of a given feed"
+msgstr "Aktueller Wert des Feeds"
+
+#: ../../../Views/feedapi_view.php:65
+msgid "Last value for multiple feeds"
+msgstr "Letzter Wert für Multiple Feeds"
+
+#: ../../../Views/feedapi_view.php:68
+msgid "Returns feed data"
+msgstr "zeigt Feed Daten"
+
+#: ../../../Views/feedapi_view.php:71
+msgid "Returns histogram data"
+msgstr "zeigt Histogramm Daten"
+
+#: ../../../Views/feedapi_view.php:74
+msgid "Returns kwh consumed in a given power band using histogram data type"
 msgstr ""
-"zeigt verbrauchte Kilowattstunden in einem bestimmten Leistungsbereich mit "
-"Hilfe von Histogrammdaten"
+"Zeigt verbrauchte kWh in bestimmten Leistungsbereich als Histogramm Daten"
 
-#: ../../../Views/feedapi_view.php:44
-msgid "returns id of a feed given by name"
-msgstr "zeigt die ID eines Feeds anhand des Namens"
+#: ../../../Views/feedapi_view.php:103
+msgid "Return total engines size"
+msgstr "Rückgabe Engine - Größe "
+
+#: ../../../Views/feedapi_view.php:106
+msgid "Return buffer points pending write"
+msgstr "Rückgabe Pufferpunkte für ausstehenden Schreibvorgang"
+
+#: ../../../Views/feedapi_view.php:111
+msgid "Virtual feed process actions"
+msgstr "Virtueller Feed Process Aktionen"
+
+#: ../../../Views/feedapi_view.php:113
+msgid "Get feed process list"
+msgstr "Abruf Feed Process Liste"
+
+#: ../../../Views/feedapi_view.php:114
+msgid "Set feed process list"
+msgstr "Setzen Feed Process LIste"
+
+#: ../../../Views/feedapi_view.php:115
+msgid "Reset feed process list"
+msgstr "Rücksetzen der Feed Process Liste"
+
+#: ../../../Views/feedlist_view.php:31
+msgid "Feed API Help"
+msgstr "Feed API Hilfe"
+
+#: ../../../Views/feedlist_view.php:32 ../../../feed_menu.php:7
+msgid "Feeds"
+msgstr "Feeds"
+
+#: ../../../Views/feedlist_view.php:37
+msgid "No feeds created"
+msgstr "Keine Feeds angelegt"
+
+#: ../../../Views/feedlist_view.php:38
+msgid ""
+"Feeds are where your monitoring data is stored. The route for creating "
+"storage feeds is to start by creating inputs (see the inputs tab). Once you "
+"have inputs you can either log them straight to feeds or if you want you can "
+"add various levels of input processing to your inputs to create things like "
+"daily average data or to calibrate inputs before storage. Alternatively you "
+"can create Virtual feeds, this is a special feed that allows you to do post "
+"processing on existing storage feeds data, the main advantage is that it "
+"will not use additional storage space and you may modify post processing "
+"list that gets applyed on old stored data. You may want the next link as a "
+"guide for generating your request: "
+msgstr ""
+"In den Feeds werden die Monitoringdaten gespeichert. Der empfohlene Weg um "
+"Feeds anzulegen ist das vorherige Anlegen von Inputs (siehe Inputs Tab). "
+"Wenn Inputs vorhanden sind können sie gespeichert werden. Alternativ können "
+"virtuelle Feeds angelegt werden, für eine Nachverarbeitung von bestehenden "
+"Feeds. Ein Vorteil besteht darin das kein zusätzlicher Speicherplatz "
+"benötigt wird und auch bestehende Daten nachverarbeitet werden können. Der "
+"folgende Link kann zur Erstellung eines Requests genutzt werden:"
+
+#: ../../../Views/feedlist_view.php:38
+msgid "Feed API helper"
+msgstr "Feed API Hilfe"
+
+#: ../../../Views/feedlist_view.php:42
+msgid "Refresh feed size"
+msgstr "Feed Größe aktualisieren"
+
+#: ../../../Views/feedlist_view.php:43
+msgid "New virtual feed"
+msgstr "Neuer Virtueller Feed"
+
+#: ../../../Views/feedlist_view.php:50
+msgid "Delete feed"
+msgstr "Feed löschen"
+
+#: ../../../Views/feedlist_view.php:53
+msgid "Deleting a feed is permanent."
+msgstr "Feed wird dauerhaft gelöscht."
+
+#: ../../../Views/feedlist_view.php:55
+msgid ""
+"If you have Input Processlist processors that use this feed, after deleting "
+"it, review that process lists or they will be in error, freezing other "
+"Inputs. Also make sure no Dashboards use the deleted feed."
+msgstr ""
+"Prüfen Sie nach dem Löschen die Process Listen. Der gelöschte Feed darf "
+"nicht mehr verwendet werden, sonst entstehen Fehler und andere Inputs "
+"frieren ein. Prüfen Sie außerdem das kein Dashboard den gelöschten Feed "
+"benutzt."
+
+#: ../../../Views/feedlist_view.php:56
+msgid ""
+"This is a Virtual Feed, after deleting it, make sure no Dashboard continue "
+"to use the deleted feed."
+msgstr ""
+"Dies ist ein virtueller Feed, nach dem Löschen prüfen Sie das kein Dashboard "
+"den gelöschten Feed benutzt."
+
+#: ../../../Views/feedlist_view.php:58
+msgid "Are you sure you want to delete?"
+msgstr "Diesen Feed wirklich löschen?"
+
+#: ../../../Views/feedlist_view.php:61 ../../../Views/feedlist_view.php:150
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: ../../../Views/feedlist_view.php:62
+msgid "Delete permanently"
+msgstr "Dauerhaft gelöscht"
+
+#: ../../../Views/feedlist_view.php:128
+msgid "Close"
+msgstr "Schliessen"
+
+#: ../../../Views/feedlist_view.php:136
+msgid "New Virtual Feed"
+msgstr "Neuer Virtueller Feed"
+
+#: ../../../Views/feedlist_view.php:151
+msgid "Save"
+msgstr "Speichern"
+
+#: ../../../Views/feedlist_view.php:166 ../../../Views/feedlist_view.php:185
+msgid "Process list"
+msgstr "Process LIste"
+
+#: ../../../Views/feedlist_view.php:170 ../../../Views/feedlist_view.php:189
+msgid "Size"
+msgstr "Größe"
+
+#: ../../../Views/feedlist_view.php:171 ../../../Views/feedlist_view.php:190
+msgid "Updated"
+msgstr "Aktualisiert"
+
+#: ../../../Views/feedlist_view.php:182
+msgid "Id"
+msgstr "Id"
+
+#: ../../../Views/feedlist_view.php:183
+msgid "Tag"
+msgstr "Tag"
+
+#: ../../../Views/feedlist_view.php:184
+msgid "Name"
+msgstr "Name"
+
+#: ../../../Views/feedlist_view.php:186
+msgid "Public"
+msgstr "Öffentlich"
+
+#: ../../../Views/feedlist_view.php:187
+msgid "Datatype"
+msgstr "Datentyp"
+
+#: ../../../Views/feedlist_view.php:188
+msgid "Engine"
+msgstr "Engine"
+
+#: ../../../Views/feedlist_view.php:191
+msgid "Value"
+msgstr "Wert"
+
+#~ msgid "returns id of a feed given by name"
+#~ msgstr "zeigt die ID eines Feeds anhand des Namens"
 
 #~ msgid "Feed "
 #~ msgstr "Feed "
@@ -185,12 +290,6 @@ msgstr "zeigt die ID eines Feeds anhand des Namens"
 
 #~ msgid "Feed properties"
 #~ msgstr "Feedeigentum"
-
-#~ msgid "Delete feeds"
-#~ msgstr "Feeds löschen"
-
-#~ msgid "Deleted feeds"
-#~ msgstr "Gelöschte Feeds"
 
 #~ msgid "Type"
 #~ msgstr "Art"
