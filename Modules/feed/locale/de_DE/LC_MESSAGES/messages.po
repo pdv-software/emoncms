@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emoncms3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-29 00:22+0100\n"
-"PO-Revision-Date: 2017-01-29 00:25+0100\n"
-"Last-Translator: @sumpfing <anne@sumpfing.de>\n"
+"POT-Creation-Date: 2017-02-02 12:13+0100\n"
+"PO-Revision-Date: 2017-02-02 13:14+0100\n"
+"Last-Translator: Frank Dille\n"
 "Language-Team: @sumpfing <anne@sumpfing.de>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
@@ -29,8 +29,8 @@ msgid ""
 "If you want to call any of the following actions when your not logged in you "
 "have this options to authenticate with the API key:"
 msgstr ""
-"Wenn die folgenden Funktionen - ohne eingeloggt zu sein - aufrufen werden "
-"sollen, kann der API Key der URL hinzugefügt werden: &apikey=APIKEY."
+"Wenn die folgenden Funktionen ohne Anmeldung aufrufen werden sollen, kann "
+"der API Key der URL hinzugefügt werden: &apikey=APIKEY:"
 
 #: ../../../Views/feedapi_view.php:23
 msgid "Append on the URL of your request: &apikey=APIKEY"
@@ -72,6 +72,10 @@ msgstr "JSON"
 msgid "To use the json api the request url needs to include .json"
 msgstr "Um die json Api zu nutzen muss der Request include.json enthalten"
 
+#: ../../../Views/feedapi_view.php:41
+msgid "Read feed actions"
+msgstr "Lese Feed Aktionen"
+
 #: ../../../Views/feedapi_view.php:43
 msgid "List feeds for autenticated user"
 msgstr "Liste der Feeds für Benutzer"
@@ -87,6 +91,10 @@ msgstr "Feed Feld abrufen"
 #: ../../../Views/feedapi_view.php:52
 msgid "Get all feed fields"
 msgstr "Abruf Feed Felder "
+
+#: ../../../Views/feedapi_view.php:57
+msgid "Read feed data actions"
+msgstr "Lese Feed Daten Aktionen"
 
 #: ../../../Views/feedapi_view.php:59
 msgid "Last updated time and value for feed"
@@ -112,6 +120,38 @@ msgstr "zeigt Histogramm Daten"
 msgid "Returns kwh consumed in a given power band using histogram data type"
 msgstr ""
 "Zeigt verbrauchte kWh in bestimmten Leistungsbereich als Histogramm Daten"
+
+#: ../../../Views/feedapi_view.php:79
+msgid "Write feed data actions"
+msgstr "Schreibe Feed Daten Aktionen"
+
+#: ../../../Views/feedapi_view.php:81
+msgid "Insert new data point"
+msgstr "Datenpunkt einfügen"
+
+#: ../../../Views/feedapi_view.php:84
+msgid "Update data point"
+msgstr "Datenpunkt ändern"
+
+#: ../../../Views/feedapi_view.php:87
+msgid "Delete data point"
+msgstr "Datenpunkt löschen"
+
+#: ../../../Views/feedapi_view.php:92
+msgid "Feed setup actions"
+msgstr "Feed Setup Aktionen"
+
+#: ../../../Views/feedapi_view.php:94
+msgid "Create new feed"
+msgstr "Feed erstellen"
+
+#: ../../../Views/feedapi_view.php:97
+msgid "Delete existent feed"
+msgstr "Feed Löschen"
+
+#: ../../../Views/feedapi_view.php:100
+msgid "Update feed field"
+msgstr "Feed Feld ändern"
 
 #: ../../../Views/feedapi_view.php:103
 msgid "Return total engines size"
@@ -221,13 +261,73 @@ msgstr "Abbrechen"
 msgid "Delete permanently"
 msgstr "Dauerhaft gelöscht"
 
+#: ../../../Views/feedlist_view.php:69
+msgid "CSV export"
+msgstr "CSV Export"
+
+#: ../../../Views/feedlist_view.php:72
+msgid "Select the time range and interval that you wish to export:"
+msgstr "Auswahl Zeitbereich und Intervall für Export"
+
+#: ../../../Views/feedlist_view.php:76
+msgid "Start date & time"
+msgstr "Start Datum & Zeit"
+
+#: ../../../Views/feedlist_view.php:83
+msgid "End date & time"
+msgstr "Ende Datum & Zeit"
+
+#: ../../../Views/feedlist_view.php:92
+msgid "Interval"
+msgstr "Intervall"
+
+#: ../../../Views/feedlist_view.php:113
+msgid "Date time format"
+msgstr "Datums/Zeit-Format"
+
+#: ../../../Views/feedlist_view.php:115
+msgid "Excel (d/m/Y H:i:s)"
+msgstr ""
+
+#: ../../../Views/feedlist_view.php:117
+msgid "Offset secs (for daily)"
+msgstr "Offset in Sek. (für täglich)"
+
+#: ../../../Views/feedlist_view.php:127
+msgid "Estimated download size"
+msgstr "ca. Größe des Downloads"
+
 #: ../../../Views/feedlist_view.php:128
 msgid "Close"
 msgstr "Schliessen"
 
+#: ../../../Views/feedlist_view.php:129
+msgid "Export"
+msgstr "Exportieren"
+
 #: ../../../Views/feedlist_view.php:136
 msgid "New Virtual Feed"
 msgstr "Neuer Virtueller Feed"
+
+#: ../../../Views/feedlist_view.php:139
+msgid "Feed Name"
+msgstr "Feed Name"
+
+#: ../../../Views/feedlist_view.php:141
+msgid "Feed Tag"
+msgstr "Feed-Tag"
+
+#: ../../../Views/feedlist_view.php:143
+msgid "Feed DataType"
+msgstr "Feed Datentyp"
+
+#: ../../../Views/feedlist_view.php:145
+msgid "Realtime"
+msgstr "Echtzeit"
+
+#: ../../../Views/feedlist_view.php:146
+msgid "Daily"
+msgstr "Täglich"
 
 #: ../../../Views/feedlist_view.php:151
 msgid "Save"
@@ -275,9 +375,6 @@ msgstr "Wert"
 
 #~ msgid "returns id of a feed given by name"
 #~ msgstr "zeigt die ID eines Feeds anhand des Namens"
-
-#~ msgid "Feed "
-#~ msgstr "Feed "
 
 #~ msgid " deleted"
 #~ msgstr "gelöscht"
