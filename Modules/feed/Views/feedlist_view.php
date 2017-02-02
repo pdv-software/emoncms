@@ -31,7 +31,7 @@
     <div id="apihelphead" style="float:right;"><a href="<?php echo $path; ?>feed/api"><?php echo _('Feed API Help'); ?></a></div>
     <div id="localheading"><h2><?php echo _('Feeds'); ?></h2></div>
 
-    <div id="table"><div align='center'>loading...</div></div>
+    <div id="table"><div align='center'><?php echo _("loading..."); ?></div></div>
 
     <div id="nofeeds" class="alert alert-block hide">
             <h4 class="alert-heading"><?php echo _('No feeds created'); ?></h4>
@@ -66,21 +66,21 @@
 <div id="ExportModal" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="ExportModalLabel" aria-hidden="true" data-backdrop="static">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="ExportModalLabel"><b><span id="SelectedExport"></span></b> CSV export</h3>
+        <h3 id="ExportModalLabel"><b><span id="SelectedExport"></span></b> <?php echo _("CSV export"); ?></h3>
     </div>
     <div class="modal-body">
-    <p>Select the time range and interval that you wish to export: </p>
+    <p><?php echo _("Select the time range and interval that you wish to export:"); ?> </p>
         <table class="table">
         <tr>
             <td>
-                <p><b>Start date & time</b></p>
+                <p><b><?php echo _("Start date & time"); ?></b></p>
                 <div id="datetimepicker1" class="input-append date">
                     <input id="export-start" data-format="dd/MM/yyyy hh:mm:ss" type="text" />
                     <span class="add-on"> <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i></span>
                 </div>
             </td>
             <td>
-                <p><b>End date & time</b></p>
+                <p><b><?php echo _("End date & time"); ?></b></p>
                 <div id="datetimepicker2" class="input-append date">
                     <input id="export-end" data-format="dd/MM/yyyy hh:mm:ss" type="text" />
                     <span class="add-on"> <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i></span>
@@ -89,7 +89,7 @@
         </tr>
         <tr>
             <td>
-                <p><b>Interval</b></p>
+                <p><b><?php echo _("Interval"); ?></b></p>
                 <select id="export-interval" >
                     <option value=1>Auto</option>
                     <option value=5>5s</option>
@@ -110,11 +110,11 @@
                 </select>
             </td>
             <td>
-                <p><b>Date time format</b></p>
+                <p><b><?php echo _("Date time format"); ?></b></p>
                 <div class="checkbox">
-                  <label><input type="checkbox" id="export-timeformat" value="" checked>Excel (d/m/Y H:i:s)</label>
+                  <label><input type="checkbox" id="export-timeformat" value="" checked><?php echo _("Excel (d/m/Y H:i:s)"); ?></label>
                 </div>
-                <label>Offset secs (for daily)&nbsp;<input id="export-timezone-offset" type="text" class="input-mini" disabled=""></label>
+                <label><?php echo _("Offset secs (for daily)"); ?>&nbsp;<input id="export-timezone-offset" type="text" class="input-mini" disabled=""></label>
             </td>
         </tr>
         </table>
@@ -124,9 +124,9 @@
             </div>
     </div>
     <div class="modal-footer">
-        <div id="downloadsizeplaceholder" style="float: left">Estimated download size: <span id="downloadsize">0</span>MB</div>
+        <div id="downloadsizeplaceholder" style="float: left"><?php echo _("Estimated download size"); ?>: <span id="downloadsize">0</span>MB</div>
         <button class="btn" data-dismiss="modal" aria-hidden="true"><?php echo _('Close'); ?></button>
-        <button class="btn" id="export">Export</button>
+        <button class="btn" id="export"><?php echo _("Export"); ?></button>
     </div>
 </div>
 
@@ -136,14 +136,14 @@
         <h3 id="newFeedNameModalLabel"><?php echo _('New Virtual Feed'); ?></h3>
     </div>
     <div class="modal-body">
-        <label>Feed Name: </label>
+        <label><?php echo _("Feed Name"); ?>: </label>
         <input type="text" value="New Virtual Feed" id="newfeed-name">
-        <label>Feed Tag: </label>
+        <label><?php echo _("Feed Tag"); ?>: </label>
         <input type="text" value="Virtual" id="newfeed-tag">
-        <label>Feed DataType: </label>
+        <label><?php echo _("Feed DataType"); ?>: </label>
         <select id="newfeed-datatype">
-            <option value=1>Realtime</option>
-            <option value=2>Daily</option>
+            <option value=1><?php echo _("Realtime"); ?></option>
+            <option value=2><?php echo _("Daily"); ?></option>
         </select>
     </div>
     <div class="modal-footer">
