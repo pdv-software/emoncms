@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emoncms3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-29 00:21+0100\n"
-"PO-Revision-Date: 2017-01-29 00:21+0100\n"
-"Last-Translator: @sumpfing <anne@sumpfing.de>\n"
+"POT-Creation-Date: 2017-02-02 13:21+0100\n"
+"PO-Revision-Date: 2017-02-02 13:29+0100\n"
+"Last-Translator: Frank Dille\n"
 "Language-Team: @sumpfing <anne@sumpfing.de>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
@@ -194,28 +194,32 @@ msgid ""
 "a parameter in the url, the only exception is the apikey which can be a post "
 "parameter as well."
 msgstr ""
+"Zum Senden von Daten per HTTP wird der \"data\" Parameter verwendet. Dieser "
+"akzeptiert das CSV und JSON Format. Weitere Parameter werden in der URL "
+"angegeben. Einzige Ausnahme ist der API-Key der auch als POST Parameter "
+"gesendet werden kann."
 
 #: ../../../Views/input_api.php:59
 msgid ""
 "The examples below use curl to post the data to the input api. It is "
 "availible "
-msgstr ""
+msgstr "Die Beispiele benutzen curl zum Senden von Daten per Input Api."
 
 #: ../../../Views/input_api.php:63
 msgid "Bulk mode legacy format:"
-msgstr ""
+msgstr "Blockmodus Legacy Format:"
 
 #: ../../../Views/input_api.php:64
 msgid "Bulk mode time offset format:"
-msgstr ""
+msgstr "Blockmodus Zeitoffset Format"
 
 #: ../../../Views/input_api.php:65
 msgid "Bulk mode sentat format:"
-msgstr ""
+msgstr "Blockmodus GesendetAm Format"
 
 #: ../../../Views/input_api.php:66
 msgid "Bulk mode absolute time format:"
-msgstr ""
+msgstr "Blockmodus absolutes Zeitformat"
 
 #: ../../../Views/input_api.php:70
 msgid "Input actions"
