@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emoncms3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-29 00:23+0100\n"
-"PO-Revision-Date: 2017-01-29 00:25+0100\n"
+"POT-Creation-Date: 2017-02-02 16:28+0100\n"
+"PO-Revision-Date: 2017-02-02 16:45+0100\n"
 "Last-Translator: Frank Dille\n"
 "Language-Team: @sumpfing <anne@sumpfing.de>\n"
 "Language: de_DE\n"
@@ -164,7 +164,7 @@ msgstr "Delta"
 
 #: ../../../vis_object.php:50
 msgid "mode"
-msgstr ""
+msgstr "Modus"
 
 #: ../../../vis_object.php:54
 msgid "Daily from Multiple (BETA)"
@@ -175,8 +175,9 @@ msgid "Smoothie"
 msgstr ""
 
 #: ../../../vis_object.php:61
+#, fuzzy
 msgid "ufac"
-msgstr ""
+msgstr "Ufac"
 
 #: ../../../vis_object.php:64
 msgid "Histgraph"
@@ -266,7 +267,7 @@ msgstr "Grenzwert B"
 
 #: ../../../vis_object.php:102
 msgid "SimpleZoom"
-msgstr ""
+msgstr "SimpleZoom"
 
 #: ../../../vis_object.php:104
 msgid "kwh"
@@ -302,11 +303,11 @@ msgstr "Vergleichen"
 
 #: ../../../vis_object.php:133
 msgid "Feed A"
-msgstr ""
+msgstr "Feed A"
 
 #: ../../../vis_object.php:134
 msgid "Feed B"
-msgstr ""
+msgstr "Feed B"
 
 #: ../../../vis_object.php:137
 msgid "Graph (BETA)"
@@ -318,7 +319,7 @@ msgstr "Zeit Vergleich"
 
 #: ../../../vis_object.php:144
 msgid "depth"
-msgstr "Tiefe"
+msgstr "Anzahl"
 
 #: ../../../vis_object.php:145
 msgid "data points"
@@ -364,7 +365,7 @@ msgstr "Aktualisieren"
 
 #: ../../../visualisations/compare.php:74
 msgid "Difference between feeds (FeedB calibration applied - FeedA)"
-msgstr "Unterschied zwischen Feeds (Feed B Kalibrierung angwendet - Feed A)"
+msgstr "Unterschied zwischen Feeds (Feed B Kalibrierung angewendet - Feed A)"
 
 #: ../../../visualisations/compare.php:77
 msgid "FeedA vs FeedB"
@@ -421,7 +422,7 @@ msgstr "Daten im Fenster löschen"
 
 #: ../../../visualisations/editrealtime.php:64
 msgid "Multiply data in window by:"
-msgstr ""
+msgstr "Daten mit Fakor multiplizieren"
 
 #: ../../../visualisations/editrealtime.php:71
 msgid "Delete feed data"
@@ -443,13 +444,97 @@ msgstr "Abbrechen"
 msgid "Delete permanently"
 msgstr "Dauerhaft löschen"
 
+#: ../../../visualisations/graph.php:28
+msgid "D"
+msgstr "T"
+
+#: ../../../visualisations/graph.php:29
+msgid "W"
+msgstr "W"
+
+#: ../../../visualisations/graph.php:30
+msgid "M"
+msgstr "M"
+
+#: ../../../visualisations/graph.php:31
+msgid "Y"
+msgstr "J"
+
+#: ../../../visualisations/graph.php:37
+msgid "Data viewer"
+msgstr "Datenansicht"
+
+#: ../../../visualisations/graph.php:47
+msgid "Stats"
+msgstr "Statistik"
+
+#: ../../../visualisations/graph.php:50
+msgid "Mean"
+msgstr "Mittelwert"
+
+#: ../../../visualisations/graph.php:50
+msgid "Min"
+msgstr "Min"
+
+#: ../../../visualisations/graph.php:50
+msgid "Max"
+msgstr "Max"
+
+#: ../../../visualisations/graph.php:50
+msgid "Diff"
+msgstr "Differenz"
+
+#: ../../../visualisations/graph.php:50
+msgid "Std Dev"
+msgstr "Std. Abw."
+
+#: ../../../visualisations/graph.php:50
+msgid "npoints"
+msgstr "Datenpunkte"
+
+#: ../../../visualisations/graph.php:62
+msgid "Advanced"
+msgstr "Erweitert"
+
+#: ../../../visualisations/graph.php:63
+msgid "Apply smoothing (number of points)"
+msgstr "Glätten (Anz. Datenpunkte)"
+
+#: ../../../visualisations/graph.php:75
+msgid "API Request"
+msgstr "API Aufruf"
+
+#: ../../../visualisations/graph.php:78
+msgid "Start"
+msgstr "Start"
+
+#: ../../../visualisations/graph.php:81
+msgid "End"
+msgstr "Ende"
+
+#: ../../../visualisations/graph.php:84
+msgid "Interval"
+msgstr "Intervall"
+
+#: ../../../visualisations/graph.php:87
+msgid "Skip missing"
+msgstr "Fehlende überspringen"
+
+#: ../../../visualisations/graph.php:88
+msgid "Limit interval"
+msgstr "Intervall begrenzt"
+
+#: ../../../visualisations/graph.php:90
+msgid "Resend"
+msgstr "Abrufen"
+
 #: ../../../visualisations/histgraph.php:39
 msgid "Histogram:"
-msgstr ""
+msgstr "Histogramm:"
 
 #: ../../../visualisations/multigraph.php:59
 msgid "Multigraph:"
-msgstr ""
+msgstr "Multigrafik"
 
 #: ../../../visualisations/orderbars.php:25
 msgid "Bar graph (ordered by height):"
@@ -541,6 +626,9 @@ msgstr "Jahr"
 #: ../../../visualisations/zoom.php:131
 msgid "Unit price:"
 msgstr "Preis:"
+
+#~ msgid "Show CSV Output"
+#~ msgstr "CSV Export"
 
 #~ msgid "Vis"
 #~ msgstr "Vis"
