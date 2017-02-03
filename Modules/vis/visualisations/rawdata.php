@@ -34,10 +34,10 @@
     <div id="graph"></div>
     <div id="graph-buttons" style="position:absolute; top:18px; right:32px; opacity:0.5;">
         <div class='btn-group'>
-            <button class='btn graph-time' type='button' time='1'>D</button>
-            <button class='btn graph-time' type='button' time='7'>W</button>
-            <button class='btn graph-time' type='button' time='30'>M</button>
-            <button class='btn graph-time' type='button' time='365'>Y</button>
+            <button class='btn graph-time' type='button' time='1'><?php echo _("D"); ?></button>
+            <button class='btn graph-time' type='button' time='7'><?php echo _("W"); ?></button>
+            <button class='btn graph-time' type='button' time='30'><?php echo _("M"); ?></button>
+            <button class='btn graph-time' type='button' time='365'><?php echo _("Y"); ?></button>
         </div>
 
         <div class='btn-group' id='graph-navbar' style='display: none;'>

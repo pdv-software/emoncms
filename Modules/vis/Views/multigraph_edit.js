@@ -35,11 +35,11 @@ function multigraphDropdown(){
     multigraphs_name[multigraphs[z]['id']] = multigraphs[z]['name'];
     options +="<option value='"+multigraphs[z]['id']+"'>"+multigraphs[z]['id']+": "+multigraphs[z]['name']+"</option>";
   }
-  var out = "<div class='alert'>No multigraphs created yet, click new to create one:</div>";
+  var out = "<div class='alert'>"+_Tr("No multigraphs created yet, click new to create one:")+"</div>";
   if (options){
-    out = "<select id='multigraph-selector' class='form-control' style='width:160px'><option>Select multigraph:</option>"+options+"</select>";
+    out = "<select id='multigraph-selector' class='form-control' style='width:160px'><option>"+_Tr("Select multigraph:")+"</option>"+options+"</select>";
   }
-  return out+"<button id='multigraph-new-button' class='btn btn-info' style='float:right'>New multigraph</button><div id='feedtable' ></div>";
+  return out+"<button id='multigraph-new-button' class='btn btn-info' style='float:right'>"+_Tr("New multigraph")+"</button><div id='feedtable' ></div>";
 }
 
 // Multigraph editor interface 
@@ -97,12 +97,12 @@ function draw_multigraph_feedlist_editor(){
 
   var out = "";
   out += '<div id="myModal" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">';
-  out += '<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button><h3 id="myModalLabel">Delete Multigraph</h3></div>';
-  out += '<div class="modal-body"><p>Deleting a multigraph is permanent.<br>Make sure no Dashboard continue to use the deleted multigraph<br><br>Are you sure you want to delete?</p></div>';
-  out += '<div class="modal-footer"><button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button><button id="confirmdelete" class="btn btn-primary">Delete permanently</button></div></div>';
+  out += '<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button><h3 id="myModalLabel">'+_Tr("Delete Multigraph")+'</h3></div>';
+  out += '<div class="modal-body"><p>'+_Tr("Deleting a multigraph is permanent.<br>Make sure no Dashboard continue to use the deleted multigraph")+"<br><br>"+_Tr("Are you sure you want to delete?")+'</p></div>';
+  out += '<div class="modal-footer"><button class="btn" data-dismiss="modal" aria-hidden="true">'+_Tr("Cancel")+'</button><button id="confirmdelete" class="btn btn-primary">'+_Tr("Delete permanently")+'</button></div></div>';
   
   out += "<table class='table' style='table-layout:fixed; width:300px;' >";
-  out += "<tr><th style='width:130px;' >Feed</th><th style='text-align: center;'>Left</th><th style='text-align: center;'>Right</th><th style='text-align: center;'>Fill</th><th style='padding:0px; width:30px;'></th></tr>";
+  out += "<tr><th style='width:130px;' >"+_Tr("Feed")+"</th><th style='text-align: center;'>"+_Tr("Left")+"</th><th style='text-align: center;'>"+_Tr("Right")+"</th><th style='text-align: center;'>"+_Tr("Fill")+"</th><th style='padding:0px; width:30px;'></th></tr>";
 
   var publicfeed = 1;
   for (z in multigraph_feedlist) {
@@ -119,67 +119,67 @@ function draw_multigraph_feedlist_editor(){
     out += "</tr>";
     var setColour = ""; if (multigraph_feedlist[z]['lineColour']) setColour = multigraph_feedlist[z]['lineColour'];
     out += "<tr>";
-    out += "<td style='text-align: right;vertical-align:middle;border-color:transparent;'>Line Colour</td>";
+    out += "<td style='text-align: right;vertical-align:middle;border-color:transparent;'>"+_Tr("Line Colour")+"</td>";
     out += "<td colspan='4' style='vertical-align:middle;'><input id='lineColour' listid='"+z+"' style='width:110px' type='color' value='#"+setColour+"'></td>";
     out += "</tr>";
     var checked = "checked"; if (!multigraph_feedlist[z]['skipmissing']) checked = "";
     out += "<tr>";
-    out += "<td style='text-align: right;vertical-align:middle;border-color:transparent;'>Skip missing data</td>";
+    out += "<td style='text-align: right;vertical-align:middle;border-color:transparent;'>"+_Tr("Skip missing data")+"</td>";
     out += "<td style='text-align: center;vertical-align:middle;'><input id='skipmissing'  listid='"+z+"' type='checkbox' "+checked+" /></td>";
     var checked = ""; if (multigraph_feedlist[z]['stacked']) checked = "checked";
-    out += "<td style='text-align: right;vertical-align:middle;border-color:transparent;'>Stack</td>";
+    out += "<td style='text-align: right;vertical-align:middle;border-color:transparent;'>"+_Tr("Stack")+"</td>";
     out += "<td style='text-align: center;vertical-align:middle;'><input id='stacked'  listid='"+z+"' type='checkbox' "+checked+" /></td>";
     out += "<td style='text-align: right;vertical-align:middle;border-color:transparent;'></td>";
     out += "</tr>";
     if (publicfeed == 1) publicfeed = (get_feed_public(multigraph_feedlist[z]['id']));
   }
   var visurl = path+"vis/"+"multigraph?mid="+multigraph_id;
-  if (publicfeed == 1) $("#embedcode").val('<iframe style="width:580px; height:400px;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="'+visurl+'&embed=1"></iframe>'); else $("#embedcode").val('Some of the feeds selected are not public, to embed a visualisation publicly first make the feeds that you want to use public.\n\nTo embed privately:\n\n<iframe style="width:580px; height:400px;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="'+visurl+'&embed=1&apikey='+apikey+'"></iframe>');
+  if (publicfeed == 1) $("#embedcode").val('<iframe style="width:580px; height:400px;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="'+visurl+'&embed=1"></iframe>'); else $("#embedcode").val('_Tr("Some of the feeds selected are not public, to embed a visualisation publicly first make the feeds that you want to use public.")+"\n\n"+_Tr("To embed privately:")+"\n\n"'+'<iframe style="width:580px; height:400px;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="'+visurl+'&embed=1&apikey='+apikey+'"></iframe>');
   out += "<tr>";
   out += "<td>"+select_feed('feedselect', feedlist, 0)+"</td>";
   out += "<td></td>";
   out += "<td></td>";
-  out += "<td><input id='add' type='button' class='btn' value='Add'/ ></td>";
+  out += "<td><input id='add' type='button' class='btn' value='"+_Tr("Add")+"'/ ></td>";
   out += "<td></td>";
   out += "</tr>";
 
-  out += "<tr><td style='width:130px;' >Y axes limits</td><td colspan='2' style='text-align: center;'>Min</td><td colspan='2' style='text-align: center;'>Max</td></tr>";
-  out += "<tr><td style='text-align: right;vertical-align:middle;border-color:transparent;'>Left</td>";
+  out += "<tr><td style='width:130px;' >"+_Tr("Y axes limits")+"</td><td colspan='2' style='text-align: center;'>"+_Tr("Min")+"</td><td colspan='2' style='text-align: center;'>"+_Tr("Max")+"</td></tr>";
+  out += "<tr><td style='text-align: right;vertical-align:middle;border-color:transparent;'>"+_Tr("Left")+"</td>";
   out += "<td colspan='2'><input style='width:50px' id='ymin' value='" + ymin + "'/></td>";
   out += "<td colspan='2'><input style='width:50px' id='ymax' value='" + ymax + "'/></td>";
   out += "</tr>";
-  out += "<tr><td style='text-align: right;vertical-align:middle;border-color:transparent;'>Right</td>";
+  out += "<tr><td style='text-align: right;vertical-align:middle;border-color:transparent;'>"+_Tr("Right")+"</td>";
   out += "<td colspan='2'><input style='width:50px' id='y2min' value='" + y2min + "'/></td>";
   out += "<td colspan='2'><input style='width:50px' id='y2max' value='" + y2max + "'/></td>";
   out += "</tr>";
 
-  out += "<tr><td>Floating time</td>";
+  out += "<tr><td>"+_Tr("Floating time")+"</td>";
   var checked = ""; if (movingtime) checked = "checked";
   out += "<td><input id='movingtime' type='checkbox' "+checked+" /></td>";
   out += "<td></td>";
   out += "<td></td>";
   out += "<td></td></tr>";
-  out += "<tr><td>Auto refresh (secs)</td>";
+  out += "<tr><td>"+_Tr("Auto refresh (secs)")+"</td>";
   out += "<td><input style='width:110px' id='autorefresh' value='" + autorefresh + "'/></td>";
   out += "<td></td>";
   out += "<td></td>";
   out += "<td></td></tr>";
-  out += "<tr><td>Show tag name</td>";
+  out += "<tr><td>"+_Tr("Show tag name")+"</td>";
   var checked = ""; if (showtag) checked = "checked";
   out += "<td><input id='showtag' type='checkbox' "+checked+" /></td>";
   out += "<td></td>";
   out += "<td></td>";
   out += "<td></td></tr>";
-  out += "<tr><td>Show Legend</td>";
+  out += "<tr><td>"+_Tr("Show Legend")+"</td>";
   var checked = ""; if (showlegend) checked = "checked";
   out += "<td><input id='showlegend' type='checkbox' "+checked+" /></td>";
   out += "<td></td>";
   out += "<td></td>";
   out += "<td></td></tr>";
   out += "</table>";
-  var name = "<div class='input-prepend'><span class='add-on' style='width: 70px; text-align: right;'>Name</span><input class='options' id='multigraph-name' value='"+multigraphs_name[multigraph_id]+"' type='text'></div>";
-  out += name+"<button id='delete-multigraph-button' class='btn btn-danger'><i class='icon-trash'></i>Delete</button>";
-  out += "<button id='save-multigraph-button' class='btn btn-success' style='float:right'>Not modified</button>";
+  var name = "<div class='input-prepend'><span class='add-on' style='width: 70px; text-align: right;'>"+_Tr("Name")+"</span><input class='options' id='multigraph-name' value='"+multigraphs_name[multigraph_id]+"' type='text'></div>";
+  out += name+"<button id='delete-multigraph-button' class='btn btn-danger'><i class='icon-trash'></i>"+_Tr("Delete")+"</button>";
+  out += "<button id='save-multigraph-button' class='btn btn-success' style='float:right'>"+_Tr("Not modified")+"</button>";
   $("#feedtable").html(out);
 }
 
@@ -218,7 +218,7 @@ function update_multigraph_feedlist_names(){
 }
 
 function modified(){
-  $(baseElement + ' #save-multigraph-button').attr('class','btn btn-warning').text("Changed, press to save");
+  $(baseElement + ' #save-multigraph-button').attr('class','btn btn-warning').text(_Tr("Changed, press to save"));
 }
 
 // Events

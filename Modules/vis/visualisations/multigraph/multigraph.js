@@ -190,15 +190,15 @@ function multigraph_init(element) {
 
       "<div id='graph-buttons-timemanual' style='position:absolute; top:15px; right:35px; opacity:0.5; display: none;'>"+
         "<div class='input-prepend input-append'>"+
-            "<span class='add-on'>Select time window</span>"+
+            "<span class='add-on'>"+_Tr("Select time window")+"</span>"+
 
-            "<span class='add-on'>Start:</span>"+
+            "<span class='add-on'>"+_Tr("Start:")+"</span>"+
             "<span id='datetimepicker1'>"+
                 "<input id='timewindow-start' data-format='dd/MM/yyyy hh:mm:ss' type='text' style='width:140px'/>"+
                 "<span class='add-on'><i data-time-icon='icon-time' data-date-icon='icon-calendar'></i></span>"+
             "</span> "+
 
-            "<span class='add-on'>End:</span>"+
+            "<span class='add-on'>"+_Tr("End:")+"</span>"+
             "<span id='datetimepicker2'>"+
                 "<input id='timewindow-end' data-format='dd/MM/yyyy hh:mm:ss' type='text' style='width:140px'/>"+
                 "<span class='add-on'><i data-time-icon='icon-time' data-date-icon='icon-calendar'></i></span>"+
@@ -211,15 +211,15 @@ function multigraph_init(element) {
       "<div id='graph-buttons' style='position:absolute; top:15px; right:35px; opacity:0.5; display: none;'>"+
         "<div id='graph-buttons-normal'>"+
             "<div class='input-prepend input-append' id='graph-tooltip' style='margin:0'>"+
-             "<span class='add-on'>Tooltip:</span>"+
+             "<span class='add-on'>"+_Tr("Tooltip:")+"</span>"+
              "<span class='add-on'><input id='enableTooltip' type='checkbox' checked ></span>"+
             "</div> "+
 
             "<div class='btn-group'>"+
-             "<button class='btn graph-time' type='button' time='1'>D</button>"+
-             "<button class='btn graph-time' type='button' time='7'>W</button>"+
-             "<button class='btn graph-time' type='button' time='30'>M</button>"+
-             "<button class='btn graph-time' type='button' time='365'>Y</button>"+
+             "<button class='btn graph-time' type='button' time='1'>"+_Tr("D")+"</button>"+
+             "<button class='btn graph-time' type='button' time='7'>"+_Tr("W")+"</button>"+
+             "<button class='btn graph-time' type='button' time='30'>"+_Tr("M")+"</button>"+
+             "<button class='btn graph-time' type='button' time='365'>"+_Tr("Y")+"</button>"+
              "<button class='btn graph-timewindow' type='button'><i class='icon-resize-horizontal'></i></button></div>"+
 
             "<div class='btn-group' id='graph-navbar' style='display: none;'>"+

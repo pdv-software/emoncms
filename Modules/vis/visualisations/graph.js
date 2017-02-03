@@ -89,7 +89,7 @@ var app_graph = {
         var placeholder = $('#placeholder');
 
         var width = placeholder_bound.width();
-        var height = width * 0.5;
+        var height = width * 0.4;
 
         placeholder.width(width);
         placeholder_bound.height(height);

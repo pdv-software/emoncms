@@ -15,11 +15,10 @@
 <script language="javascript" type="text/javascript" src="<?php echo $path;?>Lib/flot/jquery.flot.touch.min.js"></script>
 <script language="javascript" type="text/javascript" src="<?php echo $path;?>Lib/flot/jquery.flot.time.min.js"></script>
 <script language="javascript" type="text/javascript" src="<?php echo $path;?>Lib/flot/date.format.min.js"></script>
-
 <script language="javascript" type="text/javascript" src="<?php echo $path;?>Lib/flot/jquery.flot.canvas.js"></script>
-<script language="javascript" type="text/javascript" src="<?php echo $path; ?>Lib/flot/plugin/saveAsImage/lib/base64.js"></script>
-<script language="javascript" type="text/javascript" src="<?php echo $path; ?>Lib/flot/plugin/saveAsImage/lib/canvas2image.js"></script>
-<script language="javascript" type="text/javascript" src="<?php echo $path; ?>Lib/flot/plugin/saveAsImage/jquery.flot.saveAsImage.js"></script>
+<script language="javascript" type="text/javascript" src="<?php echo $path;?>Lib/flot/plugin/saveAsImage/lib/base64.js"></script>
+<script language="javascript" type="text/javascript" src="<?php echo $path;?>Lib/flot/plugin/saveAsImage/lib/canvas2image.js"></script>
+<script language="javascript" type="text/javascript" src="<?php echo $path;?>Lib/flot/plugin/saveAsImage/jquery.flot.saveAsImage.js"></script>
 
 <script language="javascript" type="text/javascript" src="<?php echo $path;?>Modules/vis/visualisations/common/daysmonthsyears.js"></script>
 <script language="javascript" type="text/javascript" src="<?php echo $path;?>Modules/vis/visualisations/zoom/view.js"></script>
@@ -35,7 +34,7 @@
 
 <div id="placeholder_bound" style="width:100%; height:400px; position:relative; ">
     <div style="position:absolute; top:10px; left:0px; width:100%;">
-        &nbsp;&nbsp;<span id="out2">Loading...</span><span id="out"></span>
+        &nbsp;&nbsp;<span id="out2"><?php echo _("Loading..."); ?></span><span id="out"></span>
     </div>
     
     <div id="placeholder" style="top: 30px; left:0px;"></div>
@@ -46,14 +45,14 @@
     
     <div id="graph-buttons" style="position:absolute; top:45px; right:32px; opacity:0.5; display: none;">
         <div class='btn-group' id="graph-return">
-            <button class='btn graph-return' id="return">Back</button>
+            <button class='btn graph-return' id="return"><?php echo _("Back"); ?></button>
         </div>
         
         <div class='btn-group'>
-            <button class='btn graph-time' time='1'>D</button>
-            <button class='btn graph-time' time='7'>W</button>
-            <button class='btn graph-time' time='30'>M</button>
-            <button class='btn graph-time' time='365'>Y</button>
+            <button class='btn graph-time' time='1'><?php echo _("D"); ?></button>
+            <button class='btn graph-time' time='7'><?php echo _("W"); ?></button>
+            <button class='btn graph-time' time='30'><?php echo _("M"); ?></button>
+            <button class='btn graph-time' time='365'><?php echo _("Y"); ?></button>
         </div>
         
         <div class='btn-group' id='graph-navbar' style='display: none;'>
