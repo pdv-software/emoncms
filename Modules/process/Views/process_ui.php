@@ -31,7 +31,7 @@
 <div id="processlistModal" class="modal hide keyboard modal-processlist" tabindex="-1" role="dialog" aria-labelledby="processlistModalLabel" aria-hidden="true" data-backdrop="static">
     <div class="modal-header">
         <button type="button" class="close" id="close">×</button>
-        <h3><b><span id="contextname"></span></b> process list setup</h3>
+        <h3><b><span id="contextname"></span></b> <?php echo _("process list setup"); ?></h3>
     </div>
     <div class="modal-body" id="processlist-ui">
         <p><?php echo _('Processes are executed sequentially with the result value being passed down for further processing to the next processor on this processing list.'); ?></p>
