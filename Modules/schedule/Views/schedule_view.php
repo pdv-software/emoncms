@@ -24,7 +24,7 @@
         </div>
     </div>
 
-    <div id="table"><div align='center'>loading...</div></div>
+    <div id="table"><div align='center'><?php echo _("loading..."); ?></div></div>
 
     <div id="bottomtoolbar"><hr>
         <button id="addnewschedule" class="btn btn-small" >&nbsp;<i class="icon-plus-sign" ></i>&nbsp;<?php echo _('New schedule'); ?></button>

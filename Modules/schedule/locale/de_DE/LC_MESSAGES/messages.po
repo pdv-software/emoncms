@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emoncms3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-29 17:47+0100\n"
-"PO-Revision-Date: 2017-01-29 17:48+0100\n"
+"POT-Creation-Date: 2017-02-05 18:00+0100\n"
+"PO-Revision-Date: 2017-02-05 18:01+0100\n"
 "Last-Translator: Frank Dille\n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -176,6 +176,10 @@ msgstr ""
 "Hilfe und Beispiele wie Scheduler konfiguriert werden, lesen Sie die <a href="
 "\"api#expression\">Expression Dokumentation</a>."
 
+#: ../../../Views/schedule_view.php:27
+msgid "loading..."
+msgstr "wird geladen ..."
+
 #: ../../../Views/schedule_view.php:30
 msgid "New schedule"
 msgstr "Neuer Scheduler"
@@ -226,187 +230,65 @@ msgstr "Scheduler"
 msgid "If !schedule, ZERO"
 msgstr "IF !Scheduler, ZERO"
 
+#: ../../../schedule_processlist.php:43 ../../../schedule_processlist.php:44
+#: ../../../schedule_processlist.php:45 ../../../schedule_processlist.php:46
+msgid ""
+"Value is passed for further processing by the next processor in the "
+"processing list."
+msgstr ""
+"Das Resultat wird zur weiteren Verarbeitung an den nächsten Prozess in der "
+"Verarbeitungsliste weitergegeben."
+
+#: ../../../schedule_processlist.php:43 ../../../schedule_processlist.php:44
+#: ../../../schedule_processlist.php:45 ../../../schedule_processlist.php:46
+msgid ""
+"You can use this to get a feed for each of the multi-rate tariff rate your "
+"provider gives. Add the 'Reset to Original' process before this process to "
+"log the input value to a different feed for each schedule on the same "
+"processing list"
+msgstr ""
+"Dies kann verwendet werden um verschiedene Tarife bei einem Versorger "
+"abzubilden. Verwenden Sie 'Reset zu Original' vor dem Speichern des Inputs "
+"in einen anderen Feed in der gleichen Prozessliste."
+
+#: ../../../schedule_processlist.php:43
+msgid ""
+"Validates if time is NOT in range of schedule. If NOT in schedule, value is "
+"ZEROed. "
+msgstr ""
+"Prüft ob Zeitbereich NICHT im Scheduler definiert ist. Wenn NICHT im "
+"Zeitbereich wird der Wert auf 0-Zero gesetzt."
+
 #: ../../../schedule_processlist.php:44
 msgid "If !schedule, NULL"
 msgstr "IF !Scheduler, NULL"
+
+#: ../../../schedule_processlist.php:44
+msgid ""
+"Validates if time is NOT in range of schedule. If NOT in schedule, value is "
+"NULLed. "
+msgstr ""
+"Prüft ob Zeitbereich NICHT im Scheduler definiert ist. Wenn NICHT im "
+"Zeitbereich wird der Wert auf NULL gesetzt."
 
 #: ../../../schedule_processlist.php:45
 msgid "If schedule, ZERO"
 msgstr "IF Scheduler, ZERO"
 
+#: ../../../schedule_processlist.php:45
+msgid ""
+"Validates if time is in range of schedule. If in schedule, value is ZEROed. "
+msgstr ""
+"Prüft ob Zeitbereich im Scheduler definiert ist. Wenn im Zeitbereich wird "
+"der Wert auf 0-Zero gesetzt."
+
 #: ../../../schedule_processlist.php:46
 msgid "If schedule, NULL"
 msgstr "IF Scheduler, NULL"
 
-#~ msgid ""
-#~ "<p>Validates if time is NOT in range of schedule. If NOT in schedule, "
-#~ "value is ZEROed. Value is passed for further processing by the next "
-#~ "processor in the processing list.</p><p>You can use this to get a feed "
-#~ "for each of the multi-rate tariff rate your provider gives. Add the "
-#~ "'Reset to Original' process before this process to log the input value to "
-#~ "a different feed for each schedule on the same processing list</p>"
-#~ msgstr ""
-#~ "<p>Prüft ob Zeit NICHT im Bereich des Schedulers. Wenn NEIN wird Wert auf "
-#~ "ZERO gesetzt. Wert wird weiterem Prozesschritt übergeben.</p><p>Dies kann "
-#~ "bei Mehrfachtarif benutzt werden. Verwenden Sie 'Reset zu Original' vor "
-#~ "diesem Prozess um den Input in einen anderen Feed in der gleichen "
-#~ "Prozessliete zu schreiben.</p>"
-
-#~ msgid ""
-#~ "<p>Validates if time is NOT in range of schedule. If NOT in schedule, "
-#~ "value is NULLed. Value is passed for further processing by the next "
-#~ "processor in the processing list.</p><p>You can use this to get a feed "
-#~ "for each of the multi-rate tariff rate your provider gives. Add the "
-#~ "'Reset to Original' process before this process to log the input value to "
-#~ "a different feed for each schedule on the same processing list</p>"
-#~ msgstr ""
-#~ "<p>Prüft ob Zeit NICHT im Bereich des Schedulers. Wenn NEIN wird Wert auf "
-#~ "NULL gesetzt. Wert wird weiterem Prozesschritt übergeben.</p><p>Dies kann "
-#~ "bei Mehrfachtarif benutzt werden. Verwenden Sie 'Reset zu Original' vor "
-#~ "diesem Prozess um den Input in einen anderen Feed in der gleichen "
-#~ "Prozessliete zu schreiben.</p>"
-
-#~ msgid ""
-#~ "<p>Validates if time is in range of schedule. If in schedule, value is "
-#~ "ZEROed. Value is passed for further processing by the next processor in "
-#~ "the processing list.</p><p>You can use this to get a feed for each of the "
-#~ "multi-rate tariff rate your provider gives. Add the 'Reset to Original' "
-#~ "process before this process to log the input value to a different feed "
-#~ "for each schedule on the same processing list</p>"
-#~ msgstr ""
-#~ "<p>Prüft ob Zeit im Bereich des Schedulers. Wenn JA wird Wert auf ZERO "
-#~ "gesetzt. Wert wird weiterem Prozesschritt übergeben.</p><p>Dies kann bei "
-#~ "Mehrfachtarif benutzt werden. Verwenden Sie 'Reset zu Original' vor "
-#~ "diesem Prozess um den Input in einen anderen Feed in der gleichen "
-#~ "Prozessliete zu schreiben.</p>"
-
-#~ msgid ""
-#~ "<p>Validates if time is in range of schedule. If in schedule, value is "
-#~ "NULLed. Value is passed for further processing by the next processor in "
-#~ "the processing list.</p><p>You can use this to get a feed for each of the "
-#~ "multi-rate tariff rate your provider gives. Add the 'Reset to Original' "
-#~ "process before this process to log the input value to a different feed "
-#~ "for each schedule on the same processing list</p>"
-#~ msgstr ""
-#~ "<p>Prüft ob Zeit im Bereich des Schedulers. Wenn JA wird Wert auf NULL "
-#~ "gesetzt. Wert wird weiterem Prozesschritt übergeben.</p><p>Dies kann bei "
-#~ "Mehrfachtarif benutzt werden. Verwenden Sie 'Reset zu Original' vor "
-#~ "diesem Prozess um den Input in einen anderen Feed in der gleichen "
-#~ "Prozessliete zu schreiben.</p>"
-
-#~ msgid "Username:"
-#~ msgstr "Benutzername:"
-
-#~ msgid "Password:"
-#~ msgstr "Paßwort"
-
-#~ msgid "Login"
-#~ msgstr "Anmeldung"
-
-#~ msgid ""
-#~ "Or if you are new enter a username and password above and click register"
-#~ msgstr ""
-#~ "Bei Neueinrichtung einen Benutzernamen und Paßwort eingeben und "
-#~ "\"Registrierung\" auswählen ."
-
-#~ msgid "Register"
-#~ msgstr "Registrierung"
-
-#~ msgid "Invalid username or password"
-#~ msgstr "Ungültiger Benutzername oder Paßwort."
-
-#~ msgid "Welcome, you are now logged in"
-#~ msgstr "Willkommen, Sie sind jetzt angemeldet."
-
-#~ msgid "Sorry username already exists"
-#~ msgstr "Der Benutzename existiert bereits!"
-
-#~ msgid "Please enter a username that is 4 to 30 characters long"
-#~ msgstr "Bitte einen Benutzernamen eingeben der 4 bis 30 Zeichen lang ist."
-
-#~ msgid "Please enter a password that is 4 to 30 characters long"
-#~ msgstr "Bitte ein Paßwort eingeben das 4 bis 30 Zeichen lang ist."
-
-#~ msgid "Your new account has been created"
-#~ msgstr "Das neue Benutzerkonto wurde angelegt. "
-
-#~ msgid "Your password has been changed"
-#~ msgstr "Paßwort wurde geändert."
-
-#~ msgid "Invalid password"
-#~ msgstr "Ungültiges Paßwort"
-
-#~ msgid "No email address present"
-#~ msgstr "Keine E-Mail Adresse vorhanden"
-
-#~ msgid "Username and password updated"
-#~ msgstr "Benutzername und Paßwort aktualisiert"
-
-#~ msgid "New read apikey: "
-#~ msgstr "Neuer Lese API Key"
-
-#~ msgid "New write apikey: "
-#~ msgstr "Neuer Schreib API Key"
-
-#~ msgid "You are logged out"
-#~ msgstr "Abmeldung erfolgreich"
-
-#~ msgid "Invalid token"
-#~ msgstr "Ungültiger Token"
-
-#~ msgid "User: "
-#~ msgstr "Benutzer"
-
-#~ msgid "Select preferred language"
-#~ msgstr "Sprache auswählen"
-
-#~ msgid "Browser language"
-#~ msgstr "Browser Sprache"
-
-#~ msgid "Save"
-#~ msgstr "Speichern"
-
-#~ msgid "Local time"
-#~ msgstr "Lokale Zeit"
-
-#~ msgid "Time offset in hours:"
-#~ msgstr "Zeit Offset in Stunden"
-
-#~ msgid "Set"
-#~ msgstr "Setzen"
-
-#~ msgid "Change details"
-#~ msgstr "Details ändern"
-
-#~ msgid "Email:"
-#~ msgstr "E-Mail:"
-
-#~ msgid "Change"
-#~ msgstr "Ändern"
-
-#~ msgid "Change password"
-#~ msgstr "Paßwort ändern"
-
-#~ msgid "Current password:"
-#~ msgstr "aktuelles Paßwort"
-
-#~ msgid "New password:"
-#~ msgstr "neues Paßwort"
-
-#~ msgid "en_EN"
-#~ msgstr "English"
-
-#~ msgid "es_ES"
-#~ msgstr "Spanish"
-
-#~ msgid "nl_BE"
-#~ msgstr "Dutch (Belgium)"
-
-#~ msgid "nl_NL"
-#~ msgstr "Dutch (Netherlands)"
-
-#~ msgid "fr_FR"
-#~ msgstr "French"
-
-#~ msgid "AUTODETECTLANGUAGE"
-#~ msgstr "Use language browser"
+#: ../../../schedule_processlist.php:46
+msgid ""
+"Validates if time is in range of schedule. If in schedule, value is NULLed. "
+msgstr ""
+"Prüft ob Zeitbereich im Scheduler definiert ist. Wenn im Zeitbereich wird "
+"der Wert auf NULL gesetzt."
