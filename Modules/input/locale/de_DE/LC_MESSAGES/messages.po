@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emoncms3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-02 13:21+0100\n"
-"PO-Revision-Date: 2017-02-02 13:29+0100\n"
+"POT-Creation-Date: 2017-02-05 14:17+0100\n"
+"PO-Revision-Date: 2017-02-05 14:18+0100\n"
 "Last-Translator: Frank Dille\n"
 "Language-Team: @sumpfing <anne@sumpfing.de>\n"
 "Language: de_DE\n"
@@ -304,7 +304,7 @@ msgstr "Wollen Sie wirklich löschen?"
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: ../../../Views/input_view.php:53
+#: ../../../Views/input_view.php:53 ../../../Views/input_view.php:87
 msgid "Delete"
 msgstr "Löschen"
 
@@ -331,6 +331,14 @@ msgstr "Name"
 #: ../../../Views/input_view.php:84
 msgid "Value"
 msgstr "Wert"
+
+#: ../../../Views/input_view.php:86
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: ../../../Views/input_view.php:88
+msgid "Processlist"
+msgstr "Prozessliste"
 
 #: ../../../input_model.php:317
 msgid "Error setting processlist"
