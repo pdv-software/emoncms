@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emoncms3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-02 12:13+0100\n"
-"PO-Revision-Date: 2017-02-02 13:14+0100\n"
+"POT-Creation-Date: 2017-02-04 16:59+0100\n"
+"PO-Revision-Date: 2017-02-04 16:59+0100\n"
 "Last-Translator: Frank Dille\n"
 "Language-Team: @sumpfing <anne@sumpfing.de>\n"
 "Language: de_DE\n"
@@ -185,6 +185,10 @@ msgstr "Feed API Hilfe"
 msgid "Feeds"
 msgstr "Feeds"
 
+#: ../../../Views/feedlist_view.php:34
+msgid "loading..."
+msgstr "wird geladen ..."
+
 #: ../../../Views/feedlist_view.php:37
 msgid "No feeds created"
 msgstr "Keine Feeds angelegt"
@@ -261,7 +265,7 @@ msgstr "Abbrechen"
 msgid "Delete permanently"
 msgstr "Dauerhaft gelöscht"
 
-#: ../../../Views/feedlist_view.php:69
+#: ../../../Views/feedlist_view.php:69 ../../../Views/feedlist_view.php:197
 msgid "CSV export"
 msgstr "CSV Export"
 
@@ -287,11 +291,29 @@ msgstr "Datums/Zeit-Format"
 
 #: ../../../Views/feedlist_view.php:115
 msgid "Excel (d/m/Y H:i:s)"
-msgstr ""
+msgstr "Excel (d/m/Y H:i:s)"
 
 #: ../../../Views/feedlist_view.php:117
 msgid "Offset secs (for daily)"
 msgstr "Offset in Sek. (für täglich)"
+
+#: ../../../Views/feedlist_view.php:122
+msgid ""
+"Selecting an interval shorter than the feed interval (or Auto) will use the "
+"feed interval instead. Averages are only returned for feed engines with "
+"built in averaging."
+msgstr ""
+"Wenn Sie ein zu kleines Intervall wählen, wird das Intervall des Feeds "
+"verwendet. Mittelwerte werden nur zurückgegeben von Feed Engines mit "
+"eingebauter Berechnung."
+
+#: ../../../Views/feedlist_view.php:123
+msgid ""
+"Date time in excel format is in user timezone. Offset can be set if "
+"exporting in Unix epoch time format."
+msgstr ""
+"Datum und Zeit im Excel-Format ist in der Zeitzone des Benutzers. Der Offset "
+"kann gesetzt werden im Unix Zeitformat."
 
 #: ../../../Views/feedlist_view.php:127
 msgid "Estimated download size"
@@ -373,11 +395,27 @@ msgstr "Engine"
 msgid "Value"
 msgstr "Wert"
 
+#: ../../../Views/feedlist_view.php:193
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: ../../../Views/feedlist_view.php:194
+msgid "Delete"
+msgstr "Löschen"
+
+#: ../../../Views/feedlist_view.php:195
+msgid "View"
+msgstr "Anzeigen"
+
+#: ../../../Views/feedlist_view.php:196
+msgid "Processlist"
+msgstr "Prozessliste"
+
+#~ msgid "Total size of used space for feeds:"
+#~ msgstr "Speicherplatz für alle Feeds:"
+
 #~ msgid "returns id of a feed given by name"
 #~ msgstr "zeigt die ID eines Feeds anhand des Namens"
-
-#~ msgid " deleted"
-#~ msgstr "gelöscht"
 
 #~ msgid "Feed does not exist"
 #~ msgstr "Feed existiert nicht"
