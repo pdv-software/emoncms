@@ -1,6 +1,10 @@
 ﻿<?php
     defined('EMONCMS_EXEC') or die('Restricted access');
     global $path, $feed_settings, $redis_enabled;
+
+    $domain = "messages";
+    bindtextdomain($domain, "Modules/process/locale");
+    bind_textdomain_codeset($domain, 'UTF-8');
 ?>
 <style>
   .modal-processlist {
