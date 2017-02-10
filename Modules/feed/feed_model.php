@@ -70,7 +70,7 @@ class Feed
                     $this->log->error("EngineClass() Engine id '".$e."' is not supported.");
                     throw new Exception("ABORTED: Engine id '".$e."' is not supported.");
             }
-            $this->log->info("EngineClass() Autoloaded new instance of '".get_class($engines[$e])."'.");
+            $this->log->debug("EngineClass() Autoloaded new instance of '".get_class($engines[$e])."'.");
             return $engines[$e];
         }
     }
@@ -107,7 +107,8 @@ class Feed
                     'tag'=>$tag,
                     'public'=>false,
                     'size'=>0,
-                    'engine'=>$engine
+                    'engine'=>$engine,
+                    'unit'=>""
                 ));
             }
 
@@ -304,11 +305,11 @@ class Feed
     {
         $userid = (int) $userid;
         $feeds = array();
-        $result = $this->mysqli->query("SELECT id,name,userid,tag,datatype,public,size,engine,time,value,processList FROM feeds WHERE `userid` = '$userid'");
+        $result = $this->mysqli->query("SELECT id,name,userid,tag,datatype,public,size,engine,time,value,processList,unit FROM feeds WHERE `userid` = '$userid'");
         while ($row = (array)$result->fetch_object())
         {
             if ($row['engine'] == Engine::VIRTUALFEED) { //if virtual get it now
-                $this->log->info("mysql_get_user_feeds() calling VIRTUAL lastvalue " . $row['id']);
+                $this->log->debug("mysql_get_user_feeds() calling VIRTUAL lastvalue " . $row['id']);
                 $lastvirtual = $this->EngineClass(Engine::VIRTUALFEED)->lastvalue($row['id']);
                 $row['time'] = $lastvirtual['time'];
                 $row['value'] = $lastvirtual['value'];
@@ -352,7 +353,7 @@ class Feed
             $row = $this->redis->hGetAll("feed:$id");
         } else {
             // Get from mysql db
-            $result = $this->mysqli->query("SELECT id,name,userid,tag,datatype,public,size,engine,processList FROM feeds WHERE `id` = '$id'");
+            $result = $this->mysqli->query("SELECT id,name,userid,tag,datatype,public,size,engine,processList,unit FROM feeds WHERE `id` = '$id'");
             $row = (array) $result->fetch_object();
         }
         $lastvalue = $this->get_timevalue($id);
@@ -397,7 +398,7 @@ class Feed
         $engine = $this->get_engine($id);
 
         if ($engine == Engine::VIRTUALFEED) { //if virtual get it now
-            $this->log->info("get_timevalue() calling VIRTUAL lastvalue $id");
+            $this->log->debug("get_timevalue() calling VIRTUAL lastvalue $id");
             $lastvirtual = $this->EngineClass(Engine::VIRTUALFEED)->lastvalue($id);
             return array('time'=>$lastvirtual['time'], 'value'=>$lastvirtual['value']);
         }
@@ -449,7 +450,7 @@ class Feed
             $bufferdata = $this->EngineClass(Engine::REDISBUFFER)->get_data($feedid,$bufferstart,$end,$outinterval,$skipmissing,$limitinterval);
 
             if (!empty($bufferdata)) {
-                $this->log->info("get_data() Buffer cache merged feedid=$feedid start=". reset($data)[0]/1000 ." end=". end($data)[0]/1000 ." bufferstart=". reset($bufferdata)[0]/1000 ." bufferend=". end($bufferdata)[0]/1000);
+                $this->log->debug("get_data() Buffer cache merged feedid=$feedid start=". reset($data)[0]/1000 ." end=". end($data)[0]/1000 ." bufferstart=". reset($bufferdata)[0]/1000 ." bufferend=". end($bufferdata)[0]/1000);
 
                 // Merge buffered data into base data timeslots (over-writing null values where they exist)
                 if ($engine==Engine::PHPFINA || $engine==Engine::PHPTIMESERIES) {
@@ -658,6 +659,7 @@ class Feed
         if (isset($fields->name)) $array[] = "`name` = '".preg_replace('/[^\p{N}\p{L}_\s-:]/u','',$fields->name)."'";
         if (isset($fields->tag)) $array[] = "`tag` = '".preg_replace('/[^\p{N}\p{L}_\s-:]/u','',$fields->tag)."'";
         if (isset($fields->public)) $array[] = "`public` = '".intval($fields->public)."'";
+        if (isset($fields->unit)) $array[] = "`unit` = '".preg_replace('/[^\p{N}\p{L}_\s-:]/u','',$fields->unit)."'";
 
         // Convert to a comma separated string for the mysql query
         $fieldstr = implode(",",$array);
@@ -667,6 +669,7 @@ class Feed
         if ($this->redis && isset($fields->name)) $this->redis->hset("feed:$id",'name',$fields->name);
         if ($this->redis && isset($fields->tag)) $this->redis->hset("feed:$id",'tag',$fields->tag);
         if ($this->redis && isset($fields->public)) $this->redis->hset("feed:$id",'public',$fields->public);
+        if ($this->redis && isset($fields->unit)) $this->redis->hset("feed:$id",'unit',$fields->unit);
 
         if ($this->mysqli->affected_rows>0){
             return array('success'=>true, 'message'=>'Field updated');
@@ -822,7 +825,7 @@ class Feed
     /* Redis helpers */
     private function load_to_redis($userid)
     {
-        $result = $this->mysqli->query("SELECT id,userid,name,datatype,tag,public,size,engine,processList FROM feeds WHERE `userid` = '$userid'");
+        $result = $this->mysqli->query("SELECT id,userid,name,datatype,tag,public,size,engine,processList,unit FROM feeds WHERE `userid` = '$userid'");
         while ($row = $result->fetch_object())
         {
             $this->redis->sAdd("user:feeds:$userid", $row->id);
@@ -835,14 +838,15 @@ class Feed
             'public'=>$row->public,
             'size'=>$row->size,
             'engine'=>$row->engine,
-            'processList'=>$row->processList
+            'processList'=>$row->processList,
+            'unit'=>$row->unit
             ));
         }
     }
 
     private function load_feed_to_redis($id)
     {
-        $result = $this->mysqli->query("SELECT id,userid,name,datatype,tag,public,size,engine,processList FROM feeds WHERE `id` = '$id'");
+        $result = $this->mysqli->query("SELECT id,userid,name,datatype,tag,public,size,engine,processList,unit FROM feeds WHERE `id` = '$id'");
         $row = $result->fetch_object();
         if (!$row) {
             $this->log->warn("Feed model: Requested feed does not exist feedid=$id");
@@ -857,7 +861,8 @@ class Feed
             'public'=>$row->public,
             'size'=>$row->size,
             'engine'=>$row->engine,
-            'processList'=>$row->processList
+            'processList'=>$row->processList,
+            'unit'=>$row->unit
         ));
         return true;
     }

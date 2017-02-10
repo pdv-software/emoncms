@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emoncms3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-02 12:13+0100\n"
-"PO-Revision-Date: 2017-02-02 13:14+0100\n"
+"POT-Creation-Date: 2017-02-10 14:02+0100\n"
+"PO-Revision-Date: 2017-02-10 14:03+0100\n"
 "Last-Translator: Frank Dille\n"
 "Language-Team: @sumpfing <anne@sumpfing.de>\n"
 "Language: de_DE\n"
@@ -185,6 +185,10 @@ msgstr "Feed API Hilfe"
 msgid "Feeds"
 msgstr "Feeds"
 
+#: ../../../Views/feedlist_view.php:34
+msgid "loading..."
+msgstr "wird geladen ..."
+
 #: ../../../Views/feedlist_view.php:37
 msgid "No feeds created"
 msgstr "Keine Feeds angelegt"
@@ -287,7 +291,7 @@ msgstr "Datums/Zeit-Format"
 
 #: ../../../Views/feedlist_view.php:115
 msgid "Excel (d/m/Y H:i:s)"
-msgstr ""
+msgstr "Excel (d/m/Y H:i:s)"
 
 #: ../../../Views/feedlist_view.php:117
 msgid "Offset secs (for daily)"
@@ -372,6 +376,10 @@ msgstr "Engine"
 #: ../../../Views/feedlist_view.php:191
 msgid "Value"
 msgstr "Wert"
+
+#: ../../../Views/feedlist_view.php:192
+msgid "Unit"
+msgstr "Einheit"
 
 #~ msgid "returns id of a feed given by name"
 #~ msgstr "zeigt die ID eines Feeds anhand des Namens"

@@ -28,7 +28,7 @@
     <div id="apihelphead" style="float:right;"><a href="api"><?php echo _('Input API Help'); ?></a></div>
     <div id="localheading"><h2><?php echo _('Inputs'); ?></h2></div>
 
-    <div id="table"><div align='center'>loading...</div></div>
+    <div id="table"><div align='center'><?php echo _("loading..."); ?></div></div>
 
     <div id="noinputs" class="alert alert-block hide">
             <h4 class="alert-heading"><?php echo _('No inputs created'); ?></h4>
@@ -79,6 +79,7 @@
     'nodeid':{'title':'<?php echo _("Node"); ?>','type':"fixed"},
     'name':{'title':'<?php echo _("Key"); ?>','type':"text"},
     'description':{'title':'<?php echo _("Name"); ?>','type':"text"},
+    'unit':{'title':'<?php echo _("Unit"); ?>','type':"text"},
     'processList':{'title':'<?php echo _("Process list"); ?>','type':"processlist"},
     'time':{'title':'<?php echo _("Updated"); ?>', 'type':"updated"},
     'value':{'title':'<?php echo _("Value"); ?>','type':"value"},

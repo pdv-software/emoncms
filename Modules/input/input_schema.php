@@ -8,5 +8,6 @@ $schema['input'] = array(
     'nodeid' => array('type' => 'text'),
     'processList' => array('type' => 'text'),
     'time' => array('type' => 'int(10)'),
-    'value' => array('type' => 'float')
+    'value' => array('type' => 'float'),
+    'unit' => array('type' => 'text','default'=>'')
 );

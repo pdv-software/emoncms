@@ -32,15 +32,14 @@ class Input
         $userid = (int) $userid;
         $nodeid = preg_replace('/[^\p{N}\p{L}_\s-.]/u','',$nodeid);
         $name = preg_replace('/[^\p{N}\p{L}_\s-.]/u','',$name);
-        $this->mysqli->query("INSERT INTO input (userid,name,nodeid,description,processList) VALUES ('$userid','$name','$nodeid','','')");
+        $this->mysqli->query("INSERT INTO input (userid,name,nodeid,description,processList,unit) VALUES ('$userid','$name','$nodeid','','','')");
         $id = $this->mysqli->insert_id;
 
         if ($this->redis) {
             $this->redis->sAdd("user:inputs:$userid", $id);
-            $this->redis->hMSet("input:$id",array('id'=>$id,'nodeid'=>$nodeid,'name'=>$name,'description'=>"", 'processList'=>""));
+            $this->redis->hMSet("input:$id",array('id'=>$id,'nodeid'=>$nodeid,'name'=>$name,'description'=>"", 'processList'=>"", 'unit'=>""));
         }
         return $id;
-
     }
 
     public function exists($inputid)
@@ -65,7 +64,7 @@ class Input
             }
         } else if (!isset($dbinputs[$nodeid]) && (count($dbinputs) >= $max_node_id_limit )) {
             $success = false;
-            $message = "Reached the maximal allowed number of diferent NodeIds, limit is $max_node_id_limit. Node '$nodeid' was ignored.";
+            $message = "Reached the maximal allowed number of different NodeIds, limit is $max_node_id_limit. Node '$nodeid' was ignored.";
         }
         return array('success'=>$success, 'message'=>$message);
     }
@@ -103,8 +102,9 @@ class Input
         $array = array();
 
         // Repeat this line changing the field name to add fields that can be updated:
-        if (isset($fields->description)) $array[] = "`description` = '".preg_replace('/[^\p{L}_\p{N}\s-]/u','',$fields->description)."'";
         if (isset($fields->name)) $array[] = "`name` = '".preg_replace('/[^\p{L}_\p{N}\s-.]/u','',$fields->name)."'";
+        if (isset($fields->description)) $array[] = "`description` = '".preg_replace('/[^\p{L}_\p{N}\s-]/u','',$fields->description)."'";
+        if (isset($fields->unit)) $array[] = "`unit` = '".preg_replace('/[^\p{L}_\p{N}\s-]/u','',$fields->unit)."'";
         // Convert to a comma seperated string for the mysql query
         $fieldstr = implode(",",$array);
         $this->mysqli->query("UPDATE input SET ".$fieldstr." WHERE `id` = '$id'");
@@ -113,6 +113,7 @@ class Input
         // UPDATE REDIS
         if (isset($fields->name) && $this->redis) $this->redis->hset("input:$id",'name',$fields->name);
         if (isset($fields->description) && $this->redis) $this->redis->hset("input:$id",'description',$fields->description);
+        if (isset($fields->unit) && $this->redis) $this->redis->hset("input:$id",'unit',$fields->unit);
 
         if ($this->mysqli->affected_rows>0){
             return array('success'=>true, 'message'=>'Field updated');
@@ -154,7 +155,7 @@ class Input
     {
         $userid = (int) $userid;
         $dbinputs = array();
-        $result = $this->mysqli->query("SELECT id,nodeid,name,description,processList FROM input WHERE `userid` = '$userid' ORDER BY nodeid,name asc");
+        $result = $this->mysqli->query("SELECT id,nodeid,name,description,processList,unit FROM input WHERE `userid` = '$userid' ORDER BY nodeid,name asc");
         while ($row = (array)$result->fetch_object())
         {
             if ($row['nodeid']==null) $row['nodeid'] = 0;
@@ -201,7 +202,7 @@ class Input
         $userid = (int) $userid;
         $inputs = array();
 
-        $result = $this->mysqli->query("SELECT id,nodeid,name,description,processList,time,value FROM input WHERE `userid` = '$userid' ORDER BY nodeid,name asc");
+        $result = $this->mysqli->query("SELECT id,nodeid,name,description,processList,time,value,unit FROM input WHERE `userid` = '$userid' ORDER BY nodeid,name asc");
         while ($row = (array)$result->fetch_object())
         {
             $inputs[] = $row;
@@ -233,7 +234,7 @@ class Input
             if (!$this->redis->exists("input:$id")) $this->load_input_to_redis($id);
             return $this->redis->hGetAll("input:$id");
         } else {
-            $result = $this->mysqli->query("SELECT nodeid,name,description FROM input WHERE `id` = '$id'");
+            $result = $this->mysqli->query("SELECT nodeid,name,description,unit FROM input WHERE `id` = '$id'");
             return $result->fetch_array();
         }
     }
@@ -337,7 +338,7 @@ class Input
     // Redis cache loaders
     private function load_input_to_redis($inputid)
     {
-        $result = $this->mysqli->query("SELECT id,nodeid,name,description,processList FROM input WHERE `id` = '$inputid' ORDER BY nodeid,name asc");
+        $result = $this->mysqli->query("SELECT id,nodeid,name,description,processList,unit FROM input WHERE `id` = '$inputid' ORDER BY nodeid,name asc");
         $row = $result->fetch_object();
 
         $this->redis->sAdd("user:inputs:$userid", $row->id);
@@ -346,13 +347,14 @@ class Input
             'nodeid'=>$row->nodeid,
             'name'=>$row->name,
             'description'=>$row->description,
-            'processList'=>$row->processList
+            'processList'=>$row->processList,
+            'unit'=>$row->unit
         ));
     }
 
     private function load_to_redis($userid)
     {
-        $result = $this->mysqli->query("SELECT id,nodeid,name,description,processList FROM input WHERE `userid` = '$userid' ORDER BY nodeid,name asc");
+        $result = $this->mysqli->query("SELECT id,nodeid,name,description,processList,unit FROM input WHERE `userid` = '$userid' ORDER BY nodeid,name asc");
         while ($row = $result->fetch_object())
         {
             $this->redis->sAdd("user:inputs:$userid", $row->id);
@@ -361,7 +363,8 @@ class Input
                 'nodeid'=>$row->nodeid,
                 'name'=>$row->name,
                 'description'=>$row->description,
-                'processList'=>$row->processList
+                'processList'=>$row->processList,
+                'unit'=>$row->unit
             ));
         }
     }

@@ -39,6 +39,10 @@ class EmonLogger
         }
     }
 
+    public function debug ($message){
+        if ($this->log_level <= 0) $this->write("DEBUG",$message);
+    }
+
     public function info ($message){
         if ($this->log_level <= 1) $this->write("INFO",$message);
     }

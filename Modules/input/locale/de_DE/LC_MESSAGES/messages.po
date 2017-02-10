@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emoncms3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-02 13:21+0100\n"
-"PO-Revision-Date: 2017-02-02 13:29+0100\n"
+"POT-Creation-Date: 2017-02-07 21:14+0100\n"
+"PO-Revision-Date: 2017-02-07 21:41+0100\n"
 "Last-Translator: Frank Dille\n"
 "Language-Team: @sumpfing <anne@sumpfing.de>\n"
 "Language: de_DE\n"
@@ -269,6 +269,10 @@ msgstr "Input API Hilfe"
 msgid "Inputs"
 msgstr "Inputs"
 
+#: ../../../Views/input_view.php:31
+msgid "loading..."
+msgstr "wird geladen ..."
+
 #: ../../../Views/input_view.php:34
 msgid "No inputs created"
 msgstr "Keine Inputs angelegt"
@@ -308,11 +312,11 @@ msgstr "Abbrechen"
 msgid "Delete"
 msgstr "Löschen"
 
-#: ../../../Views/input_view.php:68 ../../../Views/input_view.php:82
+#: ../../../Views/input_view.php:68 ../../../Views/input_view.php:83
 msgid "Process list"
 msgstr "Prozessliste"
 
-#: ../../../Views/input_view.php:69 ../../../Views/input_view.php:83
+#: ../../../Views/input_view.php:69 ../../../Views/input_view.php:84
 msgid "Updated"
 msgstr "Geändert"
 
@@ -328,11 +332,15 @@ msgstr "Key"
 msgid "Name"
 msgstr "Name"
 
-#: ../../../Views/input_view.php:84
+#: ../../../Views/input_view.php:82
+msgid "Unit"
+msgstr "Einheit"
+
+#: ../../../Views/input_view.php:85
 msgid "Value"
 msgstr "Wert"
 
-#: ../../../input_model.php:317
+#: ../../../input_model.php:319
 msgid "Error setting processlist"
 msgstr "Fehler beim Ändern der Prozessliste"
 
