@@ -119,8 +119,8 @@
         </tr>
         </table>
             <div class="alert alert-info">
-                <p>Selecting an interval shorter than the feed interval (or Auto) will use the feed interval instead. Averages are only returned for feed engines with built in averaging.</p>
-                <p>Date time in excel format is in user timezone. Offset can be set if exporting in Unix epoch time format.</p>
+                <p><?php echo _("Selecting an interval shorter than the feed interval (or Auto) will use the feed interval instead. Averages are only returned for feed engines with built in averaging."); ?></p>
+                <p><?php echo _("Date time in excel format is in user timezone. Offset can be set if exporting in Unix epoch time format."); ?></p>
             </div>
     </div>
     <div class="modal-footer">
@@ -183,7 +183,7 @@
     'tag':{'title':"<?php echo _('Tag'); ?>", 'type':"hinteditable"},
     'name':{'title':"<?php echo _('Name'); ?>", 'type':"text"},
     'processList':{'title':'<?php echo _("Process list"); ?>','type':"processlist"},
-    'public':{'title':"<?php echo _('Public'); ?>", 'type':"icon", 'trueicon':"icon-globe", 'falseicon':"icon-lock"},
+    'public':{'title':"<?php echo _('Public'); ?>", 'type':"icon", 'trueicon':"icon-globe", 'falseicon':"icon-lock", 'tooltip':"<?php echo _('Public'); ?>"},
     'datatype':{'title':"<?php echo _('Datatype'); ?>", 'type':"fixedselect", 'options':['','REALTIME','DAILY','HISTOGRAM']},
     'engine':{'title':"<?php echo _('Engine'); ?>", 'type':"fixedselect", 'options':['MYSQL','TIMESTORE','PHPTIMESERIES','GRAPHITE','PHPTIMESTORE','PHPFINA','PHPFIWA','VIRTUAL','MEMORY','REDISBUFFER']},
     'size':{'title':"<?php echo _('Size'); ?>", 'type':"size"},
@@ -191,11 +191,11 @@
     'value':{'title':"<?php echo _('Value'); ?>",'type':"value"},
     'unit':{'title':"<?php echo _('Unit'); ?>",'type':"text"},
     // Actions
-    'edit-action':{'title':'', 'type':"edit"},
-    'delete-action':{'title':'', 'type':"delete"},
-    'view-action':{'title':'', 'type':"iconlink", 'link':path+feedviewpath},
-    'processlist-action':{'title':'', 'type':"iconconfig", 'icon':'icon-wrench'},
-    'export-action':{'title':'', 'type':"iconbasic", 'icon':'icon-download'}
+    'edit-action':{'title':'', 'type':"edit", 'tooltip':"<?php echo _('Edit'); ?>"},
+    'delete-action':{'title':'', 'type':"delete", 'tooltip':"<?php echo _('Delete'); ?>"},
+    'view-action':{'title':'', 'type':"iconlink", 'link':path+feedviewpath, 'tooltip':"<?php echo _('View'); ?>"},
+    'processlist-action':{'title':'', 'type':"iconconfig", 'icon':'icon-wrench', 'tooltip':"<?php echo _('Processlist'); ?>"},
+    'export-action':{'title':'', 'type':"iconbasic", 'icon':'icon-download', 'tooltip':"<?php echo _('CSV export'); ?>"}
   }
 
   update();

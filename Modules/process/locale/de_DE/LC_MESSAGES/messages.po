@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emoncms3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-03 00:21+0100\n"
-"PO-Revision-Date: 2017-02-03 00:22+0100\n"
+"POT-Creation-Date: 2017-02-05 23:09+0100\n"
+"PO-Revision-Date: 2017-02-05 23:09+0100\n"
 "Last-Translator: Frank Dille\n"
 "Language-Team: @sumpfing <anne@sumpfing.de>\n"
 "Language: de_DE\n"
@@ -77,153 +77,181 @@ msgstr "Prozess Aktionen"
 msgid "List all supported process"
 msgstr "Prozessaktionen auflisten"
 
-#: ../../../Views/process_ui.php:34
+#: ../../../Views/process_ui.php:38
 msgid "process list setup"
 msgstr "Prozessliste"
 
-#: ../../../Views/process_ui.php:37
+#: ../../../Views/process_ui.php:41
 msgid ""
 "Processes are executed sequentially with the result value being passed down "
 "for further processing to the next processor on this processing list."
 msgstr ""
-"Prozesse werden sequentiell ausgeführt und das Resultat wird an den nächsten "
-"Prozess in der Verarbeitungsliste weitergegeben zur weiteren Verarbeitung."
+"Prozesse werden nacheinander ausgeführt. Das Resultat wird zur weiteren "
+"Verarbeitung an den nächsten Prozess in der Verarbeitungsliste weitergegeben."
 
-#: ../../../Views/process_ui.php:39
+#: ../../../Views/process_ui.php:43
 msgid "You have no processes defined"
 msgstr "Es ist kein Prozess definiert"
 
-#: ../../../Views/process_ui.php:44
+#: ../../../Views/process_ui.php:48
 msgid "Order"
 msgstr "Reihenfolge"
 
-#: ../../../Views/process_ui.php:45
+#: ../../../Views/process_ui.php:49
 msgid "Process"
 msgstr "Verarbeitung"
 
-#: ../../../Views/process_ui.php:46
+#: ../../../Views/process_ui.php:50
 msgid "Arg"
 msgstr "Arg"
 
-#: ../../../Views/process_ui.php:48
+#: ../../../Views/process_ui.php:52
 msgid "Actions"
 msgstr "Aktionen"
 
-#: ../../../Views/process_ui.php:55
+#: ../../../Views/process_ui.php:59
 msgid "Add process"
 msgstr "Neuer Prozess"
 
-#: ../../../Views/process_ui.php:56
+#: ../../../Views/process_ui.php:60
 msgid "Edit process"
 msgstr "Prozess Bearbeiten"
 
-#: ../../../Views/process_ui.php:64
+#: ../../../Views/process_ui.php:68 ../../../process_langjs.php:39
 msgid "Value"
 msgstr "Wert"
 
-#: ../../../Views/process_ui.php:65
+#: ../../../Views/process_ui.php:69
 msgid "Type value..."
 msgstr "Wert ..."
 
-#: ../../../Views/process_ui.php:71
+#: ../../../Views/process_ui.php:75
 msgid "Text"
 msgstr "Text"
 
-#: ../../../Views/process_ui.php:72
+#: ../../../Views/process_ui.php:76
 msgid "Type text..."
 msgstr "Text ..."
 
-#: ../../../Views/process_ui.php:96 ../../../Views/process_ui.php:117
+#: ../../../Views/process_ui.php:100 ../../../Views/process_ui.php:121
 msgid "Engine"
 msgstr "Engine"
 
-#: ../../../Views/process_ui.php:99
+#: ../../../Views/process_ui.php:103
 msgid "Any type"
 msgstr "Any Type"
 
-#: ../../../Views/process_ui.php:100
+#: ../../../Views/process_ui.php:104
 msgid "Realtime"
 msgstr "Echtzeit"
 
-#: ../../../Views/process_ui.php:101
+#: ../../../Views/process_ui.php:105
 msgid "Daily"
 msgstr "Täglich"
 
-#: ../../../Views/process_ui.php:102 ../../../process_processlist.php:96
+#: ../../../Views/process_ui.php:106 ../../../process_processlist.php:96
 msgid "Histogram"
 msgstr "Histogramm"
 
-#: ../../../Views/process_ui.php:121
+#: ../../../Views/process_ui.php:125
 msgid "PHPFIWA Fixed Interval With Averaging"
 msgstr "PHPFIWA Fixes Intervall mit Durchschnitt"
 
-#: ../../../Views/process_ui.php:122
+#: ../../../Views/process_ui.php:126
 msgid "PHPFINA Fixed Interval No Averaging"
 msgstr "PHPFINA Fixes Intervall ohne Durchschnitt"
 
-#: ../../../Views/process_ui.php:123
+#: ../../../Views/process_ui.php:127
 msgid "PHPTIMESERIES Variable Interval No Averaging"
 msgstr "PHPTimeSeries Variables Intervall ohne Durchschnitt"
 
-#: ../../../Views/process_ui.php:124
+#: ../../../Views/process_ui.php:128
 msgid "MYSQL TimeSeries"
 msgstr "SQL-Tabelle TimeSeries"
 
-#: ../../../Views/process_ui.php:125
+#: ../../../Views/process_ui.php:129
 msgid "MYSQL Memory (RAM data lost on power off)"
 msgstr "SQL Memory-Tabelle (Datenverlust bei Neustart)"
 
-#: ../../../Views/process_ui.php:126
+#: ../../../Views/process_ui.php:130
 msgid "RRD TimeSeries"
 msgstr "RRD TimeSeries"
 
-#: ../../../Views/process_ui.php:130
+#: ../../../Views/process_ui.php:134
 msgid "Select interval"
 msgstr "Auswahl Intervall"
 
-#: ../../../Views/process_ui.php:131 ../../../Views/process_ui.php:132
-#: ../../../Views/process_ui.php:133 ../../../Views/process_ui.php:134
 #: ../../../Views/process_ui.php:135 ../../../Views/process_ui.php:136
+#: ../../../Views/process_ui.php:137 ../../../Views/process_ui.php:138
+#: ../../../Views/process_ui.php:139 ../../../Views/process_ui.php:140
 msgid "s"
 msgstr "s"
 
-#: ../../../Views/process_ui.php:137 ../../../Views/process_ui.php:138
-#: ../../../Views/process_ui.php:139 ../../../Views/process_ui.php:140
 #: ../../../Views/process_ui.php:141 ../../../Views/process_ui.php:142
+#: ../../../Views/process_ui.php:143 ../../../Views/process_ui.php:144
+#: ../../../Views/process_ui.php:145 ../../../Views/process_ui.php:146
 msgid "m"
 msgstr "m"
 
-#: ../../../Views/process_ui.php:143
+#: ../../../Views/process_ui.php:147
 msgid "h"
 msgstr "h"
 
-#: ../../../Views/process_ui.php:144
+#: ../../../Views/process_ui.php:148
 msgid "d"
 msgstr "T"
 
-#: ../../../Views/process_ui.php:151
+#: ../../../Views/process_ui.php:155
 msgid "Add"
 msgstr "Hinzufügen"
 
-#: ../../../Views/process_ui.php:156
+#: ../../../Views/process_ui.php:160 ../../../process_langjs.php:32
 msgid "Edit"
 msgstr "Bearbeiten"
 
-#: ../../../Views/process_ui.php:159
+#: ../../../Views/process_ui.php:163
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: ../../../Views/process_ui.php:170
+#: ../../../Views/process_ui.php:174
 msgid "Close"
 msgstr "Abbrechen"
 
-#: ../../../Views/process_ui.php:171
+#: ../../../Views/process_ui.php:175 ../../../process_langjs.php:36
 msgid "Not modified"
 msgstr "Nicht geändert"
 
+#: ../../../process_langjs.php:30
+msgid "Changed, press to save"
+msgstr "Speichern (geändert)"
+
+#: ../../../process_langjs.php:31
+msgid "Delete"
+msgstr "Löschen"
+
+#: ../../../process_langjs.php:33
+msgid "ERROR"
+msgstr "FEHLER"
+
+#: ../../../process_langjs.php:34
+msgid "Move down"
+msgstr "Nach Unten"
+
+#: ../../../process_langjs.php:35
+msgid "Move up"
+msgstr "Nach Oben"
+
+#: ../../../process_langjs.php:37
+msgid "Saved"
+msgstr "Gespeichert"
+
+#: ../../../process_langjs.php:38
+msgid "UNSUPPORTED"
+msgstr "NICHT UNTERSTÜTZT"
+
 #: ../../../process_processlist.php:81
 msgid "Log to feed"
-msgstr "In Feed loggen"
+msgstr "In Feed speichern"
 
 #: ../../../process_processlist.php:81
 msgid ""
@@ -238,20 +266,25 @@ msgid ""
 "your monitoring equipment. Setting the interval rate to be shorter than the "
 "update rate of the equipment causes un-needed disk space to be used up.</p>"
 msgstr ""
-"<p><b>Speichern in Feed:</b> Dieser Processor logs to a timeseries feed "
-"which can then be used to explore historic data. This is recommended for "
-"logging power, temperature, humidity, voltage and current data.</"
-"p><p><b>Feed engine:</b><ul><li><b>PHPFina</b> Feed Engine für fixed "
-"interval timeseries.</li><li><b>PHPTimeseries</b> für unregelmäßige Daten.</"
-"li></ul></p><p><b>Feed interval:</b> When selecting the feed interval select "
-"an interval that is the same as, or longer than the update rate that is set "
-"in your monitoring equipment. Setting the interval rate to be shorter than "
-"the update rate of the equipment causes un-needed disk space to be used up.</"
-"p>"
+"<p><b>In Feed Speichern:</b> Dieser Prozessor speichert Input Werte in einen "
+"Feed. Die Werte können über die Zeit ausgewertet werden. Dies wird empfohlen "
+"um Daten wie Leistung, Temperatur, Luftfeuchte, Spannung und Strom "
+"aufzuzeichnen.</p><p><b>Engine:</b><ul><li><b>PhpFixNoAvg</b> festes "
+"Intervall keine Mittelwerte</li><li><b>PhpFixWithAvg</b> festes Intervall "
+"mit Mittelwert</li><li><b>PhpTimeSeries</b> unregelmäßige Daten</li><li><SQL "
+"TimeSeries</b>unregelmäßige Daten in Tabelle</li><li><SQL Memory</"
+"b>unregelmäßige Daten im RAM (Temporäre Tabelle, Daten gehen bei Neustart "
+"verloren!)</li></ul></p><p><b>Intervall:</b> Verwenden Sie ein Intervall das "
+"größer oder gleich der Änderungsrate entspricht. Ein Intervall das zu klein "
+"gewählt ist verschwendet Speicherplatz.</p>"
 
 #: ../../../process_processlist.php:82
 msgid "x"
 msgstr "x"
+
+#: ../../../process_processlist.php:82 ../../../process_processlist.php:83
+msgid " value"
+msgstr " Wert"
 
 #: ../../../process_processlist.php:82
 msgid ""
@@ -259,7 +292,9 @@ msgid ""
 "particular variable on the web rather than by reprogramming hardware. Result "
 "is passed back for further processing by the next processor in the "
 "processing list"
-msgstr "Skaliert den Wert mit übergebenen Wert."
+msgstr ""
+"Skaliert aktuellen Wert mit übergebenen Wert. Dies kann zur Kalibrierung von "
+"eingehenden Werten genutzt werden."
 
 #: ../../../process_processlist.php:83
 msgid "+"
@@ -271,7 +306,9 @@ msgid ""
 "calibrating a particular variable on the web rather than by reprogramming "
 "hardware. Result is passed back for further processing by the next processor "
 "in the processing list"
-msgstr "Offset mit gegebenen Wert. "
+msgstr ""
+"Offset um gegebenen Wert. Dies kann zur Kalibrierung von eingehenden Werten "
+"genutzt werden."
 
 #: ../../../process_processlist.php:84
 msgid "Power to kWh"
@@ -296,17 +333,48 @@ msgstr ""
 msgid "Power to kWh/d"
 msgstr "Leistung zu kW/h Tag"
 
+#: ../../../process_processlist.php:85
+msgid ""
+"Convert a power value in Watts to a feed that contains an entry for the "
+"total energy used each day (kWh/d)"
+msgstr "Konvertiert Power in W in einen Wert kWh/Tag"
+
 #: ../../../process_processlist.php:86
 msgid "x input"
-msgstr "x input"
+msgstr "x Input"
+
+#: ../../../process_processlist.php:86
+msgid ""
+"Multiplies the current value with the last value from other input as "
+"selected from the input list. The result is passed back for further "
+"processing by the next processor in the processing list."
+msgstr ""
+"Multipliziert aktuellen Wert mit dem letzten Wert des gewählten Inputs. Das "
+"Resultat wird zur weiteren Verarbeitung an den nächsten Prozess in der "
+"Verarbeitungsliste weitergegeben."
 
 #: ../../../process_processlist.php:87
 msgid "Input on-time"
-msgstr "Zeitige Eingabe"
+msgstr "Input zum Zeitpunkt"
+
+#: ../../../process_processlist.php:87
+msgid ""
+"Counts the amount of time that an input is high in each day and logs the "
+"result to a feed. Created for counting the number of hours a solar hot water "
+"pump is on each day"
+msgstr ""
+"Berechnet die Zeitspanne/Tag in der ein Input Werte liefert. Wird z.B. "
+"verwendet um die Betriebsstunden einer Solarpumpe zu berechnen."
 
 #: ../../../process_processlist.php:88
 msgid "Wh increments to kWh/d"
 msgstr "Watt Schritte zu kW/h pro Tag"
+
+#: ../../../process_processlist.php:88
+msgid ""
+"Accumulate Wh measurements into kWh/d.<p><b>Input</b>: energy increments in "
+"Wh.</p><p><b>Output</b>: original value is passed through untouched.</p>"
+msgstr "Berechnet Wh in kWh/Tag."
 
 #: ../../../process_processlist.php:89
 msgid "kWh to kWh/d (OLD)"
@@ -316,13 +384,41 @@ msgstr "kW/h zu kW/h pro Tag (ALT)"
 msgid "Upsert feed at day"
 msgstr "Upsert Feed tägl."
 
+#: ../../../process_processlist.php:90
+msgid ""
+"Updates or inserts daily value on the specified time (given by the JSON time "
+"parameter from the API) of the specified feed"
+msgstr ""
+"Ändert oder Erstellt Tages-Wert beim festgelegten Feed (Zeit ist vorgegeben "
+"durch JSON time-Parameter der API)"
+
 #: ../../../process_processlist.php:91
 msgid "+ input"
-msgstr "+ input"
+msgstr "+ Input"
+
+#: ../../../process_processlist.php:91
+msgid ""
+"Adds the current value with the last value from other input as selected from "
+"the input list. The result is passed back for further processing by the next "
+"processor in the processing list."
+msgstr ""
+"Addiert des aktuellen Wert mit dem letzten Wert des gewählten Inputs. Das "
+"Resultat wird zur weiteren Verarbeitung an den nächsten Prozess in der "
+"Verarbeitungsliste weitergegeben."
 
 #: ../../../process_processlist.php:92
 msgid "/ input"
-msgstr "/ input"
+msgstr "/ Input"
+
+#: ../../../process_processlist.php:92
+msgid ""
+"Divides the current value with the last value from other input as selected "
+"from the input list. The result is passed back for further processing by the "
+"next processor in the processing list."
+msgstr ""
+"Dividiert den aktuellen Wert mit dem letzten Wert des gewählten Inputs. Das "
+"Resultat wird zur weiteren Verarbeitung an den nächsten Prozess in der "
+"Verarbeitungsliste weitergegeben."
 
 #: ../../../process_processlist.php:93
 msgid "Phaseshift"
@@ -332,9 +428,30 @@ msgstr "Phasenverschiebung"
 msgid "Accumulator"
 msgstr "Akkumulator"
 
+#: ../../../process_processlist.php:94
+msgid "Output feed accumulates by input value"
+msgstr "Addiert Feed mit dem Input-Wert."
+
 #: ../../../process_processlist.php:95
 msgid "Rate of change"
 msgstr "Änderungsrate"
+
+#: ../../../process_processlist.php:95
+msgid "Output feed is the difference between the current value and the last"
+msgstr "Gibt die Differenz zwischen aktuellem Wert und letzten Wert zurück."
+
+#: ../../../process_processlist.php:96
+msgid ""
+"Creates a histogram of energy binned by power ranges. For each power range "
+"on the x-axis, this processor will aggregate the total energy of the stream "
+"while it was in that power range.<p><b>Input</b>: power in Watts.</"
+"p><p><b>Output</b>: original value is passed through untouched.</p>"
+msgstr ""
+"Erstellt Histogramm für Energiedaten. energy binned by power ranges. For "
+"each power range on the x-axis, this processor will aggregate the total "
+"energy of the stream while it was in that power range.<p><b>Input</b>: power "
+"in Watts.</p><p><b>Output</b>: original value is passed through untouched.</"
+"p>"
 
 #: ../../../process_processlist.php:97
 msgid "Daily Average"
@@ -356,85 +473,265 @@ msgstr "Gesamtimpulse zu Impulszuwachs"
 msgid "kWh to Power"
 msgstr "kW/h zu Leistung"
 
+#: ../../../process_processlist.php:109
+msgid "Convert accumulating kWh to instantaneous power"
+msgstr "Konvertiert aufsummierte kWh in Leistung."
+
 #: ../../../process_processlist.php:111
 msgid "- input"
-msgstr "- input"
+msgstr "- Input"
+
+#: ../../../process_processlist.php:111
+msgid ""
+"Subtracts from the current value the last value from other input as selected "
+"from the input list. The result is passed back for further processing by the "
+"next processor in the processing list."
+msgstr ""
+"Subtrahiert den aktuellen Wert vom letzten Wert des gewählten Inputs. Das "
+"Resultat wird zur weiteren Verarbeitung an den nächsten Prozess in der "
+"Verarbeitungsliste weitergegeben."
 
 #: ../../../process_processlist.php:112
 msgid "kWh to kWh/d"
 msgstr "kW/h zu kW/h pro Tag"
 
+#: ../../../process_processlist.php:112
+msgid ""
+"Subtracts the current value with the last value from other input as selected "
+"from the input list. The result is passed back for further processing by the "
+"next processor in the processing list."
+msgstr ""
+"Subtrahiert den aktuellen Wert vom letzten Wert des ausgewählten Input. Das "
+"Resultat wird zur weiteren Verarbeitung an den nächsten Prozess in der "
+"Verarbeitungsliste weitergegeben."
+
 #: ../../../process_processlist.php:113
 msgid "Allow positive"
 msgstr "Erlaube positive"
+
+#: ../../../process_processlist.php:113
+msgid ""
+"Negative values are zeroed for further processing by the next processor in "
+"the processing list"
+msgstr ""
+"Negative Werte werden auf 0 gesetzt. Das Resultat wird zur weiteren "
+"Verarbeitung an den nächsten Prozess in der Verarbeitungsliste weitergegeben."
 
 #: ../../../process_processlist.php:114
 msgid "Allow negative"
 msgstr "Erlaube negative"
 
+#: ../../../process_processlist.php:114
+msgid ""
+"Positive values are zeroed for further processing by the next processor in "
+"the processing list"
+msgstr ""
+"Positive Werte werden auf 0 gesetzt. Das Resultat wird zur weiteren "
+"Verarbeitung an den nächsten Prozess in der Verarbeitungsliste weitergegeben."
+
 #: ../../../process_processlist.php:115
 msgid "Signed to unsigned"
-msgstr "Signiert zu unsigniert"
+msgstr "Vorzeichen zu Vorzeichenlos"
+
+#: ../../../process_processlist.php:115
+msgid ""
+"Convert a number that was interpreted as a 16 bit signed number to an "
+"unsigned number."
+msgstr ""
+"Konvertiert eine 16 Bit Zahl mit Vorzeichen zu Vorzeichenlos. (signed to "
+"unsigned)"
 
 #: ../../../process_processlist.php:116
 msgid "Max daily value"
 msgstr "Max. Tageswert"
 
+#: ../../../process_processlist.php:116
+msgid ""
+"Maximal daily value. Upserts on the selected daily feed the highest value "
+"reached each day"
+msgstr "Maximaler Tageswert. Ändert am gewählten tägl. Feed das Maximum."
+
 #: ../../../process_processlist.php:117
 msgid "Min daily value"
 msgstr "Min. Tageswert"
+
+#: ../../../process_processlist.php:117
+msgid ""
+"Minimal daily value. Upserts on the selected daily feed the lowest value "
+"reached each day"
+msgstr "Minimaler Tageswert. Ändert am gewählten tägl. Feed das Minimum."
 
 #: ../../../process_processlist.php:119
 msgid " + feed"
 msgstr " + feed"
 
+#: ../../../process_processlist.php:119
+msgid ""
+"Adds the current value with the last value from a feed as selected from the "
+"feed list. The result is passed back for further processing by the next "
+"processor in the processing list."
+msgstr ""
+"Addiert den aktuellen Wert mit dem letzten Wert des ausgewählten Feed. Das "
+"Resultat wird zur weiteren Verarbeitung an den nächsten Prozess in der "
+"Verarbeitungsliste weitergegeben."
+
 #: ../../../process_processlist.php:120
 msgid " - feed"
 msgstr " - feed"
+
+#: ../../../process_processlist.php:120
+msgid ""
+"Subtracts from the current value the last value from a feed as selected from "
+"the feed list. The result is passed back for further processing by the next "
+"processor in the processing list."
+msgstr ""
+"Subtrahiert vom aktuellen Wert den letzten Wert des ausgewählten Feed. Das "
+"Resultat wird zur weiteren Verarbeitung an den nächsten Prozess in der "
+"Verarbeitungsliste weitergegeben."
 
 #: ../../../process_processlist.php:121
 msgid " * feed"
 msgstr " * feed"
 
+#: ../../../process_processlist.php:121
+msgid ""
+"Multiplies the current value with the last value from a feed as selected "
+"from the feed list. The result is passed back for further processing by the "
+"next processor in the processing list."
+msgstr ""
+"Multipliziert den aktuellen Wert mit dem letzten Wert des ausgewählten Feed. "
+"Das Resultat wird zur weiteren Verarbeitung an den nächsten Prozess in der "
+"Verarbeitungsliste weitergegeben."
+
 #: ../../../process_processlist.php:122
 msgid " / feed"
 msgstr " / feed"
+
+#: ../../../process_processlist.php:122
+msgid ""
+"Divides the current value by the last value from a feed as selected from the "
+"feed list. The result is passed back for further processing by the next "
+"processor in the processing list."
+msgstr ""
+"Dividiert den aktuellen Wert durch den letzten Wert des ausgewählten Feed. "
+"Das Resultat wird zur weiteren Verarbeitung an den nächsten Prozess in der "
+"Verarbeitungsliste weitergegeben."
 
 #: ../../../process_processlist.php:123
 msgid "Reset to ZERO"
 msgstr "Zurücksetzen auf Null"
 
+#: ../../../process_processlist.php:123
+msgid ""
+"The value '0' is passed back for further processing by the next processor in "
+"the processing list."
+msgstr ""
+"Der Wert 0 wird an den nächsten Prozess in der Verarbeitungsliste "
+"weitergegeben zur weiteren Verarbeitung."
+
 #: ../../../process_processlist.php:125
 msgid "Wh Accumulator"
 msgstr "Wattstunden Akkumulator"
+
+#: ../../../process_processlist.php:125
+msgid ""
+"<b>Wh Accumulator:</b> Use with emontx, emonth or emonpi pulsecount or an "
+"emontx running firmware <i>emonTxV3_4_continuous_kwhtotals</i> sending "
+"cumulative watt hours.<br><br>This processor ensures that when the emontx is "
+"reset the watt hour count in emoncms does not reset, it also checks filter's "
+"out spikes in energy use that are larger than a max power threshold set in "
+"the processor, assuming these are error's, the max power threshold is set to "
+"25kW. <br><br><b>Visualisation tip:</b> Feeds created with this input "
+"processor can be used to generate daily kWh data using the BarGraph "
+"visualisation with the delta property set to 1 and scale set to 0.001."
+"<br>See forum thread here for an example <a href='https://openenergymonitor."
+"org/emon/node/12308'>Creating kWh per day bar graphs from Accumulating kWh </"
+"a></p><p><b>Requires redis installed to work</b></p>"
+msgstr ""
+"<p><b>Power zu kWh:</b> Konvertiert Leistung in Watt zu aufsummierten kWh "
+"Wert.<br><br><b>Visualisierung Tipp:</b> Feeds mit diesem Processor können "
+"für Tägliche kWh Daten in einem Balkendiagramm mit Delta Eigenschaft =1 "
+"angezeigt werden.<br>Siehe Forum Eintrag <a href='https://openenergymonitor."
+"org/emon/node/12308'>Creating kWh per day bar graphs from Accumulating kWh </"
+"a></p>"
 
 #: ../../../process_processlist.php:127
 msgid "Publish to MQTT"
 msgstr "Veröffentlichen an MQTT"
 
+#: ../../../process_processlist.php:127
+msgid "Enter MQTT topic e.g. home/power/kitchen"
+msgstr "Eingabe MQTT Topic z.B. home/power/kitchen"
+
 #: ../../../process_processlist.php:129
 msgid "Reset to NULL"
 msgstr "Reset auf NULL"
+
+#: ../../../process_processlist.php:129
+msgid ""
+"A NULL value is passed back for further processing by the next processor in "
+"the processing list.<br>Usefull for conditional process to work on."
+msgstr ""
+"Ein NULL Wert wird an den nächsten Prozessschritt gegeben.<br>Nützlich bei "
+"der Verwendung von Bedingungen."
 
 #: ../../../process_processlist.php:130
 msgid "Reset to Original"
 msgstr "Reset auf Original"
 
+#: ../../../process_processlist.php:130
+msgid ""
+"The original value, unchanged by any process, is passed back for further "
+"processing by the next processor in the processing list."
+msgstr ""
+"Original Wert wird als Resultat zur weiteren Verarbeitung weitergegeben an "
+"den nächsten Prozess in der Verarbeitungsliste."
+
 #: ../../../process_processlist.php:132
 msgid "If ZERO, skip next"
 msgstr "Wenn ZERO, überspinge nächste Aktion"
+
+#: ../../../process_processlist.php:132
+msgid ""
+"If value from last process is ZERO, process execution will skip execution of "
+"next process in list"
+msgstr ""
+"Wenn Wert des letzten Schritts 0-ZERO, wird der nächste Schritt übersprungen."
 
 #: ../../../process_processlist.php:133
 msgid "If !ZERO, skip next"
 msgstr "Wenn !ZERO, überspinge nächste Aktion"
 
+#: ../../../process_processlist.php:133
+msgid ""
+"If value from last process is NOT ZERO, process execution will skip "
+"execution of next process in list"
+msgstr ""
+"Wenn Wert des letzten Schritts NICHT 0-ZERO, wird der nächste Schritt "
+"übersprungen."
+
 #: ../../../process_processlist.php:134
 msgid "If NULL, skip next"
 msgstr "Wenn NULL, überspinge nächste Aktion"
 
+#: ../../../process_processlist.php:134
+msgid ""
+"If value from last process is NULL, process execution will skip execution of "
+"next process in list"
+msgstr ""
+"Wenn Wert des letzten Schritts NULL, wird der nächste Schritt übersprungen."
+
 #: ../../../process_processlist.php:135
 msgid "If !NULL, skip next"
 msgstr "Wenn !NULL, überspinge nächste Aktion"
+
+#: ../../../process_processlist.php:135
+msgid ""
+"If value from last process is NOT NULL, process execution will skip "
+"execution of next process in list"
+msgstr ""
+"Wenn Wert des letzten Schritts NICHT NULL, wird der nächste Schritt "
+"übersprungen."
 
 #: ../../../process_processlist.php:137
 msgid "If >, skip next"
@@ -444,90 +741,138 @@ msgstr "Wenn >, überspinge nächste Aktion"
 msgid "If >=, skip next"
 msgstr "Wenn >=, überspinge nächste Aktion"
 
+#: ../../../process_processlist.php:138
+msgid ""
+"If value from last process is greater or equal to the specified value, "
+"process execution will skip execution of next process in list"
+msgstr ""
+"Wenn Wert des letzten Schritts >= Eingabewert, wird der nächste Schritt "
+"übersprungen."
+
 #: ../../../process_processlist.php:139
 msgid "If <, skip next"
 msgstr "Wenn <, überspinge nächste Aktion"
+
+#: ../../../process_processlist.php:139
+msgid ""
+"If value from last process is lower than the specified value, process "
+"execution will skip execution of next process in list"
+msgstr ""
+"Wenn Wert des letzten Schritts < Eingabewert, wird der nächste Schritt "
+"übersprungen."
 
 #: ../../../process_processlist.php:140
 msgid "If <=, skip next"
 msgstr "Wenn <=, überspinge nächste Aktion"
 
+#: ../../../process_processlist.php:140
+msgid ""
+"If value from last process is lower or equal to the specified value, process "
+"execution will skip execution of next process in list"
+msgstr ""
+"Wenn Wert des letzten Schritts <= Eingabewert, wird der nächste Schritt "
+"übersprungen."
+
 #: ../../../process_processlist.php:141
 msgid "If =, skip next"
 msgstr "Wenn =, überspinge nächste Aktion"
+
+#: ../../../process_processlist.php:141
+msgid ""
+"If value from last process is equal to the specified value, process "
+"execution will skip execution of next process in list"
+msgstr ""
+"Wenn Wert des letzten Schritts = Eingabewert, wird der nächste Schritt "
+"übersprungen."
 
 #: ../../../process_processlist.php:142
 msgid "If !=, skip next"
 msgstr "Wenn !=, überspinge nächste Aktion"
 
+#: ../../../process_processlist.php:142
+msgid ""
+"If value from last process is NOT equal to the specified value, process "
+"execution will skip execution of next process in list"
+msgstr ""
+"Wenn Wert des letzten Schritts != Eingabewert, wird der nächste Schritt "
+"übersprungen."
+
 #: ../../../process_processlist.php:145
 msgid "GOTO"
 msgstr "GOTO"
+
+#: ../../../process_processlist.php:145
+msgid ""
+"<p>Jumps the process execution to the specified position.</p><p><b>Warning</"
+"b><br>If you're not careful you can create a goto loop on the process list."
+"<br>When a loop occurs, the API will appear to lock until the server php "
+"times out with an error.</p>"
+msgstr ""
+"<p>Springt in der Verarbeitung zu einer festgelegten Position.</"
+"p><p><b>Warnung:</b><br>Es kann dadurch eine Endlosschleife entstehen. Wenn "
+"dies geschieht blockiert die Schleife die API bis der Server einen PHP "
+"Timeout Fehler wirft.</p>"
 
 #: ../../../process_processlist.php:150
 msgid "Source Feed"
 msgstr "Quell Feed"
 
+#: ../../../process_processlist.php:150
+msgid ""
+"<p><b>Source Feed:</b><br>Virtual feeds should use this processor as the "
+"first one in the process list. It sources data from the selected feed."
+"<br>The sourced value is passed back for further processing by the next "
+"processor in the processing list.<br>You can then add other processors to "
+"apply logic on the passed value for post-processing calculations in realtime."
+"</p><p>Note: This virtual feed process list is executed on visualizations "
+"requests that use this virtual feed.</p>"
+msgstr ""
+"<p><b>Quell Feed:</b><br>Virtuelle Feeds sollten diesen Schritt als ersten "
+"verwenden. Es werden die Daten des Quell-Feeds verwendet.<br>Der Quellwert "
+"wird an den nächsten Schritt weiter gegeben.<br>Es können weitere "
+"Berechnungen eingefügt werden.</p><p>Hinweis: Die Berechnungen des "
+"virtuellen Feeds werden bei der Visualisierung in Echtzeit ausgeführt. Daher "
+"kann es bei größeren Zeitbereichen zu Verzögerungen kommen.</p>"
+
 #: ../../../process_processlist.php:153
 msgid " + source feed"
 msgstr " + Quell Feed"
+
+#: ../../../process_processlist.php:153
+msgid "add value to source feed"
+msgstr "Addiert Wert zu Quell Feed"
 
 #: ../../../process_processlist.php:154
 msgid " - source feed"
 msgstr " - Quell Feed"
 
+#: ../../../process_processlist.php:154
+msgid "subtract value from source feed"
+msgstr "Subtrahiert den Wert vom Quell-Feed."
+
 #: ../../../process_processlist.php:155
 msgid " * source feed"
 msgstr " * Quell Feed"
+
+#: ../../../process_processlist.php:155
+msgid "muliply value with source feed"
+msgstr "Multipliziert den Wert mit Quell-Feed."
 
 #: ../../../process_processlist.php:156
 msgid " / source feed"
 msgstr " / Quell Feed"
 
+#: ../../../process_processlist.php:156
+msgid "divide value by source feed"
+msgstr "Dividiert Wert durch Quell Feed"
+
 #: ../../../process_processlist.php:157
 msgid "1/ source feed"
 msgstr "1/Quell Feed"
 
-#~ msgid ""
-#~ "Convert a power value in Watts to a feed that contains an entry for the "
-#~ "total energy used each day (kWh/d)"
-#~ msgstr "Konvertiert Power in W in einen Wert kWh/Tag"
-
-#, fuzzy
-#~ msgid ""
-#~ "Multiplies the current value with the last value from other input as "
-#~ "selected from the input list. The result is passed back for further "
-#~ "processing by the next processor in the processing list."
-#~ msgstr ""
-#~ "Prozesse werden sequentiell ausgeführt und das Resultat wird zur weiteren "
-#~ "Verarbeitung weitergegeben an den nächsten Prozess in der "
-#~ "Verarbeitungsliste."
-
-#~ msgid ""
-#~ "Accumulate Wh measurements into kWh/d.<p><b>Input</b>: energy increments "
-#~ "in Wh.</p><p><b>Output</b>: original value is passed through untouched.</"
-#~ "p>"
-#~ msgstr "Berechnet Wh in kWh/Tag."
-
-#, fuzzy
-#~ msgid ""
-#~ "Adds the current value with the last value from other input as selected "
-#~ "from the input list. The result is passed back for further processing by "
-#~ "the next processor in the processing list."
-#~ msgstr ""
-#~ "Prozesse werden sequentiell ausgeführt und das Resultat wird zur weiteren "
-#~ "Verarbeitung weitergegeben an den nächsten Prozess in der "
-#~ "Verarbeitungsliste."
-
-#, fuzzy
-#~ msgid ""
-#~ "Divides the current value with the last value from other input as "
-#~ "selected from the input list. The result is passed back for further "
-#~ "processing by the next processor in the processing list."
-#~ msgstr ""
-#~ "Prozesse werden sequentiell ausgeführt und das Resultat wird zur weiteren "
-#~ "Verarbeitung weitergegeben an den nächsten Prozess in der "
-#~ "Verarbeitungsliste."
+#: ../../../process_processlist.php:157
+msgid "calc source feed reciprocal"
+msgstr "Berechnet Reziproken vom Quell-Feed"
 
 #~ msgid "Input API"
 #~ msgstr "Input API"
@@ -687,9 +1032,6 @@ msgstr "1/Quell Feed"
 
 #~ msgid "Are you sure you want to delete?"
 #~ msgstr "Wollen Sie wirklich löschen?"
-
-#~ msgid "Delete"
-#~ msgstr "Löschen"
 
 #~ msgid "Updated"
 #~ msgstr "Geändert"

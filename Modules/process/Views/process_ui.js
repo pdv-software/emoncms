@@ -32,10 +32,10 @@ var processlist_ui =
         // Move process up or down
         out += '<td>';
         if (i > 0) {
-          out += '<a class="move-process" title="Move up" processid='+i+' moveby=-1 ><i class="icon-arrow-up"></i></a>';
+          out += '<a class="move-process" title="'+_Tr("Move up")+'" processid='+i+' moveby=-1 ><i class="icon-arrow-up"></i></a>';
         }
         if (i < this.contextprocesslist.length-1) {
-          out += '<a class="move-process" title="Move up" processid='+i+' moveby=1 ><i class="icon-arrow-down"></i></a>';
+          out += '<a class="move-process" title="'+_Tr("Move down")+'" processid='+i+' moveby=1 ><i class="icon-arrow-down"></i></a>';
         }
         out += '</td>';
 
@@ -67,7 +67,7 @@ var processlist_ui =
                 arg += "Node "+this.inputlist[inpid].nodeid+":"+this.inputlist[inpid].name;
                 if (this.inputlist[inpid].description!="") arg += " "+this.inputlist[inpid].description;
                 arg += "</span>";
-                lastvalue = "<span style='color:#888; font-size:12px'>(input last value:"+(this.inputlist[inpid].value*1).toFixed(2)+")</span>";
+                lastvalue = "<span style='color:#888; font-size:12px'>(input :"+(this.inputlist[inpid].value*1).toFixed(2)+")</span>";
                 } else {
                   arg += "<span class='label label-important'>Input "+schid+" does not exists or was deleted</span>"
                 }
@@ -81,7 +81,7 @@ var processlist_ui =
                 if (this.feedlist[feedid].tag) arg += this.feedlist[feedid].tag+": ";
                 arg += this.feedlist[feedid].name;
                 arg += "</a>";
-                lastvalue = "<span style='color:#888; font-size:12px'>(feed last value:"+(this.feedlist[feedid].value*1).toFixed(2)+")</span>";
+                lastvalue = "<span style='color:#888; font-size:12px'>(feed :"+(this.feedlist[feedid].value*1).toFixed(2)+")</span>";
                 } else {
                   arg += "<span class='label label-important'>Feedid "+feedid+" does not exists or was deleted</span>"
                 }
@@ -111,13 +111,13 @@ var processlist_ui =
         }
         else {
           processname = "UNSUPPORTED";
-          arg += "<span class='label label-important' title='Value'>Process ´"+processkey+"´ not available. Module missing?</span>";
+          arg += "<span class='label label-important' title='"+_Tr("Value")+"'>Process ´"+processkey+"´ not available. Module missing?</span>";
         }
         out += "<td>"+(i+1)+"</td><td>"+processname+"</td><td>"+arg+"</td><td>"+lastvalue+"</td>";
      
         // Delete process button (icon)
-        out += '<td><a class="edit-process" title="Edit" processid='+i+'><i class="icon-pencil" style="cursor:pointer"></i></a></td>';
-        out += '<td><a class="delete-process" title="Delete" processid='+i+'><i class="icon-trash" style="cursor:pointer"></i></a></td>';
+        out += '<td><a class="edit-process" title="'+_Tr("Edit")+'" processid='+i+'><i class="icon-pencil" style="cursor:pointer"></i></a></td>';
+        out += '<td><a class="delete-process" title="'+_Tr("Delete")+'" processid='+i+'><i class="icon-trash" style="cursor:pointer"></i></a></td>';
         out += '</tr>';
         
         i++; // process id
@@ -162,7 +162,7 @@ var processlist_ui =
                   color = 'info';
                   out += "<span class='label label-"+color+"' title='"+title+"' style='cursor:default'>"+key+"</span> ";
                 } else {
-                  return "<span class='badge badge-important' title='Input "+value+" does not exists or was deleted'>ERROR</span> "
+                  return "<span class='badge badge-important' title='Input "+value+" does not exists or was deleted'>"+_Tr("ERROR")+"</span> "
                 }
                 break;
 
@@ -172,7 +172,7 @@ var processlist_ui =
                   color = 'info';
                   out += "<a target='_blank' href='"+path+"vis/auto?feedid="+value+"'<span class='label label-"+color+"' title='"+title+"' style='cursor:pointer'>"+key+"</span></a> "; 
                 } else {
-                  return "<span class='badge badge-important' title='Feedid "+value+" does not exists or was deleted'>ERROR</span> "
+                  return "<span class='badge badge-important' title='Feedid "+value+" does not exists or was deleted'>"+_Tr("ERROR")+"</span> "
                 }
                 break;
 
@@ -188,7 +188,7 @@ var processlist_ui =
                   color = 'info';
                   out += "<span class='label label-"+color+"' title='"+title+"' style='cursor:default'>"+key+"</span> ";
                 } else {
-                  return "<span class='badge badge-important' title='Schedule "+value+" does not exists or was deleted'>ERROR</span> "
+                  return "<span class='badge badge-important' title='Schedule "+value+" does not exists or was deleted'>"+_Tr("ERROR")+"</span> "
                 }
                 break;
 
@@ -234,25 +234,25 @@ var processlist_ui =
                 case 1: //INPUTID
                 var inpid = localprocesslist[z][1];
                 if (this.inputlist[value]==undefined) {
-                  out +=  "<span class='badge badge-important' title='Input "+value+" does not exists or was deleted'>ERROR</span> "
+                  out +=  "<span class='badge badge-important' title='Input "+value+" does not exists or was deleted'>"+_Tr("ERROR")+"</span> "
                 }
                 break;
 
                 case 2: //FEEDID
                 if (this.feedlist[value]==undefined) {
-                  out +=  "<span class='badge badge-important' title='Feedid "+value+" does not exists or was deleted'>ERROR</span> "
+                  out +=  "<span class='badge badge-important' title='Feedid "+value+" does not exists or was deleted'>"+_Tr("ERROR")+"</span> "
                 }
                 break;
 
                 case 5: // SCHEDULEID
                 if (this.schedulelist[value]==undefined) {
-                  out +=  "<span class='badge badge-important' title='Schedule "+value+" does not exists or was deleted'>ERROR</span> "
+                  out +=  "<span class='badge badge-important' title='Schedule "+value+" does not exists or was deleted'>"+_Tr("ERROR")+"</span> "
                 }
                 break;
               }
             }
           } else {
-              out += "<span class='badge badge-important' title='Process ´"+processkey+"´ not available. Module missing?'>UNSUPPORTED</span> "
+              out += "<span class='badge badge-important' title='Process ´"+processkey+"´ not available. Module missing?'>"+_Tr("UNSUPPORTED")+"</span> "
           }
 		  if (out != "") return out; // return first error
         }
@@ -558,11 +558,11 @@ var processlist_ui =
   },
 
   'modified':function(){
-    $("#save-processlist").attr('class','btn btn-warning').text("Changed, press to save");
+    $("#save-processlist").attr('class','btn btn-warning').text(_Tr("Changed, press to save"));
   },
 
   'saved':function(){
-    $("#save-processlist").attr('class','btn btn-success').text("Saved");
+    $("#save-processlist").attr('class','btn btn-success').text(_Tr("Saved"));
     // Update context table immedietly
     for (z in table.data) {
       if (table.data[z].id == processlist_ui.contextid) {
@@ -768,7 +768,7 @@ var processlist_ui =
     $("#type-btn-edit").hide();
     processlist_ui.scrollto($('#processlist-ui'));
     this.draw();
-    $("#save-processlist").attr('class','btn btn-success').text("Not modified");
+    $("#save-processlist").attr('class','btn btn-success').text(_Tr("Not modified"));
     $("#processlist-ui #process-select").change(); // Force a refresh
     $("#processlistModal").modal('show');          // Show
     this.adjustmodal();

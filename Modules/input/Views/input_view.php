@@ -84,9 +84,9 @@
     'time':{'title':'<?php echo _("Updated"); ?>', 'type':"updated"},
     'value':{'title':'<?php echo _("Value"); ?>','type':"value"},
     // Actions
-    'edit-action':{'title':'', 'type':"edit"},
-    'delete-action':{'title':'', 'type':"delete"},
-    'view-action':{'title':'', 'type':"iconbasic", 'icon':'icon-wrench'}
+    'edit-action':{'title':'', 'type':"edit", 'tooltip':"<?php echo _('Edit'); ?>"},
+    'delete-action':{'title':'', 'type':"delete", 'tooltip':"<?php echo _('Delete'); ?>"},
+    'view-action':{'title':'', 'type':"iconbasic", 'icon':'icon-wrench', 'tooltip':"<?php echo _('Processlist'); ?>"}
   }
 
   update();

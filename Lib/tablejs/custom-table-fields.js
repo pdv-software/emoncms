@@ -7,8 +7,8 @@
 var customtablefields = {
   'icon': {
     'draw': function(row,field) {
-      if (table.data[row][field] == true) return "<i class='"+table.fields[field].trueicon+"' type='input' style='cursor:pointer'></i>";
-      if (table.data[row][field] == false) return "<i class='"+table.fields[field].falseicon+"' type='input' style='cursor:pointer'></i>";
+      if (table.data[row][field] == true) return "<i class='"+table.fields[field].trueicon+"' type='input' style='cursor:pointer' title="+((typeof(table.fields[field].tooltip) == "undefined")?"":'"'+table.fields[field].tooltip+'"')+"></i>";
+      if (table.data[row][field] == false) return "<i class='"+table.fields[field].falseicon+"' type='input' style='cursor:pointer' title="+((typeof(table.fields[field].tooltip) == "undefined")?"":'"'+table.fields[field].tooltip+'"')+"></i>";
     },
 
     'event': function() {
@@ -49,19 +49,19 @@ var customtablefields = {
   'iconlink': {
     'draw': function (row,field) { 
       var icon = 'icon-eye-open'; if (table.fields[field].icon) icon = table.fields[field].icon;
-      return "<a href='"+table.fields[field].link+table.data[row]['id']+"' ><i class='"+icon+"' ></i></a>" 
+      return "<a href='"+table.fields[field].link+table.data[row]['id']+"' ><i class='"+icon+"' title="+((typeof(table.fields[field].tooltip) == "undefined")?"":'"'+table.fields[field].tooltip+'"')+"></i></a>" 
     }
   },
 
   'iconbasic': {
     'draw': function(row,field)
     {
-      return "<i class='"+table.fields[field].icon+"' type='icon' row='"+row+"' style='cursor:pointer'></i>";
+      return "<i class='"+table.fields[field].icon+"' type='icon' row='"+row+"' style='cursor:pointer' title="+((typeof(table.fields[field].tooltip) == "undefined")?"":'"'+table.fields[field].tooltip+'"')+"></i>";
     }
   },
 
   'hinteditable': {
-    'draw': function (row,field) { return "…";},
+    'draw': function (row,field) { return "<i title='"+table.data[row][field]+"'>…</i>";},
     'edit': function (row,field) { return "<input type='text' value='"+table.data[row][field]+"' / >" },
     'save': function (row,field) { return $("[row="+row+"][field="+field+"] input").val() }
   },
@@ -69,7 +69,7 @@ var customtablefields = {
   'iconconfig': {
     'draw': function(row,field)
     {
-      return table.data[row]['#NO_CONFIG#'] ? "" : "<i class='"+table.fields[field].icon+"' type='icon' row='"+row+"' style='cursor:pointer'></i>";
+      return table.data[row]['#NO_CONFIG#'] ? "" : "<i class='"+table.fields[field].icon+"' type='icon' row='"+row+"' style='cursor:pointer' title="+((typeof(table.fields[field].tooltip) == "undefined")?"":'"'+table.fields[field].tooltip+'"')+"></i>";
     }
   },
 
@@ -134,6 +134,7 @@ function list_format_updated(time){
   time = time * 1000;
   var servertime = (new Date()).getTime() - table.timeServerLocalOffset;
   var update = (new Date(time)).getTime();
+	var tooltip = "";
 
   var secs = (servertime-update)/1000;
   var mins = secs/60;
@@ -144,9 +145,15 @@ function list_format_updated(time){
   if ((update == 0) || (!$.isNumeric(secs))) updated = "n/a";
   else if (secs< 0) updated = secs.toFixed(0) + "s"; // update time ahead of server date is signal of slow network
   else if (secs.toFixed(0) == 0) updated = "now";
-  else if (day>7) updated = "inactive";
-  else if (day>2) updated = day.toFixed(1)+" days";
-  else if (hour>2) updated = hour.toFixed(0)+" hrs";
+  else if (day>7) {
+    tooltip = day.toFixed(0)+" days!";
+		updated = "inactive";
+  }
+  else if (day>2) {
+    tooltip = hour.toFixed(0)+" hrs";
+		updated = day.toFixed(1)+" days";
+  } 
+	else if (hour>2) updated = hour.toFixed(0)+" hrs";
   else if (secs>180) updated = mins.toFixed(0)+" mins";
 
   secs = Math.abs(secs);
@@ -155,7 +162,7 @@ function list_format_updated(time){
   else if (secs<60) color = "rgb(240,180,20)"; 
   else if (secs<(3600*2)) color = "rgb(255,125,20)"
 
-  return "<span style='color:"+color+";'>"+updated+"</span>";
+  return "<span style='color:"+color+";' title='"+tooltip+"'>"+updated+"</span>";
 }
 
 // Format value dynamically 
@@ -175,14 +182,14 @@ function list_format_size(bytes){
   if (!$.isNumeric(bytes)) {
     return "n/a";
   } else if (bytes<1024) {
-    return bytes+"B";
+    return bytes+" "+"B";
   } else if (bytes<1024*100) {
-    return (bytes/1024).toFixed(1)+"KB";
+    return (bytes/1024).toFixed(1)+" "+"KB";
   } else if (bytes<1024*1024) {
-    return Math.round(bytes/1024)+"KB";
+    return Math.round(bytes/1024)+" "+"KB";
   } else if (bytes<=1024*1024*1024) {
-    return Math.round(bytes/(1024*1024))+"MB";
+    return Math.round(bytes/(1024*1024))+" "+"MB";
   } else {
-    return (bytes/(1024*1024*1024)).toFixed(1)+"GB";
+    return (bytes/(1024*1024*1024)).toFixed(1)+" "+"GB";
   }
 }

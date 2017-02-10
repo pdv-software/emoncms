@@ -267,11 +267,11 @@ var table = {
     },
 
     'delete': {
-      'draw': function (row,field) { return table.data[row]['#READ_ONLY#'] ? "" : "<a type='delete' row='"+row+"' uid='"+table.data[row]['id']+"' ><i class='icon-trash' style='cursor:pointer'></i></a>"; }
+      'draw': function (row,field) { return table.data[row]['#READ_ONLY#'] ? "" : "<a type='delete' row='"+row+"' uid='"+table.data[row]['id']+"' ><i class='icon-trash' style='cursor:pointer' title="+((typeof(table.fields[field].tooltip) == "undefined")?"":'"'+table.fields[field].tooltip+'"')+"></i></a>"; }
     },
 
     'edit': {
-      'draw': function (row,field) { return table.data[row]['#READ_ONLY#'] ? "" : "<a type='edit' row='"+row+"' uid='"+table.data[row]['id']+"' mode='edit'><i class='icon-pencil' style='cursor:pointer'></i></a>"; },
+      'draw': function (row,field) { return table.data[row]['#READ_ONLY#'] ? "" : "<a type='edit' row='"+row+"' uid='"+table.data[row]['id']+"' mode='edit'><i class='icon-pencil' style='cursor:pointer' title="+((typeof(table.fields[field].tooltip) == "undefined")?"":'"'+table.fields[field].tooltip+'"')+"></i></a>"; },
     },
 
     'blank': {
