@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emoncms3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-29 17:17+0100\n"
-"PO-Revision-Date: 2017-01-29 17:22+0100\n"
+"POT-Creation-Date: 2017-02-11 22:12+0100\n"
+"PO-Revision-Date: 2017-02-11 22:12+0100\n"
 "Last-Translator: Frank Dille\n"
 "Language-Team: @sumpfing <anne@sumpfing.de>\n"
 "Language: de_DE\n"
@@ -69,6 +69,7 @@ msgid "Administration"
 msgstr "Administration"
 
 #: ../../../admin_main_view.php:166 ../../../admin_main_view.php:170
+#: ../../../userlist_view.php:7
 msgid "Users"
 msgstr "Benutzer"
 
@@ -100,89 +101,93 @@ msgstr "Logger"
 msgid "Auto refresh"
 msgstr "Autom. Aktualisierung"
 
-#: ../../../admin_main_view.php:206 ../../../admin_main_view.php:232
-msgid "Download log"
+#: ../../../admin_main_view.php:206 ../../../admin_main_view.php:235
+msgid "Download Log"
 msgstr "Download Protokoll"
 
 #: ../../../admin_main_view.php:226
-msgid "Update emonPi"
-msgstr "emonPi Aktualisieren"
+msgid "Update"
+msgstr "Aktualisieren"
 
-#: ../../../admin_main_view.php:231
-msgid "Update Now"
-msgstr "Jetzt Aktualisieren"
+#: ../../../admin_main_view.php:233
+msgid "emonPi Update"
+msgstr "EmonPi Update"
 
-#: ../../../admin_main_view.php:247
+#: ../../../admin_main_view.php:234
+msgid "emonBase Update"
+msgstr "EmonBase Update"
+
+#: ../../../admin_main_view.php:250
 msgid "Server Information"
 msgstr "Server Informationen"
 
-#: ../../../admin_main_view.php:249 ../../../admin_main_view.php:266
-#: ../../../admin_main_view.php:273 ../../../admin_main_view.php:281
-#: ../../../admin_main_view.php:327
+#: ../../../admin_main_view.php:252 ../../../admin_main_view.php:269
+#: ../../../admin_main_view.php:276 ../../../admin_main_view.php:284
+#: ../../../admin_main_view.php:330
 msgid "Version"
 msgstr "Version"
 
-#: ../../../admin_main_view.php:254
+#: ../../../admin_main_view.php:253 ../../../admin_main_view.php:331
+msgid "Modules"
+msgstr "Module"
+
+#: ../../../admin_main_view.php:257
 msgid "loading..."
 msgstr "wird geladen ..."
 
-#: ../../../admin_main_view.php:259 ../../../admin_main_view.php:264
+#: ../../../admin_main_view.php:262 ../../../admin_main_view.php:267
 msgid "Server"
 msgstr "Server"
 
-#: ../../../admin_main_view.php:260 ../../../admin_main_view.php:267
-#: ../../../admin_main_view.php:274 ../../../admin_main_view.php:282
+#: ../../../admin_main_view.php:263 ../../../admin_main_view.php:270
+#: ../../../admin_main_view.php:277 ../../../admin_main_view.php:285
 msgid "Host"
 msgstr "Rechner"
 
-#: ../../../admin_main_view.php:261 ../../../admin_main_view.php:268
+#: ../../../admin_main_view.php:264 ../../../admin_main_view.php:271
 msgid "Date"
 msgstr "Datum"
 
-#: ../../../admin_main_view.php:262 ../../../admin_main_view.php:276
+#: ../../../admin_main_view.php:265 ../../../admin_main_view.php:279
 msgid "Uptime"
 msgstr "Laufzeit"
 
-#: ../../../admin_main_view.php:266
+#: ../../../admin_main_view.php:269
 msgid "Database"
 msgstr "Datenbank "
 
-#: ../../../admin_main_view.php:269 ../../../admin_main_view.php:311
+#: ../../../admin_main_view.php:272 ../../../admin_main_view.php:314
 msgid "Stats"
 msgstr "Status"
 
-#: ../../../admin_main_view.php:275
+#: ../../../admin_main_view.php:278
 msgid "Size"
 msgstr "Größe"
 
 # Unklar: Bereinigen oder Schreiben?
-#: ../../../admin_main_view.php:275
+#: ../../../admin_main_view.php:278
 msgid "Flush"
 msgstr "Bereinigen"
 
-#: ../../../admin_main_view.php:306 ../../../admin_main_view.php:320
+#: ../../../admin_main_view.php:309 ../../../admin_main_view.php:323
 msgid "Total"
 msgstr "Gesamt"
 
-#: ../../../admin_main_view.php:306 ../../../admin_main_view.php:320
+#: ../../../admin_main_view.php:309 ../../../admin_main_view.php:323
 msgid "Used"
 msgstr "Belegt"
 
-#: ../../../admin_main_view.php:306 ../../../admin_main_view.php:320
+#: ../../../admin_main_view.php:309 ../../../admin_main_view.php:323
 msgid "Free"
 msgstr "Frei"
 
-#: ../../../admin_main_view.php:311
+#: ../../../admin_main_view.php:314
 msgid "Disk"
 msgstr "Disk"
 
-#: ../../../admin_main_view.php:311
+#: ../../../admin_main_view.php:314
 msgid "Mount"
 msgstr "Eingebunden"
-
-#: ../../../admin_main_view.php:328
-msgid "Modules"
-msgstr "Module"
 
 #: ../../../update_view.php:26
 msgid "Apply changes"
@@ -211,6 +216,9 @@ msgstr "Benutzername"
 #: ../../../userlist_view.php:31
 msgid "Email"
 msgstr "E-Mail"
+
+#~ msgid "Update emonPi"
+#~ msgstr "emonPi Aktualisieren"
 
 #~ msgid "Memory"
 #~ msgstr "Speicher"
