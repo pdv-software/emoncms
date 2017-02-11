@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emoncms3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-29 00:16+0100\n"
-"PO-Revision-Date: 2017-01-29 00:19+0100\n"
+"POT-Creation-Date: 2017-02-11 23:05+0100\n"
+"PO-Revision-Date: 2017-02-11 23:16+0100\n"
 "Last-Translator: Frank Dille\n"
 "Language-Team: @sumpfing <anne@sumpfing.de>\n"
 "Language: de_DE\n"
@@ -24,6 +24,10 @@ msgstr "E-Mail"
 msgid "Username"
 msgstr "Benutzername"
 
+#: ../../../login_block.php:46
+msgid "Forgot password?"
+msgstr "Passwort vergessen?"
+
 #: ../../../login_block.php:47
 msgid "Password"
 msgstr "Passwort"
@@ -34,14 +38,14 @@ msgstr "Passwort bestätigen"
 
 #: ../../../login_block.php:64
 msgid "Remember me"
-msgstr "Erinnere dich an mich"
+msgstr "Anmeldung merken"
 
-#: ../../../login_block.php:68
+#: ../../../login_block.php:68 ../../../login_block.php:77
 msgid "Login"
-msgstr "Login"
+msgstr "Anmelden"
 
 #: ../../../login_block.php:69 ../../../login_block.php:76
-#: ../../../login_block.php:94
+#: ../../../login_block.php:94 ../../../profile/profile.php:113
 msgid "or"
 msgstr "oder"
 
@@ -53,7 +57,19 @@ msgstr "registrieren"
 msgid "Register"
 msgstr "Registrieren"
 
-#: ../../../login_block.php:77 ../../../login_block.php:95
+#: ../../../login_block.php:84
+msgid "Existing account name"
+msgstr "Bestehendes Konto"
+
+#: ../../../login_block.php:89
+msgid "Account email address"
+msgstr "Konto E-Mail-Adresse"
+
+#: ../../../login_block.php:93
+msgid "Recover"
+msgstr "Wiederherstellen"
+
+#: ../../../login_block.php:95
 msgid "login"
 msgstr "Anmelden"
 
@@ -92,15 +108,27 @@ msgstr "Abbruch"
 
 #: ../../../profile/profile.php:101
 msgid "Write API Key"
-msgstr "Write API Key"
+msgstr "API Key Schreiben"
+
+#: ../../../profile/profile.php:101 ../../../profile/profile.php:105
+msgid "Copy API Key"
+msgstr "API Key Kopieren"
 
 #: ../../../profile/profile.php:105
 msgid "Read API Key"
-msgstr "Read Api Key"
+msgstr "API Key Lesen"
 
 #: ../../../profile/profile.php:110
 msgid "Mobile App Integration QR Code"
 msgstr "QR Code zur Einbindung der Mobilen App"
+
+#: ../../../profile/profile.php:113
+msgid "Scan this QR code from the"
+msgstr "Scannen Sie diesen QR Code von der "
+
+#: ../../../profile/profile.php:114
+msgid "Or scan using a barcode scanner to directly view your MyElectric graph."
+msgstr "&nbsp;"
 
 #: ../../../profile/profile.php:122
 msgid "My Profile"
@@ -141,6 +169,10 @@ msgstr "Mein Konto"
 #: ../../../user_menu.php:9
 msgid "Logout"
 msgstr "Abmelden"
+
+#: ../../../user_menu.php:10
+msgid "Log In"
+msgstr "Anmelden"
 
 #: ../../../user_model.php:159
 msgid "Missing username, password or email parameter"
@@ -220,8 +252,8 @@ msgid ""
 "As you are using a cookie based remember me login, please logout and log "
 "back in to change username"
 msgstr ""
-"Wenn Sie ein \"Remember Me\" Cookie verwenden, loggen Sie sich bitte aus "
-"und wieder ein, um den Benutzernamen zu ändern"
+"Wenn Sie ein \"Anmeldung merken\" Cookie verwenden, loggen Sie sich bitte "
+"aus und wieder ein um den Benutzernamen zu ändern"
 
 #: ../../../user_model.php:374
 msgid "Username updated"
@@ -232,7 +264,7 @@ msgid ""
 "As you are using a cookie based remember me login, please logout and log "
 "back in to change email"
 msgstr ""
-"Wenn du ein \"erinnere dich an mich\" Cookie verwendest, bitte logge dich "
+"Wenn Sie ein \"Anmeldung merken\" Cookie verwenden, loggen Sie sich bitte "
 "aus und wieder ein um die E-Mail Adresse zu ändern"
 
 #: ../../../user_model.php:392

@@ -43,7 +43,7 @@ global $path, $enable_rememberme, $enable_password_reset, $theme;
                 </div>
 
                 <div class="form-group">
-                    <a id="passwordreset-link" class="pull-right" href="#">Forgot password?</a>
+                    <a id="passwordreset-link" class="pull-right" href="#"><?php echo _("Forgot password?"); ?></a>
                     <label><?php echo _('Password'); ?>
                         <input type="password" tabindex="3" autocomplete="on" name="password" />
                     </label>
@@ -74,23 +74,23 @@ global $path, $enable_rememberme, $enable_password_reset, $theme;
                 <div class="form-group register-item" style="display:none">
                     <button id="register" class="btn btn-primary" type="button"><?php echo _('Register'); ?></button>
                     <?php echo '&nbsp;'._('or').'&nbsp;' ?>
-                    <a id="cancel-link" href="#"><?php echo _('login'); ?></a>
+                    <a id="cancel-link" href="#"><?php echo _('Login'); ?></a>
                 </div>
 
             </div>
 
             <div id="passwordresetblock" class="collapse">
                 <div class="form-group">
-                    <label>Existing account name
+                    <label><?php echo _("Existing account name"); ?>
                         <input id="passwordreset-username" type="text" />
                     </label>
                 </div>
                 <div class="form-group">
-                    <label>Account email address
+                    <label><?php echo _("Account email address"); ?>
                         <input id="passwordreset-email" type="text" />
                     </label>
                 </div>
-                <button id="passwordreset-submit" class="btn btn-primary" type="button">Recover</button>
+                <button id="passwordreset-submit" class="btn btn-primary" type="button"><?php echo _("Recover"); ?></button>
                 <?php echo '&nbsp;'._('or').'&nbsp;' ?>
                 <a id="passwordreset-link-cancel" href="#"><?php echo _('login'); ?></a>
             </div>
