@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emoncms3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-07 21:14+0100\n"
-"PO-Revision-Date: 2017-02-07 21:41+0100\n"
+"POT-Creation-Date: 2017-02-11 17:45+0100\n"
+"PO-Revision-Date: 2017-02-11 17:45+0100\n"
 "Last-Translator: Frank Dille\n"
 "Language-Team: @sumpfing <anne@sumpfing.de>\n"
 "Language: de_DE\n"
@@ -308,15 +308,15 @@ msgstr "Wollen Sie wirklich löschen?"
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: ../../../Views/input_view.php:53
+#: ../../../Views/input_view.php:53 ../../../Views/input_view.php:88
 msgid "Delete"
 msgstr "Löschen"
 
-#: ../../../Views/input_view.php:68 ../../../Views/input_view.php:83
+#: ../../../Views/input_view.php:68 ../../../Views/input_view.php:82
 msgid "Process list"
 msgstr "Prozessliste"
 
-#: ../../../Views/input_view.php:69 ../../../Views/input_view.php:84
+#: ../../../Views/input_view.php:69 ../../../Views/input_view.php:83
 msgid "Updated"
 msgstr "Geändert"
 
@@ -332,15 +332,23 @@ msgstr "Key"
 msgid "Name"
 msgstr "Name"
 
-#: ../../../Views/input_view.php:82
-msgid "Unit"
-msgstr "Einheit"
-
-#: ../../../Views/input_view.php:85
+#: ../../../Views/input_view.php:84
 msgid "Value"
 msgstr "Wert"
 
-#: ../../../input_model.php:319
+#: ../../../Views/input_view.php:85
+msgid "Unit"
+msgstr "Einheit"
+
+#: ../../../Views/input_view.php:87
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: ../../../Views/input_view.php:89
+msgid "Processlist"
+msgstr "Prozessliste"
+
+#: ../../../input_model.php:318
 msgid "Error setting processlist"
 msgstr "Fehler beim Ändern der Prozessliste"
 

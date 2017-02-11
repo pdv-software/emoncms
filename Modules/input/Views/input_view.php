@@ -79,10 +79,10 @@
     'nodeid':{'title':'<?php echo _("Node"); ?>','type':"fixed"},
     'name':{'title':'<?php echo _("Key"); ?>','type':"text"},
     'description':{'title':'<?php echo _("Name"); ?>','type':"text"},
-    'unit':{'title':'<?php echo _("Unit"); ?>','type':"text"},
     'processList':{'title':'<?php echo _("Process list"); ?>','type':"processlist"},
     'time':{'title':'<?php echo _("Updated"); ?>', 'type':"updated"},
     'value':{'title':'<?php echo _("Value"); ?>','type':"value"},
+    'unit':{'title':'<?php echo _("Unit"); ?>','type':"text"},
     // Actions
     'edit-action':{'title':'', 'type':"edit"},
     'delete-action':{'title':'', 'type':"delete"},
