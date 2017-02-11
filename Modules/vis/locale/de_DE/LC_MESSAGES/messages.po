@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emoncms3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-03 14:25+0100\n"
-"PO-Revision-Date: 2017-02-03 14:32+0100\n"
+"POT-Creation-Date: 2017-02-11 14:18+0100\n"
+"PO-Revision-Date: 2017-02-11 14:21+0100\n"
 "Last-Translator: Frank Dille\n"
 "Language-Team: @sumpfing <anne@sumpfing.de>\n"
 "Language: de_DE\n"
@@ -911,7 +911,156 @@ msgstr "Standard Abweichung:"
 msgid "Datapoints in view:"
 msgstr "Datenpunkte:"
 
-#: ../../../visualisations/rawdata.php:124
+#: ../../../visualisations/rawdata.php:68
+msgid "Jan"
+msgstr "Jan"
+
+#: ../../../visualisations/rawdata.php:68
+msgid "Feb"
+msgstr "Feb"
+
+#: ../../../visualisations/rawdata.php:68
+msgid "Mar"
+msgstr "Mär"
+
+#: ../../../visualisations/rawdata.php:69
+msgid "Apr"
+msgstr "Apr"
+
+#: ../../../visualisations/rawdata.php:69
+#: ../../../visualisations/rawdata.php:73
+msgid "May"
+msgstr "Mai"
+
+#: ../../../visualisations/rawdata.php:69
+msgid "Jun"
+msgstr "Jun"
+
+#: ../../../visualisations/rawdata.php:70
+msgid "Jul"
+msgstr "Jul"
+
+#: ../../../visualisations/rawdata.php:70
+msgid "Aug"
+msgstr "Aug"
+
+#: ../../../visualisations/rawdata.php:70
+msgid "Sep"
+msgstr "Sep"
+
+#: ../../../visualisations/rawdata.php:71
+msgid "Oct"
+msgstr "Okt"
+
+#: ../../../visualisations/rawdata.php:71
+msgid "Nov"
+msgstr "Nov"
+
+#: ../../../visualisations/rawdata.php:71
+msgid "Dec"
+msgstr "Dez"
+
+#: ../../../visualisations/rawdata.php:72
+msgid "January"
+msgstr "Januar"
+
+#: ../../../visualisations/rawdata.php:72
+msgid "February"
+msgstr "Februar"
+
+#: ../../../visualisations/rawdata.php:72
+msgid "March"
+msgstr "März"
+
+#: ../../../visualisations/rawdata.php:73
+msgid "April"
+msgstr "April"
+
+#: ../../../visualisations/rawdata.php:73
+msgid "June"
+msgstr "Juni"
+
+#: ../../../visualisations/rawdata.php:74
+msgid "July"
+msgstr "Juli"
+
+#: ../../../visualisations/rawdata.php:74
+msgid "August"
+msgstr "August"
+
+#: ../../../visualisations/rawdata.php:74
+msgid "September"
+msgstr "September"
+
+#: ../../../visualisations/rawdata.php:75
+msgid "October"
+msgstr "Oktober"
+
+#: ../../../visualisations/rawdata.php:75
+msgid "November"
+msgstr "November"
+
+#: ../../../visualisations/rawdata.php:75
+msgid "December"
+msgstr "Dezember"
+
+#: ../../../visualisations/rawdata.php:78
+msgid "Sun"
+msgstr "So"
+
+#: ../../../visualisations/rawdata.php:78
+msgid "Mon"
+msgstr "Mo"
+
+#: ../../../visualisations/rawdata.php:78
+msgid "Tue"
+msgstr "Di"
+
+#: ../../../visualisations/rawdata.php:79
+msgid "Wed"
+msgstr "Mi"
+
+#: ../../../visualisations/rawdata.php:79
+msgid "Thu"
+msgstr "Do"
+
+#: ../../../visualisations/rawdata.php:79
+msgid "Fri"
+msgstr "Fr"
+
+#: ../../../visualisations/rawdata.php:79
+msgid "Sat"
+msgstr "Sa"
+
+#: ../../../visualisations/rawdata.php:80
+msgid "Sunday"
+msgstr "Sonntag"
+
+#: ../../../visualisations/rawdata.php:80
+msgid "Monday"
+msgstr "Montag"
+
+#: ../../../visualisations/rawdata.php:80
+msgid "Tuesday"
+msgstr "Dienstag"
+
+#: ../../../visualisations/rawdata.php:81
+msgid "Wednesday"
+msgstr "Mittwoch"
+
+#: ../../../visualisations/rawdata.php:81
+msgid "Thursday"
+msgstr "Donnerstag"
+
+#: ../../../visualisations/rawdata.php:81
+msgid "Friday"
+msgstr "Freitag"
+
+#: ../../../visualisations/rawdata.php:81
+msgid "Saturday"
+msgstr "Samstag"
+
+#: ../../../visualisations/rawdata.php:140
 msgid "Raw:"
 msgstr "Rohwert:"
 
