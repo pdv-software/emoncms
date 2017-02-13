@@ -27,6 +27,7 @@
 
 <script language="javascript" type="text/javascript" src="<?php echo $path;?>Modules/vis/visualisations/common/api.js"></script>
 <script language="javascript" type="text/javascript" src="<?php echo $path;?>Modules/vis/visualisations/common/vis.helper.js"></script>
+<script type="text/javascript"><?php require "Modules/vis/vis_constjs.php"; ?></script>
 
 <div id="vis-title"></div>
 
@@ -197,7 +198,8 @@ $(function() {
         var options = {
             canvas: true,
             lines: { fill: fill },
-            xaxis: { mode: "time", timezone: "browser", min: view.start, max: view.end, minTickSize: [interval, "second"] },
+            xaxis: { mode: "time", timezone: "browser", min: view.start, max: view.end, minTickSize: [interval, "second"],
+              monthNames: Tr_monthNames, dayNames:Tr_dayNames },
             yaxis: { },
             grid: {hoverable: true, clickable: true},
             selection: { mode: "x" },
