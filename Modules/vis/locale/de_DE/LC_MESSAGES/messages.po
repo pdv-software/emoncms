@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emoncms3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-11 14:18+0100\n"
-"PO-Revision-Date: 2017-02-11 14:21+0100\n"
+"POT-Creation-Date: 2017-02-13 16:15+0100\n"
+"PO-Revision-Date: 2017-02-13 16:40+0100\n"
 "Last-Translator: Frank Dille\n"
 "Language-Team: @sumpfing <anne@sumpfing.de>\n"
 "Language: de_DE\n"
@@ -71,6 +71,154 @@ msgstr "Aus"
 #: ../../../Views/vis_main_view.php:183
 msgid "On"
 msgstr "Ein"
+
+#: ../../../vis_constjs.php:18
+msgid "Jan"
+msgstr "Jan"
+
+#: ../../../vis_constjs.php:18
+msgid "Feb"
+msgstr "Feb"
+
+#: ../../../vis_constjs.php:18
+msgid "Mar"
+msgstr "Mär"
+
+#: ../../../vis_constjs.php:19
+msgid "Apr"
+msgstr "Apr"
+
+#: ../../../vis_constjs.php:19 ../../../vis_constjs.php:23
+msgid "May"
+msgstr "Mai"
+
+#: ../../../vis_constjs.php:19
+msgid "Jun"
+msgstr "Jun"
+
+#: ../../../vis_constjs.php:20
+msgid "Jul"
+msgstr "Jul"
+
+#: ../../../vis_constjs.php:20
+msgid "Aug"
+msgstr "Aug"
+
+#: ../../../vis_constjs.php:20
+msgid "Sep"
+msgstr "Sep"
+
+#: ../../../vis_constjs.php:21
+msgid "Oct"
+msgstr "Okt"
+
+#: ../../../vis_constjs.php:21
+msgid "Nov"
+msgstr "Nov"
+
+#: ../../../vis_constjs.php:21
+msgid "Dec"
+msgstr "Dez"
+
+#: ../../../vis_constjs.php:22
+msgid "January"
+msgstr "Januar"
+
+#: ../../../vis_constjs.php:22
+msgid "February"
+msgstr "Februar"
+
+#: ../../../vis_constjs.php:22
+msgid "March"
+msgstr "März"
+
+#: ../../../vis_constjs.php:23
+msgid "April"
+msgstr "April"
+
+#: ../../../vis_constjs.php:23
+msgid "June"
+msgstr "Juni"
+
+#: ../../../vis_constjs.php:24
+msgid "July"
+msgstr "Juli"
+
+#: ../../../vis_constjs.php:24
+msgid "August"
+msgstr "August"
+
+#: ../../../vis_constjs.php:24
+msgid "September"
+msgstr "September"
+
+#: ../../../vis_constjs.php:25
+msgid "October"
+msgstr "Oktober"
+
+#: ../../../vis_constjs.php:25
+msgid "November"
+msgstr "November"
+
+#: ../../../vis_constjs.php:25
+msgid "December"
+msgstr "Dezember"
+
+#: ../../../vis_constjs.php:30
+msgid "Sun"
+msgstr "So"
+
+#: ../../../vis_constjs.php:30
+msgid "Mon"
+msgstr "Mo"
+
+#: ../../../vis_constjs.php:30
+msgid "Tue"
+msgstr "Di"
+
+#: ../../../vis_constjs.php:31
+msgid "Wed"
+msgstr "Mi"
+
+#: ../../../vis_constjs.php:31
+msgid "Thu"
+msgstr "Do"
+
+#: ../../../vis_constjs.php:31
+msgid "Fri"
+msgstr "Fr"
+
+#: ../../../vis_constjs.php:31
+msgid "Sat"
+msgstr "Sa"
+
+#: ../../../vis_constjs.php:32
+msgid "Sunday"
+msgstr "Sonntag"
+
+#: ../../../vis_constjs.php:32
+msgid "Monday"
+msgstr "Montag"
+
+#: ../../../vis_constjs.php:32
+msgid "Tuesday"
+msgstr "Dienstag"
+
+#: ../../../vis_constjs.php:33
+msgid "Wednesday"
+msgstr "Mittwoch"
+
+#: ../../../vis_constjs.php:33
+msgid "Thursday"
+msgstr "Donnerstag"
+
+#: ../../../vis_constjs.php:33
+msgid "Friday"
+msgstr "Freitag"
+
+#: ../../../vis_constjs.php:33
+msgid "Saturday"
+msgstr "Samstag"
 
 #: ../../../vis_controller.php:11
 msgid "Restricted access"
@@ -201,7 +349,7 @@ msgid "Y axes limits"
 msgstr "Grenze Y Achsen"
 
 #: ../../../vis_langjs.php:61 ../../../visualisations/compare.php:57
-#: ../../../visualisations/graph.php:28 ../../../visualisations/rawdata.php:37
+#: ../../../visualisations/graph.php:28 ../../../visualisations/rawdata.php:38
 #: ../../../visualisations/zoom.php:52
 msgid "D"
 msgstr "T"
@@ -211,7 +359,7 @@ msgid "End:"
 msgstr "Bis:"
 
 #: ../../../vis_langjs.php:63 ../../../visualisations/compare.php:59
-#: ../../../visualisations/graph.php:30 ../../../visualisations/rawdata.php:39
+#: ../../../visualisations/graph.php:30 ../../../visualisations/rawdata.php:40
 #: ../../../visualisations/zoom.php:54
 msgid "M"
 msgstr "M"
@@ -229,13 +377,13 @@ msgid "Tooltip:"
 msgstr "Wert anz."
 
 #: ../../../vis_langjs.php:67 ../../../visualisations/compare.php:58
-#: ../../../visualisations/graph.php:29 ../../../visualisations/rawdata.php:38
+#: ../../../visualisations/graph.php:29 ../../../visualisations/rawdata.php:39
 #: ../../../visualisations/zoom.php:53
 msgid "W"
 msgstr "W"
 
 #: ../../../vis_langjs.php:68 ../../../visualisations/compare.php:60
-#: ../../../visualisations/graph.php:31 ../../../visualisations/rawdata.php:40
+#: ../../../visualisations/graph.php:31 ../../../visualisations/rawdata.php:41
 #: ../../../visualisations/zoom.php:55
 msgid "Y"
 msgstr "J"
@@ -298,7 +446,7 @@ msgstr "Vorgabe:800"
 
 #: ../../../vis_langjs.php:85
 msgid "Default visible window interval"
-msgstr ""
+msgstr "Vorgabe Zeitbereich"
 
 #: ../../../vis_langjs.php:86 ../../../vis_object.php:49
 #: ../../../vis_object.php:78 ../../../vis_object.php:87
@@ -334,7 +482,7 @@ msgstr "h"
 
 #: ../../../vis_langjs.php:95
 msgid "Hours"
-msgstr ""
+msgstr "Stunden"
 
 #: ../../../vis_langjs.php:96 ../../../visualisations/graph.php:84
 msgid "Interval"
@@ -416,27 +564,22 @@ msgid "Solar"
 msgstr "Solar"
 
 #: ../../../vis_langjs.php:115
-#, fuzzy
 msgid "Solar feed value"
-msgstr "Solarfeed Wert"
+msgstr ""
 
 #: ../../../vis_langjs.php:116
-#, fuzzy
 msgid "Threshold A"
 msgstr "Schwelle A"
 
 #: ../../../vis_langjs.php:117
-#, fuzzy
 msgid "Threshold A used"
 msgstr "Schwelle A benutzt"
 
 #: ../../../vis_langjs.php:118
-#, fuzzy
 msgid "Threshold B"
 msgstr "Schwelle B"
 
 #: ../../../vis_langjs.php:119
-#, fuzzy
 msgid "Threshold B used"
 msgstr "Schwelle B benutzt"
 
@@ -445,14 +588,12 @@ msgid "Top"
 msgstr "Oben"
 
 #: ../../../vis_langjs.php:121
-#, fuzzy
 msgid "Top colour"
-msgstr "Farbe"
+msgstr ""
 
 #: ../../../vis_langjs.php:122
-#, fuzzy
 msgid "Top feed value"
-msgstr "Höchstwert"
+msgstr ""
 
 #: ../../../vis_langjs.php:123
 msgid "Ufac"
@@ -762,6 +903,14 @@ msgstr "Feed A im Vergleich mit Feed B"
 msgid "Relationship should be linear if measurements are the same"
 msgstr "Es sollte eine lineare Beziehung zw. den Messwerten bestehen"
 
+#: ../../../visualisations/comparison/comparison.php:83
+msgid "kWh/d"
+msgstr "kWh/Tag"
+
+#: ../../../visualisations/comparison/comparison.php:83
+msgid "Comparison"
+msgstr "Vergleich"
+
 #: ../../../visualisations/editdaily.php:30
 #: ../../../visualisations/editrealtime.php:31
 msgid "Datapoint editor:"
@@ -891,176 +1040,27 @@ msgstr ""
 msgid "Reload"
 msgstr "Neu Laden"
 
-#: ../../../visualisations/rawdata.php:56
+#: ../../../visualisations/rawdata.php:57
 msgid "Mean:"
 msgstr "Mittelwert:"
 
-#: ../../../visualisations/rawdata.php:57
+#: ../../../visualisations/rawdata.php:58
 msgid "Min:"
 msgstr "Minimum:"
 
-#: ../../../visualisations/rawdata.php:58
+#: ../../../visualisations/rawdata.php:59
 msgid "Max:"
 msgstr "Maximum:"
 
-#: ../../../visualisations/rawdata.php:59
+#: ../../../visualisations/rawdata.php:60
 msgid "Standard deviation:"
 msgstr "Standard Abweichung:"
 
-#: ../../../visualisations/rawdata.php:60
+#: ../../../visualisations/rawdata.php:61
 msgid "Datapoints in view:"
 msgstr "Datenpunkte:"
 
-#: ../../../visualisations/rawdata.php:68
-msgid "Jan"
-msgstr "Jan"
-
-#: ../../../visualisations/rawdata.php:68
-msgid "Feb"
-msgstr "Feb"
-
-#: ../../../visualisations/rawdata.php:68
-msgid "Mar"
-msgstr "Mär"
-
-#: ../../../visualisations/rawdata.php:69
-msgid "Apr"
-msgstr "Apr"
-
-#: ../../../visualisations/rawdata.php:69
-#: ../../../visualisations/rawdata.php:73
-msgid "May"
-msgstr "Mai"
-
-#: ../../../visualisations/rawdata.php:69
-msgid "Jun"
-msgstr "Jun"
-
-#: ../../../visualisations/rawdata.php:70
-msgid "Jul"
-msgstr "Jul"
-
-#: ../../../visualisations/rawdata.php:70
-msgid "Aug"
-msgstr "Aug"
-
-#: ../../../visualisations/rawdata.php:70
-msgid "Sep"
-msgstr "Sep"
-
-#: ../../../visualisations/rawdata.php:71
-msgid "Oct"
-msgstr "Okt"
-
-#: ../../../visualisations/rawdata.php:71
-msgid "Nov"
-msgstr "Nov"
-
-#: ../../../visualisations/rawdata.php:71
-msgid "Dec"
-msgstr "Dez"
-
-#: ../../../visualisations/rawdata.php:72
-msgid "January"
-msgstr "Januar"
-
-#: ../../../visualisations/rawdata.php:72
-msgid "February"
-msgstr "Februar"
-
-#: ../../../visualisations/rawdata.php:72
-msgid "March"
-msgstr "März"
-
-#: ../../../visualisations/rawdata.php:73
-msgid "April"
-msgstr "April"
-
-#: ../../../visualisations/rawdata.php:73
-msgid "June"
-msgstr "Juni"
-
-#: ../../../visualisations/rawdata.php:74
-msgid "July"
-msgstr "Juli"
-
-#: ../../../visualisations/rawdata.php:74
-msgid "August"
-msgstr "August"
-
-#: ../../../visualisations/rawdata.php:74
-msgid "September"
-msgstr "September"
-
-#: ../../../visualisations/rawdata.php:75
-msgid "October"
-msgstr "Oktober"
-
-#: ../../../visualisations/rawdata.php:75
-msgid "November"
-msgstr "November"
-
-#: ../../../visualisations/rawdata.php:75
-msgid "December"
-msgstr "Dezember"
-
-#: ../../../visualisations/rawdata.php:78
-msgid "Sun"
-msgstr "So"
-
-#: ../../../visualisations/rawdata.php:78
-msgid "Mon"
-msgstr "Mo"
-
-#: ../../../visualisations/rawdata.php:78
-msgid "Tue"
-msgstr "Di"
-
-#: ../../../visualisations/rawdata.php:79
-msgid "Wed"
-msgstr "Mi"
-
-#: ../../../visualisations/rawdata.php:79
-msgid "Thu"
-msgstr "Do"
-
-#: ../../../visualisations/rawdata.php:79
-msgid "Fri"
-msgstr "Fr"
-
-#: ../../../visualisations/rawdata.php:79
-msgid "Sat"
-msgstr "Sa"
-
-#: ../../../visualisations/rawdata.php:80
-msgid "Sunday"
-msgstr "Sonntag"
-
-#: ../../../visualisations/rawdata.php:80
-msgid "Monday"
-msgstr "Montag"
-
-#: ../../../visualisations/rawdata.php:80
-msgid "Tuesday"
-msgstr "Dienstag"
-
-#: ../../../visualisations/rawdata.php:81
-msgid "Wednesday"
-msgstr "Mittwoch"
-
-#: ../../../visualisations/rawdata.php:81
-msgid "Thursday"
-msgstr "Donnerstag"
-
-#: ../../../visualisations/rawdata.php:81
-msgid "Friday"
-msgstr "Freitag"
-
-#: ../../../visualisations/rawdata.php:81
-msgid "Saturday"
-msgstr "Samstag"
-
-#: ../../../visualisations/rawdata.php:140
+#: ../../../visualisations/rawdata.php:125
 msgid "Raw:"
 msgstr "Rohwert:"
 
