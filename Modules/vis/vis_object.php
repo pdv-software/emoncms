@@ -31,13 +31,13 @@
             array('units',_("units"),5,''),
             array('dp',_("dp"),7,'2'),
             array('scale',_("scale"),6,'1'),
-			array('ymin',_("ymin"),6,''),
-			array('ymax',_("ymax"),6,''),
-			array('xtitle',_("xtitle"),5,''),
-			array('ytitle',_("ytitle"),5,'')
-			)
+            array('ymin',_("ymin"),6,''),
+            array('ymax',_("ymax"),6,''),
+            array('xtitle',_("xtitle"),5,''),
+            array('ytitle',_("ytitle"),5,'')
+            )
         ),
-		
+
         
         'bargraph'=> array('label'=>_("BarGraph"), 'options'=>array(
             array('feedid',_("feed"),0),
@@ -53,7 +53,8 @@
         
         'timestoredaily'=> array('label'=>_("Daily from Multiple (BETA)"), 'options'=>array(
             array('feedid',_("feed"),1),
-            array('units',_("units"),5,'kWh'))
+            array('units',_("units"),5,'kWh')
+            )
         ),
         
         'smoothie'=> array('label'=>_("Smoothie"), 'options'=>array(
@@ -65,7 +66,8 @@
             array('feedid',_("feed"),3),
             array('barwidth',_("barwidth"),7,50),
             array('start',_("start"),7,0),
-            array('end',_("end"),7,0))
+            array('end',_("end"),7,0)
+            )
         ),
         
         //'dailyhistogram'=> array('options'=>array(array('feedid',3))),

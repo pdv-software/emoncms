@@ -80,7 +80,7 @@
     </style>
 
 <?php if (!$embed) { ?>
-<h2>kWh/d Comparison</h2>
+<h2><?php echo _("kWh/d"); ?> <?php echo _("Comparison"); ?></h2>
 <?php } ?>
 
     <div id="widget"></div>
