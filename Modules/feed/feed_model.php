@@ -247,13 +247,6 @@ class Feed
         return $this->EngineClass($engine)->get_meta($feedid);
     }
 
-    public function get_npoints($feedid) {
-        $feedid = (int) $feedid;
-        $engine = $this->get_engine($feedid);
-        if ($engine!=5) return false;
-        return $this->EngineClass($engine)->get_npoints($feedid);
-    }
-
 
     /*
     Get operations by user
@@ -407,6 +400,8 @@ class Feed
         {
             if ($this->redis->hExists("feed:$id",'time')) {
                 $lastvalue = $this->redis->hmget("feed:$id",array('time','value'));
+                $lastvalue['time'] = (int) $lastvalue['time'];
+                $lastvalue['value'] = (float) $lastvalue['value'];
             } else {
                 // if it does not, load it in to redis from the actual feed data because we have no updated data from sql feeds table with redis enabled.
                 $lastvalue = $this->EngineClass($engine)->lastvalue($id);
