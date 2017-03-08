@@ -10,3 +10,4 @@
 [submodule "Modules/collector"]
 	path = Modules/collector
 	url = https://github.com/pdv-software/collector.git
+
