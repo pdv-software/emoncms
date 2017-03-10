@@ -19,7 +19,13 @@ var customtablefields = {
         var field = $(this).parent().attr('field');
         var t = table;
         if (!t.data[row]['#READ_ONLY#']) {
-          t.data[row][field] = !t.data[row][field];
+		  var val = t.data[row][field];
+          if(typeof val === "boolean"){		  
+            t.data[row][field] = !val;
+		  }else{
+			//boolean conversion and negate
+			t.data[row][field] = !!val;  
+		  }
 
           var fields = {};
           fields[field] = t.data[row][field];
