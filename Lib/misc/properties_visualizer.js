@@ -22,33 +22,33 @@ PropertiesVisualizer.prototype.visualize = function (properties, container, init
 	                			  input.val(prop.defaultValue);
 	                		    }
 							  }
-							  if(prop.dataType == 'number'){
+					    if(prop.dataType == 'number'){
 	                		    input.on("focusout", function(e){
 								  var val = $(this).val();
 	                			  if(!$.isNumeric(val)){
 	                				  for(var l in this.numberValidatorListeners){
 										  l(this, val);
-									  }
+							  }
 	                			  }  
 	                		    });
-							  }
+					    }
 	                		  break;
 	                		case 'range':
 	                		  input = $('<input type="text"></input>');
 	                		  if(initialValues.hasOwnProperty(prop.name)){
 								input.val(initialValues[prop.name])  
-							  }else{
+					  }else{
 	                		    if(prop.defaultValue){
 	                			  input.val(prop.defaultValue);
 	                		    }
-							  }
-							  if(prop.rangeMin && prop.rangeMax){
-								label.html(prop.name + " (" + prop.rangeMin + "-" + prop.rangeMax + ")");  
-							  }else if(prop.rangeMin){
-								label.html(prop.name + " ( min. " + prop.rangeMin + ")");  
-							  }else if(prop.rangeMax){
-								label.html(prop.name + " ( max. " + prop.rangeMax + ")");   
-							  }
+					  }
+					  if( (typeof prop.rangeMin === "number") && (typeof prop.rangeMax === "number") ){
+					    label.html(prop.name + " (" + prop.rangeMin + "-" + prop.rangeMax + ")");  
+					  }else if(typeof prop.rangeMin === "number"){
+					    label.html(prop.name + " ( min. " + prop.rangeMin + ")");  
+					  }else if(typeof prop.rangeMax === "number"){
+					    label.html(prop.name + " ( max. " + prop.rangeMax + ")");   
+					  }
 	                		  input.on("focusout", function(e){
 	                			var val = $(this).val();
 	                			if(!$.isNumeric(val)){
