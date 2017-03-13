@@ -331,7 +331,15 @@ var table = {
     },
 
     'select': {
-      'draw': function (t,row,child_row,field) { return t.fields[field].options[t.data[row][field]] },
+      'draw': function (t,row,child_row,field) {
+          var value = t.fields[field].options[t.data[row][field]] ;
+          if(typeof value === 'undefined'){
+              return '';
+          } else{
+              return value;
+          }
+          //return t.fields[field].options[t.data[row][field]] 
+      },
       'edit': function (t,row,child_row,field) {
         var options = "";
         for (option in t.fields[field].options) {
