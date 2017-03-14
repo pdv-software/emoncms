@@ -24,3 +24,4 @@ Modules/*/
 Theme/*
 Theme/*/
 !Theme/basic/
+/nbproject/private/
